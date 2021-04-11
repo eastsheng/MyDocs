@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Code examples | MyDocs</title>
-  <meta name="keywords" content=" Python , examples ">
-  <meta name="description" content="Code examples | MyDocs">
+  <title>Python Code Study | MyDocs</title>
+  <meta name="keywords" content=" Python , Code ">
+  <meta name="description" content="Python Code Study | MyDocs">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="[toc] 1. 操作文件（夹）等 例如：获得当前文件所在目录 path&#x3D;os.getcwd() print(path)   在当前文件夹生成文件夹，以时间命名 folder&#x3D;time.strftime(r&quot;%Y-%m-%d_%H-%M-%S&quot;,time.localtime()) folder&#x3D;time.strftime(r&quot;%Y%m%d_%H%M%S&quot;,t">
 <meta property="og:type" content="article">
@@ -639,9 +639,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-python/codes" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-python/python_code_study" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">Code examples</h1>
+        <h1 class="article-title">Python Code Study</h1>
     
     <div class="article-meta">
         
@@ -653,7 +653,7 @@
             
             <a  data-rel="Python">Python</a> > 
             
-            <a  data-rel="Python&lt;---&gt;examples">examples</a>
+            <a  data-rel="Python&lt;---&gt;Code">Code</a>
             
         </span>
         
@@ -663,19 +663,19 @@
             
             <a class="color2">Python</a>
             
-            <a class="color4">examples</a>
+            <a class="color5">Code</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2021-04-11 18:32:27'>2019-08-05 18:11</time>
+            发布时间 : <time class="date" title='最后更新: 2021-04-11 18:22:32'>2021-04-11 18:22</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:702</span>
+        <span>字数:194</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -694,7 +694,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-python%E5%87%BD%E6%95%B0%E6%A8%A1%E5%9D%97%E5%8C%96%EF%BC%8C%E5%B9%B6%E5%AE%89%E8%A3%85%E5%9C%A8%E6%9C%AC%E5%9C%B0%E8%B0%83%E7%94%A8"><span class="toc-text">1. python函数模块化，并安装在本地调用&#96;</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%89%93%E5%8C%85Python%E7%A8%8B%E5%BA%8F%E4%B8%BAexe"><span class="toc-text">2. 打包Python程序为exe</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-turtle%E7%94%BB%E5%A4%AA%E6%9E%81"><span class="toc-text">3. turtle画太极</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%93%8D%E4%BD%9C%E6%96%87%E4%BB%B6%EF%BC%88%E5%A4%B9%EF%BC%89%E7%AD%89"><span class="toc-text">1. 操作文件（夹）等</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -710,130 +710,47 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><div class='inner-toc'><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-python%E5%87%BD%E6%95%B0%E6%A8%A1%E5%9D%97%E5%8C%96%EF%BC%8C%E5%B9%B6%E5%AE%89%E8%A3%85%E5%9C%A8%E6%9C%AC%E5%9C%B0%E8%B0%83%E7%94%A8"><span class="toc-text">1. python函数模块化，并安装在本地调用&#96;</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%89%93%E5%8C%85Python%E7%A8%8B%E5%BA%8F%E4%B8%BAexe"><span class="toc-text">2. 打包Python程序为exe</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-turtle%E7%94%BB%E5%A4%AA%E6%9E%81"><span class="toc-text">3. turtle画太极</span></a></li></ol></div></p>
-<h3 id="1-python函数模块化，并安装在本地调用"><a href="#1-python函数模块化，并安装在本地调用" class="headerlink" title="1. python函数模块化，并安装在本地调用`"></a>1. python函数模块化，并安装在本地调用`</h3><ul>
-<li>首先，把编写好的函数写在一个指定文件(example：xxx.py)里，并放到一个文件夹(example：xxx)里。</li>
-<li>接着，在这个文件夹里写一个setup.py文件，文件内容例如：</li>
+        <p><div class='inner-toc'><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%93%8D%E4%BD%9C%E6%96%87%E4%BB%B6%EF%BC%88%E5%A4%B9%EF%BC%89%E7%AD%89"><span class="toc-text">1. 操作文件（夹）等</span></a></li></ol></div></p>
+<h3 id="1-操作文件（夹）等"><a href="#1-操作文件（夹）等" class="headerlink" title="1. 操作文件（夹）等"></a>1. 操作文件（夹）等</h3><ul>
+<li><p>例如：获得当前文件所在目录</p>
+<pre><code class="python">path=os.getcwd()
+print(path)
+</code></pre>
+</li>
+<li><p>在当前文件夹生成文件夹，以时间命名</p>
+<pre><code class="python">folder=time.strftime(r&quot;%Y-%m-%d_%H-%M-%S&quot;,time.localtime())
+folder=time.strftime(r&quot;%Y%m%d_%H%M%S&quot;,time.localtime())
+os.makedirs(r&#39;%s/%s&#39;%(os.getcwd(),folder))
+</code></pre>
+</li>
+<li><p>更改当前工作路径</p>
+<pre><code class="python">os.chdir(&#39;C:\\Users\\ASUS\\Desktop\\1&#39;)
+path=os.getcwd()
+print(path)
+</code></pre>
+</li>
+<li><p>判断一个路径是否存在</p>
+<pre><code class="python">path_yesno = os.path.exists(&#39;C:\\Users\\ASUS\\Desktop\\1&#39;)
+print(path_yesno)
+</code></pre>
+</li>
+<li><p>获取目录中所有文件及文件夹list</p>
+<pre><code class="python">PATH = os.listdir(&#39;C:\\Users\\ASUS\\Desktop&#39;)
+print(PATH)
+</code></pre>
+</li>
+<li><p>创建和删除子目录</p>
+<pre><code class="python">os.makedirs(&#39;C:\\Users\\ASUS\\Desktop\\2&#39;)
+os.rmdir(&#39;C:\\Users\\ASUS\\Desktop\\2&#39;)
+path=os.getcwd()
+print(path)
+</code></pre>
+</li>
+<li><p>改文件名</p>
+<pre><code class="python">os.rename(&#39;123.txt&#39;,&#39;000.txt&#39;)
+</code></pre>
+</li>
 </ul>
-<pre><code class="python">$ from distutils.core import setup
-
-$ setup(
-$ name         = &#39;thermal_conductivity&#39;,
-$ version      = &#39;1.0.0&#39;,
-$ py_modules   = [&#39;thermal_conductivity&#39;],
-$ author       = &#39;eastsheng&#39;,
-$ author_email = &#39;eastsheng@hotmail.com&#39;,
-$ url          = &#39;https://github.com/eastsheng&#39;,
-$ description  = &#39;Calculate thermal conductivity according to NEMD dump.&#39;
-)
-</code></pre>
-<ul>
-<li>然后，在此文件夹里打开cmd，输入：</li>
-</ul>
-<pre><code class="bash">$ python setup.py sdist
-</code></pre>
-<ul>
-<li>最后，安装此模块到本地，输入：</li>
-</ul>
-<pre><code class="bash">$ python setup.py install
-</code></pre>
-<h3 id="2-打包Python程序为exe"><a href="#2-打包Python程序为exe" class="headerlink" title="2. 打包Python程序为exe"></a>2. 打包Python程序为exe</h3><p><em>打包后可以在Windows上运行，而不需要安装程序里需要的各种包。</em></p>
-<p><strong>（1）. 安装第三方包pyinstaller</strong></p>
-<p><strong>（2）. 在cmd命令行输入:</strong></p>
-<pre><code class="cmd">pip install pyinstaller
-</code></pre>
-<p><strong>（3）. 如果嫌慢，或者失败，可以用国内镜像网址下载安装:</strong></p>
-<pre><code class="cmd">pip install pyinstaller -i https://pypi.douban.com/simple
-</code></pre>
-<p>或者设置Windows国内镜像，具体参考<a target="_blank" rel="noopener" href="http://www.ipaomi.com/2017/11/04/python-pip-%e4%b8%8b%e8%bd%bd%e9%80%9f%e5%ba%a6%e6%85%a2-windows-%e8%ae%be%e7%bd%ae-%e5%9b%bd%e5%86%85%e6%ba%90%ef%bc%8c%e7%94%a8-%e9%98%bf%e9%87%8c%e4%ba%91-%e5%9b%bd%e5%86%85%e9%95%9c%e5%83%8f/">这里</a>:</p>
-<ul>
-<li>在 windows “文件资源管理器” 地址栏 输入 <code>%APPDATA%</code> 回车；或者直接找到路径<code>C:\Users\yourcomputer\AppData\Roaming</code></li>
-<li>创建名为<code>pip</code>的文件夹</li>
-<li>在里面新建名为 <code>pip.ini</code> 的配置文件</li>
-<li>在 pip.ini 文件中输入以下内容，然后保存<br>```pip.ini<br>[global]<br>index-url=<a target="_blank" rel="noopener" href="http://mirrors.aliyun.com/pypi/simple/">http://mirrors.aliyun.com/pypi/simple/</a></li>
-</ul>
-<p>[install]<br>trusted-host=mirrors.aliyun.com</p>
-<pre><code>- 然后可以试试快不快
-
-**（4）. cmd执行：**
-
-```cmd
-pyinstaller -F filename.py 
-</code></pre>
-<p><strong>（5）. 还可以给程序加个图标：</strong></p>
-<pre><code class="cmd">pyinstaller -i &lt;图标名.ico&gt; -F filename.py
-</code></pre>
-<p><strong>（6）. 其他需要用到的命令</strong></p>
-<pre><code class="cmd">pyinstaller -h             为查看help命令
-pyinstaller --clean        为清理打包过程中的临时文件
-pyinstaller -D,--onedir    为默认值，生成dist文件夹
-pyinstaller -F，--onefile  为在dist文件夹中只生成独立的打包文件
-pyinstaller -i &lt;图标名.ico&gt; -F filename.py为指定打包程序使用的图标文件
-</code></pre>
-<h3 id="3-turtle画太极"><a href="#3-turtle画太极" class="headerlink" title="3. turtle画太极"></a>3. turtle画太极</h3><p><strong>画太极；打包后的<a target="_blank" rel="noopener" href="https://github.com/eastsheng/Daily-file">exe文件</a></strong></p>
-<img src="https://s1.ax1x.com/2020/06/24/NwZkjA.jpg" alt="太极" border="0" />
-
-
-<pre><code class="python">#画个太极阴阳鱼
-import turtle
-turtle.setup(0.5,0.6,0,0)
-turtle.speed(10)
-# #大圆
-# turtle.penup()
-# turtle.goto(0,-160)
-# turtle.pendown()
-# turtle.circle(180)
-#画阴鱼
-turtle.begin_fill()
-turtle.fillcolor(&#39;black&#39;)
-turtle.left(180)
-turtle.penup()
-turtle.goto(0,200)
-turtle.pendown()
-turtle.circle(90,180)
-turtle.circle(-90,180)
-turtle.left(180)
-turtle.circle(180,180)
-turtle.end_fill()
-#画阴鱼
-turtle.circle(180,180)
-#白眼
-turtle.begin_fill()
-turtle.fillcolor(&#39;white&#39;)
-turtle.penup()
-turtle.goto(0,80)
-turtle.pendown()
-turtle.circle(40)
-turtle.end_fill()
-#黑眼
-turtle.begin_fill()
-turtle.fillcolor(&#39;black&#39;)
-turtle.penup()
-turtle.goto(0,-120)
-turtle.pendown()
-turtle.circle(40)
-turtle.end_fill()
-#太极
-turtle.penup()
-turtle.goto(-275,0)
-turtle.pendown()
-turtle.write(&quot;太&quot;,font=(&quot;华文行楷&quot;,30,&quot;normal&quot;))
-turtle.penup()
-turtle.goto(-275,-50)
-turtle.pendown()
-turtle.write(&quot;极&quot;,font=(&quot;华文行楷&quot;,30,&quot;normal&quot;))
-turtle.penup()
-turtle.goto(200,-120)
-turtle.pendown()
-turtle.write(&quot;---2020/3/17&quot;,font=(&quot;方正&quot;,12,&quot;normal&quot;))
-turtle.penup()
-turtle.goto(250,-150)
-turtle.pendown()
-turtle.write(&quot;sheng&quot;,font=(&quot;华文行楷&quot;,12,&quot;normal&quot;))
-
-turtle.hideturtle()
-turtle.done()
-</code></pre>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。 </span>
