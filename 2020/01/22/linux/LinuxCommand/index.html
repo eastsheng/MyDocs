@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Linux Command | MyDocs</title>
+  <meta name="keywords" content=" Command , Linux ">
+  <meta name="description" content="Linux Command | MyDocs">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="[toc] 1. 操作文件（夹）等 例如：获得当前文件所在目录 path&#x3D;os.getcwd() print(path)   在当前文件夹生成文件夹，以时间命名 folder&#x3D;time.strftime(r&quot;%Y-%m-%d_%H-%M-%S&quot;,time.localtime()) folder&#x3D;time.strftime(r&quot;%Y%m%d_%H%M%S&quot;,t">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python Code Study">
+<meta property="og:url" content="https://eastsheng.github.io/MyDocs/2021/04/11/python/python_code_study/index.html">
+<meta property="og:site_name" content="MyDocs">
+<meta property="og:description" content="[toc] 1. 操作文件（夹）等 例如：获得当前文件所在目录 path&#x3D;os.getcwd() print(path)   在当前文件夹生成文件夹，以时间命名 folder&#x3D;time.strftime(r&quot;%Y-%m-%d_%H-%M-%S&quot;,time.localtime()) folder&#x3D;time.strftime(r&quot;%Y%m%d_%H%M%S&quot;,t">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-04-11T10:22:28.000Z">
+<meta property="article:modified_time" content="2021-04-11T10:22:32.943Z">
+<meta property="article:author" content="Eastsheng">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="Code">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/MyDocs/img/avatar.png">
+
+<link href="/MyDocs/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/MyDocs/css/hl_theme/rainbow.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/MyDocs/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/MyDocs/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="/MyDocs">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/MyDocs/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/MyDocs/img/avatar.png"/>
+</a>
+<div class="author">
+    <span>Eastsheng</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="rss"
+               href="/atom.xml"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-rss"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="github"
+               href="https://github.com/eastsheng"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="email"
+               href="mailto:eastsheng@hotmail.com"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-email"></use>
+                    </svg>
+                
+            </a>
+        
+    
+</div>
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="全部文章">全部文章
+            
+                <small>(16)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                <li>
+                    <div data-rel="Python">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        Python
+                        <small>(5)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="Python<--->Bug">
+                                        
+                                        Bug
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="Python<--->Code">
+                                        
+                                        Code
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="Python<--->examples">
+                                        
+                                        examples
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="Python<--->Matplotlib">
+                                        
+                                        Matplotlib
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="Python<--->Numpy">
+                                        
+                                        Numpy
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="Linux">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        Linux
+                        <small>(2)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="Linux<--->Command">
+                                        
+                                        Command
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="Linux<--->Problems">
+                                        
+                                        Problems
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="Lammps">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        Lammps
+                        <small>(3)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="Lammps<--->Notes">
+                                        
+                                        Notes
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="Lammps<--->Command">
+                                        
+                                        Command
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="Lammps<--->error">
+                                        
+                                        error
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="Notes">
+                        
+                        Notes
+                        <small>(3)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="Collections">
+                        
+                        Collections
+                        <small>(3)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+            <a class="about  "
+               target="_blank"
+                    
+               href="https://eastsheng.github.io">关于</a>
+        
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="16">
+<input type="hidden" id="yelog_site_word_count" value="8.3k">
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="https://eastsheng.github.io/">Eastsheng</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Books</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Bug</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Code</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Command</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Daily Notes</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>error</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>examples</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Lammps</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Linux</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Matplotlib</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Notes</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Numpy</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Problems</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Python</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>units</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Videos</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>乱七八糟的收藏</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        <a  class="全部文章 Python Code "
+           href="/MyDocs/2021/04/11/python/python_code_study/"
+           data-tag="Python,Code"
+           data-author="" >
+            <span class="post-title" title="Python Code Study">Python Code Study</span>
+            <span class="post-date" title="2021-04-11 18:22:28">2021/04/11</span>
+        </a>
+        
+        <a  class="全部文章 Collections "
+           href="/MyDocs/2021/03/15/collections/luan78zao/"
+           data-tag="乱七八糟的收藏"
+           data-author="" >
+            <span class="post-title" title="乱七八糟的收藏">乱七八糟的收藏</span>
+            <span class="post-date" title="2021-03-15 18:11:28">2021/03/15</span>
+        </a>
+        
+        <a  class="全部文章 Notes "
+           href="/MyDocs/2021/01/22/notes/DailyNotes2021/"
+           data-tag="Daily Notes"
+           data-author="" >
+            <span class="post-title" title="随笔---2021">随笔---2021</span>
+            <span class="post-date" title="2021-01-22 18:11:28">2021/01/22</span>
+        </a>
+        
+        <a  class="全部文章 Python Numpy "
+           href="/MyDocs/2021/01/22/python/numpy/"
+           data-tag="Python,Numpy"
+           data-author="" >
+            <span class="post-title" title="Numpy常用">Numpy常用</span>
+            <span class="post-date" title="2021-01-22 18:11:28">2021/01/22</span>
+        </a>
+        
+        <a  class="全部文章 Python Bug "
+           href="/MyDocs/2021/01/22/python/problems/"
+           data-tag="Python,Bug"
+           data-author="" >
+            <span class="post-title" title="Python问题与解决方法汇总">Python问题与解决方法汇总</span>
+            <span class="post-date" title="2021-01-22 18:11:28">2021/01/22</span>
+        </a>
+        
+        <a  class="全部文章 Python Matplotlib "
+           href="/MyDocs/2021/01/22/python/matplotlib/"
+           data-tag="Python,Matplotlib"
+           data-author="" >
+            <span class="post-title" title="Matplotlib学习">Matplotlib学习</span>
+            <span class="post-date" title="2021-01-22 18:11:28">2021/01/22</span>
+        </a>
+        
+        <a  class="全部文章 Notes "
+           href="/MyDocs/2021/01/21/notes/units/"
+           data-tag="Daily Notes,units"
+           data-author="" >
+            <span class="post-title" title="单位记录">单位记录</span>
+            <span class="post-date" title="2021-01-21 18:11:28">2021/01/21</span>
+        </a>
+        
+        <a  class="全部文章 Notes "
+           href="/MyDocs/2020/07/23/notes/glossary/"
+           data-tag="Daily Notes"
+           data-author="" >
+            <span class="post-title" title="概念笔记">概念笔记</span>
+            <span class="post-date" title="2020-07-23 18:11:28">2020/07/23</span>
+        </a>
+        
+        <a  class="全部文章 Collections "
+           href="/MyDocs/2020/06/18/collections/videos/"
+           data-tag="Videos"
+           data-author="" >
+            <span class="post-title" title="视频收藏">视频收藏</span>
+            <span class="post-date" title="2020-06-18 09:33:48">2020/06/18</span>
+        </a>
+        
+        <a  class="全部文章 Collections "
+           href="/MyDocs/2020/06/18/collections/books/"
+           data-tag="Books"
+           data-author="" >
+            <span class="post-title" title="书籍收藏">书籍收藏</span>
+            <span class="post-date" title="2020-06-18 09:33:48">2020/06/18</span>
+        </a>
+        
+        <a  class="全部文章 Linux Command "
+           href="/MyDocs/2020/01/22/linux/LinuxCommand/"
+           data-tag="Command,Linux"
+           data-author="" >
+            <span class="post-title" title="Linux Command">Linux Command</span>
+            <span class="post-date" title="2020-01-22 18:11:28">2020/01/22</span>
+        </a>
+        
+        <a  class="全部文章 Linux Problems "
+           href="/MyDocs/2020/01/22/linux/problems/"
+           data-tag="Linux,Problems"
+           data-author="" >
+            <span class="post-title" title="Linux Problems">Linux Problems</span>
+            <span class="post-date" title="2020-01-22 18:11:28">2020/01/22</span>
+        </a>
+        
+        <a  class="全部文章 Python examples "
+           href="/MyDocs/2019/08/05/python/codes/"
+           data-tag="Python,examples"
+           data-author="" >
+            <span class="post-title" title="Code examples">Code examples</span>
+            <span class="post-date" title="2019-08-05 18:11:28">2019/08/05</span>
+        </a>
+        
+        <a  class="全部文章 Lammps Command "
+           href="/MyDocs/2019/01/22/lammps/command/"
+           data-tag="Lammps,Command"
+           data-author="" >
+            <span class="post-title" title="Lammps Command">Lammps Command</span>
+            <span class="post-date" title="2019-01-22 18:11:28">2019/01/22</span>
+        </a>
+        
+        <a  class="全部文章 Lammps error "
+           href="/MyDocs/2019/01/22/lammps/error/"
+           data-tag="Lammps,error"
+           data-author="" >
+            <span class="post-title" title="Lammps error">Lammps error</span>
+            <span class="post-date" title="2019-01-22 18:11:28">2019/01/22</span>
+        </a>
+        
+        <a  class="全部文章 Lammps Notes "
+           href="/MyDocs/2019/01/22/lammps/LammpsNotes/"
+           data-tag="Lammps,Notes"
+           data-author="" >
+            <span class="post-title" title="Lammps Notes">Lammps Notes</span>
+            <span class="post-date" title="2019-01-22 18:11:28">2019/01/22</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-linux/LinuxCommand" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">Linux Command</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="Linux">Linux</a> > 
+            
+            <a  data-rel="Linux&lt;---&gt;Command">Command</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color3">Command</a>
+            
+            <a class="color1">Linux</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2021-04-11 18:43:45'>2020-01-22 18:11</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>字数:882</span>
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%A9%BA%E9%97%B4"><span class="toc-text">1. 空间</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="toc-text">2. 文件夹</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-root"><span class="toc-text">3. root</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%BC%80%E5%90%AFssh"><span class="toc-text">4. 开启ssh:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="toc-text">5. 环境变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-conda%E5%90%AF%E5%8A%A8%E4%B8%8E%E5%85%B3%E9%97%AD"><span class="toc-text">6. conda启动与关闭</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-Linux%E6%9F%A5%E7%9C%8Bcpu%E4%BF%A1%E6%81%AF"><span class="toc-text">7. Linux查看cpu信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-%E5%9C%A8linux%E5%90%AF%E5%8A%A8%E5%92%8C%E7%BB%88%E6%AD%A2matlab"><span class="toc-text">8. 在linux启动和终止matlab</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-Centos7-%E5%85%B3%E9%97%AD%E5%BC%80%E5%90%AF%E9%98%B2%E7%81%AB%E5%A2%99"><span class="toc-text">8. Centos7 关闭开启防火墙</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-%E7%BB%88%E7%AB%AF%E8%BF%9E%E6%8E%A5%E5%8F%A6%E4%B8%80%E5%8F%B0%E4%B8%BB%E6%9C%BA"><span class="toc-text">9. 终端连接另一台主机</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-%E5%8D%B8%E8%BD%BDcuda"><span class="toc-text">10. 卸载cuda</span></a></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><div class='inner-toc'><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%A9%BA%E9%97%B4"><span class="toc-text">1. 空间</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="toc-text">2. 文件夹</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-root"><span class="toc-text">3. root</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%BC%80%E5%90%AFssh"><span class="toc-text">4. 开启ssh:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="toc-text">5. 环境变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-conda%E5%90%AF%E5%8A%A8%E4%B8%8E%E5%85%B3%E9%97%AD"><span class="toc-text">6. conda启动与关闭</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-Linux%E6%9F%A5%E7%9C%8Bcpu%E4%BF%A1%E6%81%AF"><span class="toc-text">7. Linux查看cpu信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-%E5%9C%A8linux%E5%90%AF%E5%8A%A8%E5%92%8C%E7%BB%88%E6%AD%A2matlab"><span class="toc-text">8. 在linux启动和终止matlab</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-Centos7-%E5%85%B3%E9%97%AD%E5%BC%80%E5%90%AF%E9%98%B2%E7%81%AB%E5%A2%99"><span class="toc-text">8. Centos7 关闭开启防火墙</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-%E7%BB%88%E7%AB%AF%E8%BF%9E%E6%8E%A5%E5%8F%A6%E4%B8%80%E5%8F%B0%E4%B8%BB%E6%9C%BA"><span class="toc-text">9. 终端连接另一台主机</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-%E5%8D%B8%E8%BD%BDcuda"><span class="toc-text">10. 卸载cuda</span></a></li></ol></div></p>
+<h3 id="1-空间"><a href="#1-空间" class="headerlink" title="1. 空间"></a>1. 空间</h3><ul>
+<li>查看空间大小：<code>df -h</code>；</li>
+<li>查看该目录下文件大小：<code>du -sh *</code></li>
+<li>查看内存使用情况：<code>free -m</code></li>
+<li>删除残余的配置文件:</li>
+</ul>
+<pre><code class="bash">sudo apt-get remove &lt;package-name&gt; #删除软件包
+sudo apt-get purge &lt;package-name&gt; #删除软件包以及配置文件
+</code></pre>
+<ul>
+<li>找出所删除软件包的残余配置文件</li>
+</ul>
+<pre><code class="bash">dpkg --list | grep &quot;^rc&quot; #找出所删除软件包的残余配置文件
+dpkg --list | grep &quot;^rc&quot; | cut -d &quot; &quot; -f 3 #提取这些软件包的名称
+sudo dpkg --purge &lt;package-name&gt; #只删除某个软件包的配置文件
+dpkg --list | grep &quot;^rc&quot; | cut -d &quot; &quot; -f 3 | xargs sudo dpkg --purge  #删除所有软件包
+</code></pre>
+<ul>
+<li>删除没有用的deb软件安装包</li>
+</ul>
+<pre><code class="bash">sudo du -sh /var/cache/apt/archives  #查看/var/chace/apt/archives目录下deb安装包的总大小
+sudo apt-get clean #删除这些deb包
+sudo apt-get autoclean
+</code></pre>
+<ul>
+<li>清理日志文件</li>
+</ul>
+<pre><code class="bash">sudo apt-get install ncdu #安装ncdu工具
+sudo ncdu /var/log #查看日志文件
+sudo dd if=/dev/null of=/var/log/shadowsocks.log  #清空这个日志文件的内容
+</code></pre>
+<ul>
+<li><p>删除’/dev/loop0…’文件:</p>
+<pre><code class="bash">sudo apt purge snapd
+</code></pre>
+</li>
+<li><p>ubuntu清理缓存</p>
+<pre><code class="bash">sudo apt-get autoclean     #清理旧版本软件缓存
+sudo apt-get clean         #清理所有软件缓存
+sudo apt-get autoremove    #删除系统不再使用孤立软件
+</code></pre>
+</li>
+</ul>
+<h3 id="2-文件夹"><a href="#2-文件夹" class="headerlink" title="2. 文件夹"></a>2. 文件夹</h3><ul>
+<li>创建文件夹：<code>mkdir filename</code>；</li>
+<li>还可以同时创建两个文件夹：<code>mkdir file1 file2</code>；</li>
+<li>创建一个包含路径的文件夹：<code>mkdir -p /home/file/file1</code></li>
+<li>删除文件；<code>rm -f filename</code></li>
+<li>删除空文件夹：<code>rmdir foldername</code>；</li>
+<li>删除有文件的文件夹：<code>rm -rf foldername</code>；</li>
+<li>同时删除两个有文件的文件夹：<code>rm -rf folder1 folder2</code>；</li>
+<li>返回上一级目录：<code>cd ..</code>；</li>
+<li>显示当前工作路径：<code>pwd</code>；</li>
+<li>查看当前目录中的文件/文件夹<code>ls</code>；</li>
+<li>复制一个目录到另一个目录下:<code>cp -r dir1 dir2</code></li>
+<li>解压<code>&quot;.tar.gz&quot;</code>：<code>tar -zxvf filename.tar.gz</code>;</li>
+<li>解压<code>&quot;.zip&quot;</code>：<code>unzip filename.zip</code>;</li>
+<li>显示隐藏文件夹：<pre><code>ctrl h #快捷键
+ls -a #命令
+</code></pre>
+</li>
+</ul>
+<ul>
+<li>更多参考：[1] <a target="_blank" rel="noopener" href="https://www.cnblogs.com/yjd_hycf_space/p/7730690.html">https://www.cnblogs.com/yjd_hycf_space/p/7730690.html</a></li>
+</ul>
+<h3 id="3-root"><a href="#3-root" class="headerlink" title="3. root"></a>3. root</h3><ul>
+<li>开启root：<code>su</code></li>
+<li>退出root：<code>exit</code></li>
+<li>或者快捷键退出：<code>ctrl+D</code></li>
+<li>而另一种方法:<code>logout</code>则出现错误:<code>bash: logout: not login shell: use &quot;exit&quot;</code></li>
+</ul>
+<h3 id="4-开启ssh"><a href="#4-开启ssh" class="headerlink" title="4. 开启ssh:"></a>4. 开启ssh:</h3><pre><code class="bash">sudo apt-get install openssh-server
+service ssh start
+</code></pre>
+<h3 id="5-环境变量"><a href="#5-环境变量" class="headerlink" title="5. 环境变量"></a>5. 环境变量</h3><ul>
+<li><p>查看已设环境变量:</p>
+<pre><code class="bash">echo $PATH
+</code></pre>
+</li>
+<li><p>设置临时环境变量:</p>
+<pre><code class="bash">PATH=/usr/local/.../bin:$PATH;export PATH
+</code></pre>
+</li>
+<li><p>设置永久环境变量: </p>
+</li>
+<li><p>root后在<code>/etc/profile</code>文件或者<code>~/.brashrc</code>文件添加环境变量；</p>
+</li>
+<li><p>例如：</p>
+</li>
+</ul>
+<pre><code class="bash">export PATH=&quot;/usr/local/mpich-3.3.2/bin:$PATH&quot;
+</code></pre>
+<ul>
+<li>设置永久环境变量具体操作：</li>
+</ul>
+<pre><code class="bash">vim /etc/profile
+export PATH=&quot;/usr/local/mpich-3.3.2/bin:$PATH&quot;
+Esc #（键盘）
+:wq #或（快捷键）shift+ZZ 保存并退出；
+:q #不保存退出
+:q! #强制退出
+source /etc/profile#(使生效)
+</code></pre>
+<h3 id="6-conda启动与关闭"><a href="#6-conda启动与关闭" class="headerlink" title="6. conda启动与关闭"></a>6. conda启动与关闭</h3><ul>
+<li>启动：<code>conda activate</code></li>
+<li>关闭：<code>conda deactivate</code></li>
+<li>关闭自动开启base:<code>conda config --set auto_activate_base false</code></li>
+</ul>
+<h3 id="7-Linux查看cpu信息"><a href="#7-Linux查看cpu信息" class="headerlink" title="7. Linux查看cpu信息"></a>7. Linux查看cpu信息</h3><ul>
+<li>Linux查看cpu总数，在top后的界面按1，</li>
+<li>或者：</li>
+</ul>
+<pre><code class="bash">cat /proc/cpuinfo | grep processor
+</code></pre>
+<ul>
+<li>查看进程绝对路径</li>
+</ul>
+<pre><code>top c
+</code></pre>
+<h3 id="8-在linux启动和终止matlab"><a href="#8-在linux启动和终止matlab" class="headerlink" title="8. 在linux启动和终止matlab"></a>8. 在linux启动和终止matlab</h3><pre><code class="bash">matlab -nodesktop -nosplash -r matlabfile(parameters)
+exit
+</code></pre>
+<h3 id="8-Centos7-关闭开启防火墙"><a href="#8-Centos7-关闭开启防火墙" class="headerlink" title="8. Centos7 关闭开启防火墙"></a>8. Centos7 关闭开启防火墙</h3><pre><code class="bash">systemctl status firewalld.service #查看状态
+systemctl stop firewalld.service   #停止防火墙，但重启后会自动开启
+systemctl disable firewalld.service #关闭防火墙
+systemctl start firewalld.service  #打开防火墙
+</code></pre>
+<h3 id="9-终端连接另一台主机"><a href="#9-终端连接另一台主机" class="headerlink" title="9. 终端连接另一台主机"></a>9. 终端连接另一台主机</h3><pre><code class="bash">ssh root@另一台主机ip
+#例如：
+ssh root@111.111.11.11
+#然后按提示输入该主机root密码即可
+exit #退出
+</code></pre>
+<h3 id="10-卸载cuda"><a href="#10-卸载cuda" class="headerlink" title="10. 卸载cuda"></a>10. 卸载cuda</h3><pre><code class="bash">cd  /usr/local/cuda/bin
+sudo ./uninstall_cuda_x.x.pl 
+#或
+sudo ./cuda-uninstaller
+</code></pre>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。 </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2020-2021 Eastsheng
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>喜欢就点赞,疼爱就打赏</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/MyDocs/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/MyDocs/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">支付宝</label></span><span><label><input type="radio" name="pay" value="weixin">微信</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="/MyDocs/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/MyDocs/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 572px;
+    }
+    .nav.fullscreen {
+        margin-left: -572px;
+    }
+    .nav-left {
+        width: 150px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;
+        background: url("/MyDocs/img/ys.jpg");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+
+    
+</style>
+
+
+
+
+
+
+
+
+</html>

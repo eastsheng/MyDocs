@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>概念笔记 | MyDocs</title>
+  <meta name="keywords" content=" Daily Notes ">
+  <meta name="description" content="概念笔记 | MyDocs">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="[toc] 1. 操作文件（夹）等 例如：获得当前文件所在目录 path&#x3D;os.getcwd() print(path)   在当前文件夹生成文件夹，以时间命名 folder&#x3D;time.strftime(r&quot;%Y-%m-%d_%H-%M-%S&quot;,time.localtime()) folder&#x3D;time.strftime(r&quot;%Y%m%d_%H%M%S&quot;,t">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python Code Study">
+<meta property="og:url" content="https://eastsheng.github.io/MyDocs/2021/04/11/python/python_code_study/index.html">
+<meta property="og:site_name" content="MyDocs">
+<meta property="og:description" content="[toc] 1. 操作文件（夹）等 例如：获得当前文件所在目录 path&#x3D;os.getcwd() print(path)   在当前文件夹生成文件夹，以时间命名 folder&#x3D;time.strftime(r&quot;%Y-%m-%d_%H-%M-%S&quot;,time.localtime()) folder&#x3D;time.strftime(r&quot;%Y%m%d_%H%M%S&quot;,t">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-04-11T10:22:28.000Z">
+<meta property="article:modified_time" content="2021-04-11T10:22:32.943Z">
+<meta property="article:author" content="Eastsheng">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="Code">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/MyDocs/img/avatar.png">
+
+<link href="/MyDocs/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/MyDocs/css/hl_theme/rainbow.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/MyDocs/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/MyDocs/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="/MyDocs">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/MyDocs/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/MyDocs/img/avatar.png"/>
+</a>
+<div class="author">
+    <span>Eastsheng</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="rss"
+               href="/atom.xml"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-rss"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="github"
+               href="https://github.com/eastsheng"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="email"
+               href="mailto:eastsheng@hotmail.com"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-email"></use>
+                    </svg>
+                
+            </a>
+        
+    
+</div>
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="全部文章">全部文章
+            
+                <small>(16)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                <li>
+                    <div data-rel="Python">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        Python
+                        <small>(5)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="Python<--->Bug">
+                                        
+                                        Bug
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="Python<--->Code">
+                                        
+                                        Code
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="Python<--->examples">
+                                        
+                                        examples
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="Python<--->Matplotlib">
+                                        
+                                        Matplotlib
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="Python<--->Numpy">
+                                        
+                                        Numpy
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="Linux">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        Linux
+                        <small>(2)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="Linux<--->Command">
+                                        
+                                        Command
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="Linux<--->Problems">
+                                        
+                                        Problems
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="Lammps">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        Lammps
+                        <small>(3)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="Lammps<--->Notes">
+                                        
+                                        Notes
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="Lammps<--->Command">
+                                        
+                                        Command
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="Lammps<--->error">
+                                        
+                                        error
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="Notes">
+                        
+                        Notes
+                        <small>(3)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="Collections">
+                        
+                        Collections
+                        <small>(3)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+            <a class="about  "
+               target="_blank"
+                    
+               href="https://eastsheng.github.io">关于</a>
+        
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="16">
+<input type="hidden" id="yelog_site_word_count" value="8.3k">
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="https://eastsheng.github.io/">Eastsheng</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Books</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Bug</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Code</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Command</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Daily Notes</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>error</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>examples</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Lammps</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Linux</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Matplotlib</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Notes</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Numpy</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Problems</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Python</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>units</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Videos</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>乱七八糟的收藏</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        <a  class="全部文章 Python Code "
+           href="/MyDocs/2021/04/11/python/python_code_study/"
+           data-tag="Python,Code"
+           data-author="" >
+            <span class="post-title" title="Python Code Study">Python Code Study</span>
+            <span class="post-date" title="2021-04-11 18:22:28">2021/04/11</span>
+        </a>
+        
+        <a  class="全部文章 Collections "
+           href="/MyDocs/2021/03/15/collections/luan78zao/"
+           data-tag="乱七八糟的收藏"
+           data-author="" >
+            <span class="post-title" title="乱七八糟的收藏">乱七八糟的收藏</span>
+            <span class="post-date" title="2021-03-15 18:11:28">2021/03/15</span>
+        </a>
+        
+        <a  class="全部文章 Notes "
+           href="/MyDocs/2021/01/22/notes/DailyNotes2021/"
+           data-tag="Daily Notes"
+           data-author="" >
+            <span class="post-title" title="随笔---2021">随笔---2021</span>
+            <span class="post-date" title="2021-01-22 18:11:28">2021/01/22</span>
+        </a>
+        
+        <a  class="全部文章 Python Numpy "
+           href="/MyDocs/2021/01/22/python/numpy/"
+           data-tag="Python,Numpy"
+           data-author="" >
+            <span class="post-title" title="Numpy常用">Numpy常用</span>
+            <span class="post-date" title="2021-01-22 18:11:28">2021/01/22</span>
+        </a>
+        
+        <a  class="全部文章 Python Bug "
+           href="/MyDocs/2021/01/22/python/problems/"
+           data-tag="Python,Bug"
+           data-author="" >
+            <span class="post-title" title="Python问题与解决方法汇总">Python问题与解决方法汇总</span>
+            <span class="post-date" title="2021-01-22 18:11:28">2021/01/22</span>
+        </a>
+        
+        <a  class="全部文章 Python Matplotlib "
+           href="/MyDocs/2021/01/22/python/matplotlib/"
+           data-tag="Python,Matplotlib"
+           data-author="" >
+            <span class="post-title" title="Matplotlib学习">Matplotlib学习</span>
+            <span class="post-date" title="2021-01-22 18:11:28">2021/01/22</span>
+        </a>
+        
+        <a  class="全部文章 Notes "
+           href="/MyDocs/2021/01/21/notes/units/"
+           data-tag="Daily Notes,units"
+           data-author="" >
+            <span class="post-title" title="单位记录">单位记录</span>
+            <span class="post-date" title="2021-01-21 18:11:28">2021/01/21</span>
+        </a>
+        
+        <a  class="全部文章 Notes "
+           href="/MyDocs/2020/07/23/notes/glossary/"
+           data-tag="Daily Notes"
+           data-author="" >
+            <span class="post-title" title="概念笔记">概念笔记</span>
+            <span class="post-date" title="2020-07-23 18:11:28">2020/07/23</span>
+        </a>
+        
+        <a  class="全部文章 Collections "
+           href="/MyDocs/2020/06/18/collections/videos/"
+           data-tag="Videos"
+           data-author="" >
+            <span class="post-title" title="视频收藏">视频收藏</span>
+            <span class="post-date" title="2020-06-18 09:33:48">2020/06/18</span>
+        </a>
+        
+        <a  class="全部文章 Collections "
+           href="/MyDocs/2020/06/18/collections/books/"
+           data-tag="Books"
+           data-author="" >
+            <span class="post-title" title="书籍收藏">书籍收藏</span>
+            <span class="post-date" title="2020-06-18 09:33:48">2020/06/18</span>
+        </a>
+        
+        <a  class="全部文章 Linux Command "
+           href="/MyDocs/2020/01/22/linux/LinuxCommand/"
+           data-tag="Command,Linux"
+           data-author="" >
+            <span class="post-title" title="Linux Command">Linux Command</span>
+            <span class="post-date" title="2020-01-22 18:11:28">2020/01/22</span>
+        </a>
+        
+        <a  class="全部文章 Linux Problems "
+           href="/MyDocs/2020/01/22/linux/problems/"
+           data-tag="Linux,Problems"
+           data-author="" >
+            <span class="post-title" title="Linux Problems">Linux Problems</span>
+            <span class="post-date" title="2020-01-22 18:11:28">2020/01/22</span>
+        </a>
+        
+        <a  class="全部文章 Python examples "
+           href="/MyDocs/2019/08/05/python/codes/"
+           data-tag="Python,examples"
+           data-author="" >
+            <span class="post-title" title="Code examples">Code examples</span>
+            <span class="post-date" title="2019-08-05 18:11:28">2019/08/05</span>
+        </a>
+        
+        <a  class="全部文章 Lammps Command "
+           href="/MyDocs/2019/01/22/lammps/command/"
+           data-tag="Lammps,Command"
+           data-author="" >
+            <span class="post-title" title="Lammps Command">Lammps Command</span>
+            <span class="post-date" title="2019-01-22 18:11:28">2019/01/22</span>
+        </a>
+        
+        <a  class="全部文章 Lammps error "
+           href="/MyDocs/2019/01/22/lammps/error/"
+           data-tag="Lammps,error"
+           data-author="" >
+            <span class="post-title" title="Lammps error">Lammps error</span>
+            <span class="post-date" title="2019-01-22 18:11:28">2019/01/22</span>
+        </a>
+        
+        <a  class="全部文章 Lammps Notes "
+           href="/MyDocs/2019/01/22/lammps/LammpsNotes/"
+           data-tag="Lammps,Notes"
+           data-author="" >
+            <span class="post-title" title="Lammps Notes">Lammps Notes</span>
+            <span class="post-date" title="2019-01-22 18:11:28">2019/01/22</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-notes/glossary" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">概念笔记</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="Notes">Notes</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color2">Daily Notes</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2021-04-11 19:01:23'>2020-07-23 18:11</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>字数:1.6k</span>
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%A3%B0%E5%AD%90%E7%BA%BF%E5%AE%BD%CE%93-phonon-linewidth"><span class="toc-text">1. 声子线宽Γ(phonon linewidth)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%8B%89%E6%9B%BC%E5%85%89%E8%B0%B1-raman-spectra"><span class="toc-text">2. 拉曼光谱(raman spectra)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%9D%82%E5%8C%96-hybridization"><span class="toc-text">3. 杂化(hybridization)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E6%95%A3%E5%B0%84%E7%9B%B8%E7%A9%BA%E9%97%B4SPS-scattering-phase-space"><span class="toc-text">4. 散射相空间SPS(scattering phase space</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E6%B3%A1%E5%88%A9%E4%B8%8D%E7%9B%B8%E5%AE%B9%E5%8E%9F%E7%90%86-Pauli-exclusion-principe"><span class="toc-text">5. 泡利不相容原理(Pauli exclusion principe)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E7%83%AD%E5%8A%9B%E5%AD%A6%E5%AE%9A%E5%BE%8B"><span class="toc-text">6. 热力学定律</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-RDF"><span class="toc-text">7. RDF</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-%E6%9E%81%E5%8C%96%EF%BC%88polarization%EF%BC%89"><span class="toc-text">8. 极化（polarization）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-phonon-wave-packets"><span class="toc-text">9. phonon wave-packets</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-H-phase%E5%92%8CT-phase"><span class="toc-text">10. H-phase和T-phase</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-%E7%AE%80%E5%B9%B6%EF%BC%88Degeneration-amp-Entartung%EF%BC%89"><span class="toc-text">11. 简并（Degeneration&amp;Entartung）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-%E7%BB%9D%E7%83%AD%E8%BF%91%E4%BC%BC%EF%BC%88Born-Oppenheimer%EF%BC%89%EF%BC%9A"><span class="toc-text">12. 绝热近似（Born-Oppenheimer）：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13-AA-stacking%E5%92%8C-AB-BA-stacking%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-text">13. AA stacking和 AB(BA) stacking的区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14-Wiedemann-Franz-law%EF%BC%88%E5%A8%81%E5%BE%B7%E6%9B%BC-%E5%BC%97%E6%9C%97%E5%85%B9%E5%AE%9A%E5%BE%8B%EF%BC%89"><span class="toc-text">14. Wiedemann-Franz law（威德曼-弗朗兹定律）</span></a></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><div class='inner-toc'><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%A3%B0%E5%AD%90%E7%BA%BF%E5%AE%BD%CE%93-phonon-linewidth"><span class="toc-text">1. 声子线宽Γ(phonon linewidth)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%8B%89%E6%9B%BC%E5%85%89%E8%B0%B1-raman-spectra"><span class="toc-text">2. 拉曼光谱(raman spectra)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%9D%82%E5%8C%96-hybridization"><span class="toc-text">3. 杂化(hybridization)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E6%95%A3%E5%B0%84%E7%9B%B8%E7%A9%BA%E9%97%B4SPS-scattering-phase-space"><span class="toc-text">4. 散射相空间SPS(scattering phase space</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E6%B3%A1%E5%88%A9%E4%B8%8D%E7%9B%B8%E5%AE%B9%E5%8E%9F%E7%90%86-Pauli-exclusion-principe"><span class="toc-text">5. 泡利不相容原理(Pauli exclusion principe)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E7%83%AD%E5%8A%9B%E5%AD%A6%E5%AE%9A%E5%BE%8B"><span class="toc-text">6. 热力学定律</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-RDF"><span class="toc-text">7. RDF</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-%E6%9E%81%E5%8C%96%EF%BC%88polarization%EF%BC%89"><span class="toc-text">8. 极化（polarization）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-phonon-wave-packets"><span class="toc-text">9. phonon wave-packets</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-H-phase%E5%92%8CT-phase"><span class="toc-text">10. H-phase和T-phase</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-%E7%AE%80%E5%B9%B6%EF%BC%88Degeneration-amp-Entartung%EF%BC%89"><span class="toc-text">11. 简并（Degeneration&amp;Entartung）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-%E7%BB%9D%E7%83%AD%E8%BF%91%E4%BC%BC%EF%BC%88Born-Oppenheimer%EF%BC%89%EF%BC%9A"><span class="toc-text">12. 绝热近似（Born-Oppenheimer）：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13-AA-stacking%E5%92%8C-AB-BA-stacking%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-text">13. AA stacking和 AB(BA) stacking的区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14-Wiedemann-Franz-law%EF%BC%88%E5%A8%81%E5%BE%B7%E6%9B%BC-%E5%BC%97%E6%9C%97%E5%85%B9%E5%AE%9A%E5%BE%8B%EF%BC%89"><span class="toc-text">14. Wiedemann-Franz law（威德曼-弗朗兹定律）</span></a></li></ol></div></p>
+<p><strong>2020-07</strong></p>
+<p><strong>07-23</strong></p>
+<h3 id="1-声子线宽Γ-phonon-linewidth"><a href="#1-声子线宽Γ-phonon-linewidth" class="headerlink" title="1. 声子线宽Γ(phonon linewidth)"></a>1. 声子线宽<code>Γ</code>(phonon linewidth)</h3><blockquote>
+<ul>
+<li>声子线宽与声子的寿命<code>τ</code>(lifetime or relaxtion time)有关,<code>声子寿命(τ)=1/2*半高宽(FWHM)</code>。</li>
+<li>Full width at half maximum (FWHM) equals 2Γ</li>
+<li>τ = 1/2Γ.</li>
+</ul>
+</blockquote>
+<h3 id="2-拉曼光谱-raman-spectra"><a href="#2-拉曼光谱-raman-spectra" class="headerlink" title="2. 拉曼光谱(raman spectra)"></a>2. 拉曼光谱(raman spectra)</h3><p><img src="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/Blog/lmss.PNG"></p>
+<ul>
+<li>利用光子与原子产生的散射光来研究振动能量方式的。</li>
+<li>在拉曼散射中，入射光子与原子发生非弹性散射，进行能量交换而产生拉曼信号。</li>
+<li>产生的散射光中小于原入射光子频率的称为斯托克斯（Stokes）偏移，</li>
+<li>大于入射光子频率的称为反斯托克斯（Anti-Stokes）偏移。</li>
+<li>等于入射光子频率的称为瑞利（Rayleigh）偏移。</li>
+</ul>
+<h3 id="3-杂化-hybridization"><a href="#3-杂化-hybridization" class="headerlink" title="3. 杂化(hybridization)"></a>3. <a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%9D%82%E5%8C%96">杂化(hybridization)</a></h3><blockquote>
+<p>在成键过程中，由于原子间的相互影响，同一原子中几个能量相近的不同类型的原子轨道（即波函数），可以进行线性组合，重新分配能量和确定空间方向，组成数目相等的新的原子轨道，这种轨道重新组合的过程称为杂化（hybridization），杂化后形成的新轨道称为 杂化轨道（hybrid orbital）。</p>
+</blockquote>
+<p><strong>07-24</strong></p>
+<h3 id="4-散射相空间SPS-scattering-phase-space"><a href="#4-散射相空间SPS-scattering-phase-space" class="headerlink" title="4. 散射相空间SPS(scattering phase space"></a>4. 散射相空间<code>SPS</code>(scattering phase space</h3><blockquote>
+<ul>
+<li><a target="_blank" rel="noopener" href="http://bolvan.ph.utexas.edu/~vadim/Classes/2016f/phase-space.pdf">相空间(phase space)</a> ，<a target="_blank" rel="noopener" href="https://doi.org/10.1117/12.2309519">相空间的散射理论</a></li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>相空间在数学与物理学中，是一个用以表示出一系统所有可能状态的空间；系统每个可能的状态都有一相对应的相空间的点。</li>
+<li>搞不懂啊……</li>
+</ul>
+</blockquote>
+<p><strong>07-27</strong></p>
+<h3 id="5-泡利不相容原理-Pauli-exclusion-principe"><a href="#5-泡利不相容原理-Pauli-exclusion-principe" class="headerlink" title="5. 泡利不相容原理(Pauli exclusion principe)"></a>5. 泡利不相容原理(Pauli exclusion principe)</h3><blockquote>
+<ul>
+<li>在<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E8%B4%B9%E7%B1%B3%E5%AD%90">费米子</a>组成的系统中，不能有两个或两个以上的粒子处于完全相同的状态。</li>
+<li>通俗的说就是，两个相同的粒子不能处于同一个状态。</li>
+<li>费米子(玻色子)满足(不满足)泡利不相容原理。</li>
+<li>自旋为整数(0,1,2……)的是玻色子，为半奇数(1/2,3/2,5/2……)的为费米子。</li>
+<li>玻色子一般有：光子、</li>
+<li>费米子一般有：电子、中子、质子……</li>
+</ul>
+</blockquote>
+<p><strong>2020-(08~11)</strong></p>
+<p><strong>08-19</strong></p>
+<h3 id="6-热力学定律"><a href="#6-热力学定律" class="headerlink" title="6. 热力学定律"></a>6. 热力学定律</h3><p>老是记不住，参考自：《热力学.统计物理》第五版—汪志诚</p>
+<ol>
+<li>热力学第一定律：能量守恒定律，公式：U1-U2=W+Q，系统在终态2和初态1的内能之差（U1-U2）等于在过程中外界对系统所作的功W与系统从外界吸收的热量Q之和。（也即是，在过程中通过作功和传热两种方式所传递的能量，都转化为系统的内能）<blockquote>
+<ul>
+<li>表述1：自然界一切物质都具有能量，能量有各种不同的形式，可以从一种形式转化为另一种形式，从一个物体传递到另一个物体，在传递和转化中能量的数量不变。</li>
+<li>表述2：第一类永动机是不可能的造成的。</li>
+</ul>
+</blockquote>
+</li>
+<li>热力学第二定律：<blockquote>
+<ul>
+<li>克氏表述：不可能把热量从低温物体传到高温物体而不引起其他变化。</li>
+<li>开氏表述：不可能从单一热源吸热使之完全变成有用的功而不引起其他变化。（或者，第二类永动机是不可能造成的。）</li>
+</ul>
+</blockquote>
+</li>
+<li>卡诺定理：所有工作于两个一定温度之间的热机，以可逆机的效率最高。<blockquote>
+<ul>
+<li>推论：所有工作于两个一定温度之间的可逆热机，其效率相等。</li>
+</ul>
+</blockquote>
+</li>
+<li>热力学第三定律：不可能通过有限的步骤使一个物体冷却到热力学温度的零度（绝对零度）。</li>
+</ol>
+<p><strong>09-1</strong></p>
+<h3 id="7-RDF"><a href="#7-RDF" class="headerlink" title="7. RDF"></a>7. RDF</h3><p><a target="_blank" rel="noopener" href="http://isaacs.sourceforge.net/phys/rdfs.html">The radial distribution function(RDF)</a><br>通俗的讲就是，局部的密度与全局的密度的比值。</p>
+<p><strong>09-08</strong></p>
+<h3 id="8-极化（polarization）"><a href="#8-极化（polarization）" class="headerlink" title="8. 极化（polarization）"></a>8. 极化（polarization）</h3><ol>
+<li>在原始晶体材料中，正常的模，都是具有明确极化的声子模；</li>
+<li>当材料变得越无序的时候，给定模式的原子振动方向就会变得越不像波、well-defined、越随机。也即是，极化越弱，波矢量的定义缺失。</li>
+</ol>
+<h3 id="9-phonon-wave-packets"><a href="#9-phonon-wave-packets" class="headerlink" title="9. phonon wave-packets"></a>9. phonon wave-packets</h3><p><strong>11-02</strong></p>
+<ol>
+<li>The dominant width of phonon wave-packets is also called coherent length.</li>
+</ol>
+<h3 id="10-H-phase和T-phase"><a href="#10-H-phase和T-phase" class="headerlink" title="10. H-phase和T-phase"></a>10. H-phase和T-phase</h3><p><strong>12-07</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/Blog/Atomic-configurations-of-the-a-H-phase-b-T-phase-and-c-distorted-T-phase-T_W640.jpg"></p>
+<p>图片引用自：DOI: 10.1021/acsnano.6b00148</p>
+<ol>
+<li>TMDs的H-phase和T-phase,表示不同结构</li>
+</ol>
+<ul>
+<li>不同材料的不同phase的稳定性不同；</li>
+<li>例如MoTe2在H-phase更稳定；而WTe2在T-phase更稳定</li>
+<li>两个phase的能量差不是很大，所以两项可以共存（coexistence），</li>
+<li>却有不同的电子性质，比如在H-phase是半导体，在T-phase可能是半金属或者拓扑绝缘体,跟层数有关。</li>
+</ul>
+<h3 id="11-简并（Degeneration-amp-Entartung）"><a href="#11-简并（Degeneration-amp-Entartung）" class="headerlink" title="11. 简并（Degeneration&amp;Entartung）"></a>11. 简并（Degeneration&amp;Entartung）</h3><ul>
+<li><a target="_blank" rel="noopener" href="http://www.wuli.ac.cn/fileup/PDF/2013-42-09-011.pdf">简并（Degeneration&amp;Entartung）</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/27824623">简并</a></li>
+</ul>
+<h3 id="12-绝热近似（Born-Oppenheimer）："><a href="#12-绝热近似（Born-Oppenheimer）：" class="headerlink" title="12. 绝热近似（Born-Oppenheimer）："></a>12. 绝热近似（Born-Oppenheimer）：</h3><ul>
+<li>将原子核与电子的运动分开考虑，认为电子能绝热于原子核的运动。</li>
+<li>也即是，在考虑电子运动时，原子核处于静止状态（电子的运动速度比原子核高出几个量级）；</li>
+<li>考虑原子核的运动则不考虑周围电子的分布。</li>
+</ul>
+<p><strong>2021-03-16</strong></p>
+<h3 id="13-AA-stacking和-AB-BA-stacking的区别"><a href="#13-AA-stacking和-AB-BA-stacking的区别" class="headerlink" title="13. AA stacking和 AB(BA) stacking的区别"></a>13. AA stacking和 AB(BA) stacking的区别</h3><p><img src="https://www.researchgate.net/profile/Ke-Xu-34/publication/328891557/figure/fig1/AS:709563540054017@1546184539404/Atomic-structure-of-AA-stacking-and-AB-stacking-hetero-bilayer-MX-2-in-a-3-A-3-A-1.png"></p>
+<ul>
+<li>参考文献：<br><a target="_blank" rel="noopener" href="https://pubs.rsc.org/lv/content/articlelanding/2018/cp/c8cp05522j/unauth#!divAbstract">[1]. Xu K, Xu Y, Zhang H, et al. The role of Anderson’s rule in determining electronic, optical and transport properties of transition metal dichalcogenide heterostructures[J]. Physical Chemistry Chemical Physics, 2018, 20(48): 30351-30364.</a></li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/ab_stacking.png"></p>
+<ul>
+<li>参考文献：<br><a target="_blank" rel="noopener" href="https://doi.org/10.1038/s41563-021-00960-1">[2]. Quan, J., Linhart, L., Lin, ML. et al. Phonon renormalization in reconstructed MoS2 moiré superlattices. Nat. Mater. (2021).</a></li>
+</ul>
+<p><strong>2021-03-26</strong></p>
+<h3 id="14-Wiedemann-Franz-law（威德曼-弗朗兹定律）"><a href="#14-Wiedemann-Franz-law（威德曼-弗朗兹定律）" class="headerlink" title="14. Wiedemann-Franz law（威德曼-弗朗兹定律）"></a>14. <a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%A8%81%E5%BE%B7%E6%9B%BC-%E5%BC%97%E6%9C%97%E5%85%B9%E5%AE%9A%E5%BE%8B/8821039?fr=aladdin">Wiedemann-Franz law（威德曼-弗朗兹定律）</a></h3><ul>
+<li>Wiedemann-Franz定律是关于金属材料热导率与电导率之间的关系的定律。</li>
+<li>自由电子引起的热导率可以通过电导率，利用Wiedemann-Franz定律得到。</li>
+<li><strong>在物理学中，wiedemann–franz定律的简述是，金属的热导率（k）与导电率（σ）之比与温度（t）成正比。</strong></li>
+<li><strong>κ/σ=LT</strong>（常数L即洛伦兹数(Lorenz number)）</li>
+<li>即在给定温度下，许多金属材料的热导率(κ)与它的电导率(σ)之比约为常数。</li>
+<li>德国物理学家Gustav Wiedemann和Rudolph Franz于1853年由大量实验事实发现，许多金属的热导率和电导率的比值都是一个常数，这一规律称为威德曼-弗朗兹定律。</li>
+<li>1872年，Ludvig Lorenz进一步发现，比值λ/σT是与金属种类无关的常数，T是绝对温度，这常数用L表示，称洛伦兹数。Ludwig Lorenz发现了κ/σ与温度的比例关系。</li>
+</ul>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。 </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2020-2021 Eastsheng
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>喜欢就点赞,疼爱就打赏</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/MyDocs/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/MyDocs/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">支付宝</label></span><span><label><input type="radio" name="pay" value="weixin">微信</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="/MyDocs/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/MyDocs/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 572px;
+    }
+    .nav.fullscreen {
+        margin-left: -572px;
+    }
+    .nav-left {
+        width: 150px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;
+        background: url("/MyDocs/img/ys.jpg");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+
+    
+</style>
+
+
+
+
+
+
+
+
+</html>
