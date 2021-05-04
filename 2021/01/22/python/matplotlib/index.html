@@ -605,14 +605,6 @@
             <span class="post-date" title="2021-03-15 18:11:28">2021/03/15</span>
         </a>
         
-        <a  class="全部文章 Notes "
-           href="/MyDocs/2021/01/22/notes/DailyNotes2021/"
-           data-tag="Daily Notes"
-           data-author="" >
-            <span class="post-title" title="随笔---2021">随笔---2021</span>
-            <span class="post-date" title="2021-01-22 18:11:28">2021/01/22</span>
-        </a>
-        
         <a  class="全部文章 Python Matplotlib "
            href="/MyDocs/2021/01/22/python/matplotlib/"
            data-tag="Python,Matplotlib"
@@ -634,6 +626,14 @@
            data-tag="Python,Bug"
            data-author="" >
             <span class="post-title" title="Python问题与解决方法汇总">Python问题与解决方法汇总</span>
+            <span class="post-date" title="2021-01-22 18:11:28">2021/01/22</span>
+        </a>
+        
+        <a  class="全部文章 Notes "
+           href="/MyDocs/2021/01/22/notes/DailyNotes2021/"
+           data-tag="Daily Notes"
+           data-author="" >
+            <span class="post-title" title="随笔---2021">随笔---2021</span>
             <span class="post-date" title="2021-01-22 18:11:28">2021/01/22</span>
         </a>
         
@@ -1054,6 +1054,25 @@ plt.subplots_adjust(wspace =0, hspace =0)#调整子图间距
         $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
 
         
+        
+        /* 渲染*/
+        function HTMLDecode(text) {
+            var temp = document.createElement("div");
+            temp.innerHTML = text;
+            var output = temp.innerText || temp.textContent;
+            temp = null;
+            return output;
+        }
+        if (window.mermaid){
+            window.mermaid = null
+        }
+        $.getScript("//cdnjs.cloudflare.com/ajax/libs/mermaid/8.3.1/mermaid.min.js", function () {
+            var mermaidOptions = JSON.parse(HTMLDecode("{&#34;theme&#34;:&#34;default&#34;,&#34;startOnLoad&#34;:true,&#34;flowchart&#34;:{&#34;useMaxWidth&#34;:false,&#34;htmlLabels&#34;:true}}"))
+            if (window.mermaid) {
+                mermaid.initialize(mermaidOptions)
+                mermaid.contentLoaded()
+            }
+        })
         
     }
 
