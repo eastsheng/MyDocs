@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Python问题与解决方法汇总 | MyDocs</title>
-  <meta name="keywords" content=" Python , Bug ">
-  <meta name="description" content="Python问题与解决方法汇总 | MyDocs">
+  <title>挖矿流程 | MyDocs</title>
+  <meta name="keywords" content=" Daily Notes ">
+  <meta name="description" content="挖矿流程 | MyDocs">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="[toc] 1. electrum钱包 安装钱包 生成地址  2. 挖矿软件nicehash">
 <meta property="og:type" content="article">
@@ -770,9 +770,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-python/problems" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-notes/mining" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">Python问题与解决方法汇总</h1>
+        <h1 class="article-title">挖矿流程</h1>
     
     <div class="article-meta">
         
@@ -782,9 +782,7 @@
             <i class="iconfont icon-category"></i>
             
             
-            <a  data-rel="Python">Python</a> > 
-            
-            <a  data-rel="Python&lt;---&gt;Bug">Bug</a>
+            <a  data-rel="Notes">Notes</a>
             
         </span>
         
@@ -792,21 +790,19 @@
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color2">Python</a>
-            
-            <a class="color4">Bug</a>
+            <a class="color2">Daily Notes</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2021-05-09 00:31:27'>2021-01-22 18:11</time>
+            发布时间 : <time class="date" title='最后更新: 2021-05-21 12:37:33'>2021-05-21 18:11</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:383</span>
+        <span>字数:19</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -825,7 +821,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Windows%E4%B8%8B-quot-MINGW64-quot-%E4%B8%AD%E8%BF%90%E8%A1%8Cpython%E6%B2%A1%E5%8F%8D%E5%BA%94"><span class="toc-text">1. Windows下&quot;MINGW64&quot;中运行python没反应</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-FileNotFoundError-Could-not-find-module"><span class="toc-text">2. FileNotFoundError: Could not find module</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Centos-7%E5%AE%89%E8%A3%85python3"><span class="toc-text">3. Centos 7安装python3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-StopIteration"><span class="toc-text">4. StopIteration</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-overflow-encountered"><span class="toc-text">5. overflow encountered</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-electrum%E9%92%B1%E5%8C%85"><span class="toc-text">1. electrum钱包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%8C%96%E7%9F%BF%E8%BD%AF%E4%BB%B6nicehash"><span class="toc-text">2. 挖矿软件nicehash</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -841,75 +837,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><div class='inner-toc'><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Windows%E4%B8%8B-quot-MINGW64-quot-%E4%B8%AD%E8%BF%90%E8%A1%8Cpython%E6%B2%A1%E5%8F%8D%E5%BA%94"><span class="toc-text">1. Windows下&quot;MINGW64&quot;中运行python没反应</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-FileNotFoundError-Could-not-find-module"><span class="toc-text">2. FileNotFoundError: Could not find module</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Centos-7%E5%AE%89%E8%A3%85python3"><span class="toc-text">3. Centos 7安装python3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-StopIteration"><span class="toc-text">4. StopIteration</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-overflow-encountered"><span class="toc-text">5. overflow encountered</span></a></li></ol></div></p>
-<h3 id="1-Windows下-quot-MINGW64-quot-中运行python没反应"><a href="#1-Windows下-quot-MINGW64-quot-中运行python没反应" class="headerlink" title="1. Windows下&quot;MINGW64&quot;中运行python没反应"></a><code>1. Windows下&quot;MINGW64&quot;中运行python没反应</code></h3><blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/mingw64_python1.png"></p>
-</blockquote>
-<ul>
-<li><strong><font size=5>（1）.</font> 可以<code>pip list</code>，也可以<code>python --version</code>，但是直接输入<code>python</code>就卡那不动了</strong></li>
+        <p><div class='inner-toc'><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-electrum%E9%92%B1%E5%8C%85"><span class="toc-text">1. electrum钱包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%8C%96%E7%9F%BF%E8%BD%AF%E4%BB%B6nicehash"><span class="toc-text">2. 挖矿软件nicehash</span></a></li></ol></div></p>
+<h3 id="1-electrum钱包"><a href="#1-electrum钱包" class="headerlink" title="1. electrum钱包"></a>1. <a target="_blank" rel="noopener" href="https://electrum.org/#home">electrum钱包</a></h3><ul>
+<li>安装钱包</li>
+<li>生成地址<br><img src="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/bit/electrum_1.PNG"><br><img src="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/bit/electrum_2.PNG"><br><img src="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/bit/electrum_3.PNG"><br><img src="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/bit/electrum_4.PNG"><br><img src="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/bit/electrum_5.PNG"><br><img src="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/bit/electrum_6.PNG"><br><img src="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/bit/electrum_7.PNG"><br><img src="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/bit/electrum_8.PNG"></li>
 </ul>
-<blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/mingw64_python2.png"></p>
-</blockquote>
-<blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/mingw64_python3.png"></p>
-</blockquote>
-<ul>
-<li><strong><font size=5>（2）.</font> 解决方法–&gt;在 <code>MINGW64 git shell</code> 中输入以下命令即可解决：</strong></li>
-</ul>
-<pre><code class="bash">alias python=&#39;winpty python.exe&#39;
-</code></pre>
-<blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/mingw64_python4.png"></p>
-</blockquote>
-<ul>
-<li><strong><font size=5>（3）.</font> 但是，发现这只是临时的，关了再重新打开输入<code>python</code>，还是没反应</strong></li>
-<li><strong><font size=5>（4）.</font> 永久解决方法，将第2步命令直接复制到以下文件中：<code>C:\Users\yourcomputer\.bash_profile</code></strong></li>
-</ul>
-<p>参考链接：<br>[1] <a target="_blank" rel="noopener" href="https://www.codenong.com/32597209/">https://www.codenong.com/32597209/</a></p>
-<h3 id="2-FileNotFoundError-Could-not-find-module"><a href="#2-FileNotFoundError-Could-not-find-module" class="headerlink" title="2. FileNotFoundError: Could not find module"></a><code>2. FileNotFoundError: Could not find module</code></h3><ul>
-<li><strong><font size=5>（1）.</font>引用<code>vlc</code>库时报错：</strong></li>
-</ul>
-<pre><code class="bash">FileNotFoundError: Could not find module &#39;...\2021\2021-3\libvlc.dll&#39; (or one of its dependencies). 
-Try using the full path with constructor syntax.
-</code></pre>
-<ul>
-<li><strong><font size=5>（2）.</font>解决方法：</strong></li>
-</ul>
-<p>①. 首先<code>pip list</code>查看vlc的版本：</p>
-<blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/mingw64_python5.png"></p>
-</blockquote>
-<p>②. 然后，下载并解压对应vlc版本 <a target="_blank" rel="noopener" href="http://download.videolan.org/pub/videolan/vlc/">http://download.videolan.org/pub/videolan/vlc/</a></p>
-<blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/mingw64_python6.png"></p>
-</blockquote>
-<p>③. 将文件夹中<code>plugins</code>、<code>libvlc.dll</code>、<code>libvlccore.dll</code>，复制到添加到已经设置环境变量的文件夹中，这里我直接复制到<code>D:\softwares\Python\Python39\Scripts</code>中</p>
-<blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/mingw64_python7.png"></p>
-</blockquote>
-<p>参考链接：<br>[1] <a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/59014318/filenotfounderror-could-not-find-module-libvlc-dll">https://stackoverflow.com/questions/59014318/filenotfounderror-could-not-find-module-libvlc-dll</a><br>[2] <a target="_blank" rel="noopener" href="https://blog.csdn.net/fleaxin/article/details/101943941">https://blog.csdn.net/fleaxin/article/details/101943941</a><br>④. 解决</p>
-<h3 id="3-Centos-7安装python3"><a href="#3-Centos-7安装python3" class="headerlink" title="3. Centos 7安装python3"></a><code>3. Centos 7安装python3</code></h3><ul>
-<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/simuhunluo/p/7704765.html">Centos 7安装python3 </a></li>
-</ul>
-<h3 id="4-StopIteration"><a href="#4-StopIteration" class="headerlink" title="4. StopIteration"></a><code>4. StopIteration</code></h3><ul>
-<li>StopIteration异常，一般是由于迭代时所给的数据超出实际数据范围所致；</li>
-<li>如果想要正常运行已给出数据范围的程序，则可以处理异常程序：<pre><code class="python">re = iter(range(5))
-try:
-  for i inrange(200):
-      print(&quot;normal: &quot;,re.next())
-except StopIteration:
-  print(&#39;Here is stop &#39;,i)
-</code></pre>
-</li>
-</ul>
-<h3 id="5-overflow-encountered"><a href="#5-overflow-encountered" class="headerlink" title="5. overflow encountered"></a><code>5. overflow encountered</code></h3><pre><code class="bash">RuntimeWarning: overflow encountered in det r = _umath_linalg.det(a, signature=signature)
-</code></pre>
-<ul>
-<li>计算行列式时溢出；</li>
-<li>没解决。</li>
-</ul>
-
+<h3 id="2-挖矿软件nicehash"><a href="#2-挖矿软件nicehash" class="headerlink" title="2. 挖矿软件nicehash"></a>2. 挖矿软件<a target="_blank" rel="noopener" href="https://www.nicehash.com/">nicehash</a></h3>
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。 </span>
     </div>
