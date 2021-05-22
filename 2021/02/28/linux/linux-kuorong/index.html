@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Python Code Study | MyDocs</title>
-  <meta name="keywords" content=" Python , Code ">
-  <meta name="description" content="Python Code Study | MyDocs">
+  <title>虚拟机扩容 | MyDocs</title>
+  <meta name="keywords" content=" Linux , 虚拟机扩容 , Ubuntu ">
+  <meta name="description" content="虚拟机扩容 | MyDocs">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="[toc] 1. electrum钱包 安装钱包 生成地址  2. 挖矿软件nicehash">
 <meta property="og:type" content="article">
@@ -856,9 +856,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-python/python_code_study" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-linux/linux-kuorong" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">Python Code Study</h1>
+        <h1 class="article-title">虚拟机扩容</h1>
     
     <div class="article-meta">
         
@@ -868,9 +868,9 @@
             <i class="iconfont icon-category"></i>
             
             
-            <a  data-rel="Python">Python</a> > 
+            <a  data-rel="Linux">Linux</a> > 
             
-            <a  data-rel="Python&lt;---&gt;Code">Code</a>
+            <a  data-rel="Linux&lt;---&gt;虚拟机">虚拟机</a>
             
         </span>
         
@@ -878,21 +878,23 @@
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color2">Python</a>
+            <a class="color1">Linux</a>
             
-            <a class="color5">Code</a>
+            <a class="color1">虚拟机扩容</a>
+            
+            <a class="color2">Ubuntu</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2021-04-11 18:22:32'>2021-04-11 18:22</time>
+            发布时间 : <time class="date" title='最后更新: 2021-05-23 00:22:17'>2021-02-28 13:36</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:194</span>
+        <span>字数:420</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -911,7 +913,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%93%8D%E4%BD%9C%E6%96%87%E4%BB%B6%EF%BC%88%E5%A4%B9%EF%BC%89%E7%AD%89"><span class="toc-text">1. 操作文件（夹）等</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-VMware%E8%99%9A%E6%8B%9F%E6%9C%BA%E8%99%9A%E6%8B%9F%E7%A1%AC%E7%9B%98%E6%89%A9%E5%B1%95"><span class="toc-text">1. VMware虚拟机虚拟硬盘扩展</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%9C%A8Ubuntu%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%AD%E5%88%86%E9%85%8D%E5%86%85%E5%AD%98"><span class="toc-text">2. 在Ubuntu虚拟机中分配内存</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%9C%80%E5%90%8E%E5%8F%AF%E8%83%BD%E8%BF%98%E4%BC%9A%E6%9C%89%E4%B8%AA1MiB%E7%9A%84%E7%A9%BA%E9%97%B4%E6%9C%AA%E5%88%86%E9%85%8D"><span class="toc-text">3. 最后可能还会有个1MiB的空间未分配</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E7%BB%88%E7%AB%AF%E6%9F%A5%E7%9C%8Bdf-h%E7%A9%BA%E9%97%B4%E6%98%AF%E5%90%A6%E5%A2%9E%E5%8A%A0"><span class="toc-text">4. 终端查看df -h空间是否增加</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -927,46 +929,32 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><div class='inner-toc'><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%93%8D%E4%BD%9C%E6%96%87%E4%BB%B6%EF%BC%88%E5%A4%B9%EF%BC%89%E7%AD%89"><span class="toc-text">1. 操作文件（夹）等</span></a></li></ol></div></p>
-<h3 id="1-操作文件（夹）等"><a href="#1-操作文件（夹）等" class="headerlink" title="1. 操作文件（夹）等"></a>1. 操作文件（夹）等</h3><ul>
-<li><p>例如：获得当前文件所在目录</p>
-<pre><code class="python">path=os.getcwd()
-print(path)
-</code></pre>
-</li>
-<li><p>在当前文件夹生成文件夹，以时间命名</p>
-<pre><code class="python">folder=time.strftime(r&quot;%Y-%m-%d_%H-%M-%S&quot;,time.localtime())
-folder=time.strftime(r&quot;%Y%m%d_%H%M%S&quot;,time.localtime())
-os.makedirs(r&#39;%s/%s&#39;%(os.getcwd(),folder))
-</code></pre>
-</li>
-<li><p>更改当前工作路径</p>
-<pre><code class="python">os.chdir(&#39;C:\\Users\\ASUS\\Desktop\\1&#39;)
-path=os.getcwd()
-print(path)
-</code></pre>
-</li>
-<li><p>判断一个路径是否存在</p>
-<pre><code class="python">path_yesno = os.path.exists(&#39;C:\\Users\\ASUS\\Desktop\\1&#39;)
-print(path_yesno)
-</code></pre>
-</li>
-<li><p>获取目录中所有文件及文件夹list</p>
-<pre><code class="python">PATH = os.listdir(&#39;C:\\Users\\ASUS\\Desktop&#39;)
-print(PATH)
-</code></pre>
-</li>
-<li><p>创建和删除子目录</p>
-<pre><code class="python">os.makedirs(&#39;C:\\Users\\ASUS\\Desktop\\2&#39;)
-os.rmdir(&#39;C:\\Users\\ASUS\\Desktop\\2&#39;)
-path=os.getcwd()
-print(path)
-</code></pre>
-</li>
-<li><p>改文件名</p>
-<pre><code class="python">os.rename(&#39;123.txt&#39;,&#39;000.txt&#39;)
-</code></pre>
-</li>
+        <h3 id="1-VMware虚拟机虚拟硬盘扩展"><a href="#1-VMware虚拟机虚拟硬盘扩展" class="headerlink" title="1. VMware虚拟机虚拟硬盘扩展"></a>1. VMware虚拟机虚拟硬盘扩展</h3><p><img src="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/Blog/xuniji.PNG"></p>
+<ul>
+<li>虚拟机关机情况下，打开<code>虚拟机&gt;设置&gt;硬盘</code>；</li>
+<li>点击右侧<code>磁盘实用工具</code>下方<code>扩展</code>，输入磁盘大小，点击扩展;</li>
+<li><code>注意，谨慎操作，貌似虚拟盘只能增大，往小了改的话好像很困难，我是实现不了</code>;</li>
+<li>耐心等……</li>
+</ul>
+<h3 id="2-在Ubuntu虚拟机中分配内存"><a href="#2-在Ubuntu虚拟机中分配内存" class="headerlink" title="2. 在Ubuntu虚拟机中分配内存"></a>2. 在Ubuntu虚拟机中分配内存</h3><img src="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/Blog/xuniji2.png" height="500" width="500"/>
+
+<ul>
+<li>目前只是把内存给了虚拟机，就像是给电脑增加了个硬盘，但是，是未分配状态，因此需要分配空间;</li>
+<li>打开虚拟机，在终端使用：<code>sudo apt-get install gparted</code>安装磁盘分区软件<code>GParted</code>，打开<code>GParted</code></li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/Blog/xuniji3.png"></p>
+<ul>
+<li>可以看到一个<code>unallocated</code>的内存空间，右键所要扩容的一级磁盘<code>/dev/sda1</code>，点击<code>Resize/Move</code>，将进度条拉到最右边，点击<code>Resize</code>，相同方法操作二级磁盘，再点击上方绿色对勾√；</li>
+<li>比如，这只有两个盘，一个系统盘<code>/dev/sda1</code>和一个空间盘<code>/dev/sda2</code>，我们要扩容给空间盘<code>/dev/sda2</code>，就先右键<code>/dev/sda2</code>这一行（一级磁盘）扩容，然后发现<code>unallocated</code>并未分配，还需要再给它的子空间再分配一次。</li>
+<li>因为，直接右键<code>/dev/sda5</code>分配空间，是不行的，进度条是拉不动的，只有先给一级磁盘分配，然后再由一级分给二级才可以实现。</li>
+</ul>
+<h3 id="3-最后可能还会有个1MiB的空间未分配"><a href="#3-最后可能还会有个1MiB的空间未分配" class="headerlink" title="3. 最后可能还会有个1MiB的空间未分配"></a>3. 最后可能还会有个1MiB的空间未分配</h3><p><img src="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/Blog/xuniji4.png"></p>
+<ul>
+<li>直接把那<code>1MiB</code>空间加到<code>Free space following(MiB)</code>,然后<code>Resize</code>；</li>
+<li>之后就可以把这<code>1MiB</code>空间按上述操作再加到<code>/dev/sda2</code>或<code>/dev/sda5</code>里</li>
+</ul>
+<h3 id="4-终端查看df-h空间是否增加"><a href="#4-终端查看df-h空间是否增加" class="headerlink" title="4. 终端查看df -h空间是否增加"></a>4. 终端查看<code>df -h</code>空间是否增加</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/u013755520/article/details/91978293?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.control&dist_request_id=51cd5575-61bc-414c-a186-4798ec20747c&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.control">参考链接</a></li>
 </ul>
 
       
@@ -981,12 +969,12 @@ print(path)
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>Python Code Study</p>
-    <p><span class="copy-title">字数:</span><span class="post-count">200</span></p>
+    <p><span class="copy-title">文章标题:</span>虚拟机扩容</p>
+    <p><span class="copy-title">字数:</span><span class="post-count">420</span></p>
     <p><span class="copy-title">本文作者:</span><a  title="Eastsheng">Eastsheng</a></p>
-    <p><span class="copy-title">发布时间:</span>2021-04-11, 18:22:28</p>
-    <p><span class="copy-title">最后更新:</span>2021-04-11, 18:22:32</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2021/04/11/python/python_code_study/" title="Python Code Study">https://eastsheng.github.io/2021/04/11/python/python_code_study/</a>
+    <p><span class="copy-title">发布时间:</span>2021-02-28, 13:36:18</p>
+    <p><span class="copy-title">最后更新:</span>2021-05-23, 00:22:17</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2021/02/28/linux/linux-kuorong/" title="虚拟机扩容">https://eastsheng.github.io/2021/02/28/linux/linux-kuorong/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">&#34;署名-非商用-相同方式共享 4.0&#34;</a> 转载请保留原文链接及作者。
     </p>
