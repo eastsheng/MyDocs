@@ -166,27 +166,23 @@
     
     
     <entry>
-      <title>Matplotlib学习</title>
-      <link href="2021/01/22/python/matplotlib/"/>
-      <url>2021/01/22/python/matplotlib/</url>
+      <title>随笔---2021</title>
+      <link href="2021/01/22/notes/DailyNotes2021/"/>
+      <url>2021/01/22/notes/DailyNotes2021/</url>
       
-        <content type="html"><![CDATA[<p>[toc]</p><h3 id="1-画自定义颜色曲线"><a href="#1-画自定义颜色曲线" class="headerlink" title="1. 画自定义颜色曲线"></a>1. 画自定义颜色曲线</h3><img src="https://s1.ax1x.com/2020/08/27/dhFFdU.png" alt="Figure" border="0" /><pre><code class="python">import numpy as npimport matplotlib.pyplot as pltfrom matplotlib.collections import LineCollectionx = np.linspace(0, 2*np.pi, 100)y = np.sin(x)z = np.cos(x)#上色数据points = np.array([x, y]).T.reshape(-1, 1, 2)segments = np.concatenate([points[:-1], points[1:]], axis=1)fig, ax = plt.subplots(figsize=(5,3))fig.subplots_adjust(bottom=0.1,left=0.2)##调整边界norm = plt.Normalize(min(z),max(z))lc = LineCollection(segments,cmap=&#39;jet&#39;,norm=norm)lc.set_array(z)lc.set_linewidth(2)line = ax.add_collection(lc)fig.colorbar(line)plt.xlim(0,2*np.pi)plt.ylim(-1,1)plt.savefig(&#39;fig1.png&#39;)plt.show()</code></pre><ul><li>如果想要画很多曲线的上色，其实只要一个循环就可以了，这里不赘述。</li><li>参考 [1] <a href="https://www.matplotlib.org.cn/">https://www.matplotlib.org.cn/</a></li></ul><h3 id="2-直方图"><a href="#2-直方图" class="headerlink" title="2. 直方图"></a>2. 直方图</h3><p><img src="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/plot_bar.png"></p><pre><code class="python">import numpy as np import matplotlib.pyplot as plt X = np.linspace(0,1,10)Y = np.ones(X.size)plt.rc(&#39;font&#39;, family=&#39;Times New Roman&#39;,size=26)fig, ax = plt.subplots(figsize=(10, 4))fig.subplots_adjust(bottom=0.2,left=0.2)ax.bar(X,Y,0.05,hatch=&#39;\\\\&#39;,color=&#39;white&#39;,edgecolor=&#39;c&#39;)ax.set_xlabel(&#39;Eigenvector Amplitude&#39;,fontsize=26,fontweight=&#39;bold&#39;)ax.set_ylabel(&#39;Count&#39;,fontsize=26,fontweight=&#39;bold&#39;)plt.show()</code></pre><h3 id="3-直方截断图"><a href="#3-直方截断图" class="headerlink" title="3. 直方截断图"></a>3. 直方截断图</h3><p><img src="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/plot_broken.png"></p><pre><code class="python">import numpy as np import matplotlib.pyplot as plt from brokenaxes import brokenaxesX = np.linspace(0,1,10)Y = np.ones(X.size)plt.rc(&#39;font&#39;, family=&#39;Times New Roman&#39;,size=26)# fig = plt.subplots(figsize=(10, 4))fig = plt.figure(figsize=(10,4))ax = brokenaxes(ylims=((0,0.5),(0.6,1)),hspace=0.06,despine=False)# fig.subplots_adjust(bottom=0.2,left=0.2)ax.bar(X,Y,0.05,hatch=&#39;\\\\&#39;,color=&#39;white&#39;,edgecolor=&#39;c&#39;)# ax.set_xlabel(&#39;Eigenvector Amplitude&#39;,fontsize=26,fontweight=&#39;bold&#39;)# ax.set_ylabel(&#39;Count&#39;,fontsize=26,fontweight=&#39;bold&#39;)plt.show()</code></pre><h3 id="4-直方Log图"><a href="#4-直方Log图" class="headerlink" title="4. 直方Log图"></a>4. 直方Log图</h3><p><img src="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/plot_log.png"></p><pre><code class="python">import numpy as np import matplotlib.pyplot as plt from brokenaxes import brokenaxesX = np.linspace(0,1,10)Y = np.ones(X.size)plt.rc(&#39;font&#39;, family=&#39;Times New Roman&#39;,size=26)fig, ax= plt.subplots(figsize=(10, 4))# fig = plt.figure(figsize=(10,4))# ax = brokenaxes(ylims=((0,0.5),(0.6,1)),hspace=0.06,despine=False)fig.subplots_adjust(bottom=0.2,left=0.2)ax.bar(X,Y,0.05,hatch=&#39;\\\\&#39;,color=&#39;white&#39;,edgecolor=&#39;c&#39;)ax.set_xlabel(&#39;Eigenvector Amplitude&#39;,fontsize=26,fontweight=&#39;bold&#39;)ax.set_ylabel(&#39;Count&#39;,fontsize=26,fontweight=&#39;bold&#39;)&#39;&#39;&#39;x、y坐标log&#39;&#39;&#39;# ax.set_xscale(&quot;log&quot;)ax.set_yscale(&quot;log&quot;)plt.show()</code></pre><h3 id="5-点线图（Error-Bar）"><a href="#5-点线图（Error-Bar）" class="headerlink" title="5. 点线图（Error Bar）"></a>5. 点线图（Error Bar）</h3><p><img src="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/plot_Error_bar.png"></p><pre><code class="python">import numpy as np import matplotlib.pyplot as plt def plt_tc(tcfile):    tc = np.loadtxt(tcfile)    # print(tc)    x = tc[:,0]/32.06    y = tc[:,1:4]    y_mean = np.mean(y,axis=1)    y_std = np.std(y,axis=1)    # print(y_mean,y_std)    plt.rc(&#39;font&#39;,family=&#39;Times New Roman&#39;,size=26)    fig, ax = plt.subplots(figsize=(8,6))    fig.subplots_adjust(bottom=0.2,left=0.2)    s1 = ax.errorbar(x,y_mean,yerr=y_std,capsize=10,capthick=4,        fmt=&#39;bo:&#39;,mfc=&#39;w&#39;,mec=&#39;b&#39;,markersize=16,mew=2)    ax.legend(handles=[s1],labels=[&#39;$\mathregular&#123;MoS_2&#125;$/$\mathregular&#123;MoSe^&#123;78&#125;&#125;_\mathregular&#123;2&#125;$&#39;]        ,loc=&#39;best&#39;, fontsize=26)    ax.set_xlabel(&#39;Mass ratio (R)&#39;,fontsize=26,fontweight=&#39;bold&#39;)    ax.set_ylabel(&#39;Thermal conductivity (W/m-K)&#39;,fontsize=26,fontweight=&#39;bold&#39;)    ax.set_xticks([0,1,2,3,4,5,6])    plt.show()    return    if __name__ == &#39;__main__&#39;:    tcfile = &#39;./Thermal_conductivity.txt&#39;    plt_tc(tcfile)</code></pre><ul><li>数据</li></ul><pre><code class="./Thermal_conductivity.txt">8.9    17.925 16.9828 16.447515.999    19.5132 18.2719 19.375132.06    25.3194 23.8796 25.242948.9    23.6784 21.4915 22.988878.9    15.9254 14.4494 15.1808127.6    8.5564 9.0751 8.8317209    5.2363 6.8541 5.3407</code></pre><ul><li>参考：[1] <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.errorbar.html">https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.errorbar.html</a></li></ul><h3 id="6-去掉坐标轴"><a href="#6-去掉坐标轴" class="headerlink" title="6. 去掉坐标轴"></a>6. 去掉坐标轴</h3><pre><code class="python">plt.xticks([])  #去掉x轴plt.yticks([])  #去掉y轴plt.axis(&#39;off&#39;)  #去掉坐标轴</code></pre><p>or</p><pre><code class="python">ax = plt.gca()ax.spines[&#39;top&#39;].set_visible(False)ax.spines[&#39;bottom&#39;].set_visible(False)ax.spines[&#39;left&#39;].set_visible(False)ax.spines[&#39;right&#39;].set_visible(False)</code></pre><p>or</p><pre><code class="python">ax.set_xticks([]), ax_set_yticks([]) #关闭坐标刻度ax.axis(&#39;off&#39;) #关闭坐标轴ax.set_title()#设置标题</code></pre><p>参考：<br>[1] <a href="https://blog.csdn.net/lly1122334/article/details/90647962">https://blog.csdn.net/lly1122334/article/details/90647962</a><br>[2] <a href="https://blog.csdn.net/lanchunhui/article/details/80100430">https://blog.csdn.net/lanchunhui/article/details/80100430</a></p><h3 id="7-调整图间距"><a href="#7-调整图间距" class="headerlink" title="7. 调整图间距"></a>7. 调整图间距</h3><pre><code class="python">fig.tight_layout()#调整整体处于正确位置fig.subplots_adjust(bottom=0.2,left=0.15)#调整图间距plt.subplots_adjust(wspace =0, hspace =0)#调整子图间距</code></pre><p>参考：[1] <a href="https://blog.csdn.net/GAN_player/article/details/78543643">https://blog.csdn.net/GAN_player/article/details/78543643</a></p><h3 id="8-图片上添加文字"><a href="#8-图片上添加文字" class="headerlink" title="8. 图片上添加文字"></a>8. 图片上添加文字</h3><pre><code class="python">plt.text(100, 100, &#39;text&#39;) #(x坐标,y坐标,&#39;text&#39;)</code></pre>]]></content>
+        <content type="html"><![CDATA[<p>[toc]</p><h3 id="1-只要使用键盘Materials-Studio就卡住"><a href="#1-只要使用键盘Materials-Studio就卡住" class="headerlink" title="1. 只要使用键盘Materials Studio就卡住"></a><strong>1. 只要使用键盘Materials Studio就卡住</strong></h3><ul><li>解决方法：在微软拼音输入法的“中”(或“英”)字上右击鼠标，然后点“设置”，在弹出界面中点“常规”，在新界面中向下滚动动底部，有个兼容性，打开兼容性，然后就OK了。</li><li>参考链接:<br>[1] <a href="http://muchong.com/t-14329827-1">http://muchong.com/t-14329827-1</a></li></ul><h3 id="2-最新WIN10-20H2系统找回经典系统属性界面的最彻底的方法"><a href="#2-最新WIN10-20H2系统找回经典系统属性界面的最彻底的方法" class="headerlink" title="2. 最新WIN10 20H2系统找回经典系统属性界面的最彻底的方法"></a><strong>2. 最新WIN10 20H2系统找回经典系统属性界面的最彻底的方法</strong></h3><ul><li>重装了Win10 20H2以后，右键此电脑后的属性面板变了，要彻底换回经典的属性面板方法。</li><li>（1）打开注册表，直接搜索<code>注册表</code>、或者<code>Win+R</code>，然后输入<code>regedit</code>；</li><li>（2）找到路径<code>HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\FeatureManagement\Overrides\0\2093230218</code>;</li><li>（3）将EnabledState的数值数据修改为 <code>1</code> 即可。</li><li>（4）参考链接：<a href="https://www.bilibili.com/read/cv8197364">https://www.bilibili.com/read/cv8197364</a></li></ul><h3 id="3-OPLS-optimized-potentials-for-liquid-simulations"><a href="#3-OPLS-optimized-potentials-for-liquid-simulations" class="headerlink" title="3. OPLS(optimized potentials for liquid simulations)"></a><strong>3. OPLS(optimized potentials for liquid simulations)</strong></h3><ul><li>参考链接:<br>[1] <a href="https://blog.csdn.net/qq_31346429/article/details/106358251">https://blog.csdn.net/qq_31346429/article/details/106358251</a></li></ul><h3 id="4-AMBER基础教程B0：AMBER分子动力学模拟入门"><a href="#4-AMBER基础教程B0：AMBER分子动力学模拟入门" class="headerlink" title="4. [AMBER基础教程B0：AMBER分子动力学模拟入门]"></a><strong>4. [AMBER基础教程B0：AMBER分子动力学模拟入门]</strong></h3><ul><li>参考链接:<br>[1] <a href="https://jerkwin.github.io/2018/01/17/AMBER%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8BB0-AMBER%E5%88%86%E5%AD%90%E5%8A%A8%E5%8A%9B%E5%AD%A6%E6%A8%A1%E6%8B%9F%E5%85%A5%E9%97%A8/">https://jerkwin.github.io/2018/01/17/AMBER%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8BB0-AMBER%E5%88%86%E5%AD%90%E5%8A%A8%E5%8A%9B%E5%AD%A6%E6%A8%A1%E6%8B%9F%E5%85%A5%E9%97%A8/</a></li></ul><h3 id="5-国内9大免费CDN汇总-转"><a href="#5-国内9大免费CDN汇总-转" class="headerlink" title="5. 国内9大免费CDN汇总 转"></a><strong>5. 国内9大免费CDN汇总 转</strong></h3><ul><li>转 [1] <a href="https://cloud.tencent.com/developer/article/1352398">https://cloud.tencent.com/developer/article/1352398</a></li></ul><h3 id="6-ctrl-c没反应"><a href="#6-ctrl-c没反应" class="headerlink" title="6. ctrl+c没反应"></a><strong>6. <code>ctrl+c</code>没反应</strong></h3><ul><li>可能是开着有道翻译快捷键冲突了，关了有道或者其他快捷键冲突软件即可</li></ul><h3 id="7-R7000office时不时闪黑屏"><a href="#7-R7000office时不时闪黑屏" class="headerlink" title="7. R7000office时不时闪黑屏"></a><strong>7. <code>R7000</code>office时不时闪黑屏</strong></h3><p><img src="https://filestore.community.support.microsoft.com/api/images/25b29daa-46b9-47c5-8875-3952d3cf174b?upload=true"></p><ul><li>打开office，文件&gt;选项&gt;高级&gt;显示</li><li>勾选“禁用硬件图形加速”，“应用”并“确定”</li><li>参考：[1] <a href="https://answers.microsoft.com/zh-hans/msoffice/forum/msoffice_word-mso_win10-mso_2019/office-%E9%97%AA%E5%B1%8F/33c9a15d-595b-4c62-8d30-fbce21a24fc8">https://answers.microsoft.com/zh-hans/msoffice/forum/msoffice_word-mso_win10-mso_2019/office-%E9%97%AA%E5%B1%8F/33c9a15d-595b-4c62-8d30-fbce21a24fc8</a></li></ul><h3 id="8-双系统教程参考"><a href="#8-双系统教程参考" class="headerlink" title="8. 双系统教程参考"></a><strong>8. 双系统教程参考</strong></h3><ul><li><a href="https://www.cnblogs.com/masbay/p/10745170.html">https://www.cnblogs.com/masbay/p/10745170.html</a></li></ul><h3 id="9-Origin-Copy-Page到Word或PPT后侧边空白多？"><a href="#9-Origin-Copy-Page到Word或PPT后侧边空白多？" class="headerlink" title="9. Origin, Copy Page到Word或PPT后侧边空白多？"></a><strong>9. Origin, Copy Page到Word或PPT后侧边空白多？</strong></h3><ul><li>修改Tools→Options→page选项卡，将Margin Control 设置为Tight，或者将Clip Border Width设置为0，两种都可行。</li></ul><p><img src="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/origin_bug.png"></p><ul><li>若以上步骤不行，那应该是电脑的屏幕缩放不是100%，改为100%就好；</li><li>或者换更高版本的Origin.</li></ul><h3 id="10-FFTW"><a href="#10-FFTW" class="headerlink" title="10. FFTW"></a><strong>10. FFTW</strong></h3><ul><li>Windows安装跟使用fftw  <a href="http://m.myexceptions.net/windows/1616414.html">http://m.myexceptions.net/windows/1616414.html</a></li><li>linux 和 Windows下FFTW库的安装  <a href="https://blog.csdn.net/dengm155/article/details/53819704">https://blog.csdn.net/dengm155/article/details/53819704</a></li></ul><h3 id="11-Vmware虚拟机完整创建一个linux"><a href="#11-Vmware虚拟机完整创建一个linux" class="headerlink" title="11. Vmware虚拟机完整创建一个linux"></a><strong>11. Vmware虚拟机完整创建一个linux</strong></h3><ul><li><a href="https://blog.csdn.net/weixin_42533541/article/details/81877207">https://blog.csdn.net/weixin_42533541/article/details/81877207</a></li></ul><h3 id="12-在VMD中显示原子序号的方法"><a href="#12-在VMD中显示原子序号的方法" class="headerlink" title="12. 在VMD中显示原子序号的方法"></a><strong>12. 在VMD中显示原子序号的方法</strong></h3><ul><li><a href="http://sobereva.com/197">http://sobereva.com/197</a></li></ul><h3 id="13-PhpStudy"><a href="#13-PhpStudy" class="headerlink" title="13. PhpStudy"></a><strong>13. PhpStudy</strong></h3><ul><li>PhpStudy <a href="https://www.xp.cn/">https://www.xp.cn/</a></li><li><a href="https://jingyan.baidu.com/article/148a1921b820c34d70c3b168.html">https://jingyan.baidu.com/article/148a1921b820c34d70c3b168.html</a></li><li>phpStudy V8 使用手册 <a href="https://www.xp.cn/phpstudy-v8/">https://www.xp.cn/phpstudy-v8/</a></li><li>FileZilla <a href="https://www.filezilla.cn/">https://www.filezilla.cn/</a></li></ul><h3 id="14-搭建本地服务器"><a href="#14-搭建本地服务器" class="headerlink" title="14. 搭建本地服务器"></a><strong>14. 搭建本地服务器</strong></h3><ul><li>Web服务器——保姆级教程！ <a href="https://my.oschina.net/u/4383725/blog/4510772">https://my.oschina.net/u/4383725/blog/4510772</a></li></ul><h3 id="15-MathType7"><a href="#15-MathType7" class="headerlink" title="15. MathType7"></a><strong>15. MathType7</strong></h3><ul><li><a href="https://www.mathtype.cn/">https://www.mathtype.cn/</a></li><li>30天到期后，删除注册表<code>计算机\HKEY_CURRENT_USER\SOFTWARE\Install Options</code>中的<code>Options7.4</code></li><li>便可再获得30天（还没试过）</li></ul><h3 id="16-Office自动安装至C盘修改（如果够用不建议）"><a href="#16-Office自动安装至C盘修改（如果够用不建议）" class="headerlink" title="16. Office自动安装至C盘修改（如果够用不建议）"></a><strong>16. Office自动安装至C盘修改（如果够用不建议）</strong></h3><p><img src="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/Office/1.PNG"></p><ul><li>安装前修改注册表<code>计算机\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion</code>下<code>ProgramFilesDir</code>路径为其他盘路径（千万不要乱改后又重启电脑）<blockquote><ul><li>一定要注意，改完安装后，立马注册表修改回到原来，没改前千万别重启电脑。</li><li>被迫重装系统后的反思。</li></ul></blockquote></li></ul>]]></content>
       
       
       <categories>
           
-          <category> Python </category>
-          
-          <category> Matplotlib </category>
+          <category> Notes </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Python </tag>
-            
-            <tag> Matplotlib </tag>
+            <tag> Daily Notes </tag>
             
         </tags>
       
@@ -226,6 +222,35 @@
     
     
     <entry>
+      <title>Matplotlib学习</title>
+      <link href="2021/01/22/python/matplotlib/"/>
+      <url>2021/01/22/python/matplotlib/</url>
+      
+        <content type="html"><![CDATA[<p>[toc]</p><h3 id="1-画自定义颜色曲线"><a href="#1-画自定义颜色曲线" class="headerlink" title="1. 画自定义颜色曲线"></a>1. 画自定义颜色曲线</h3><img src="https://s1.ax1x.com/2020/08/27/dhFFdU.png" alt="Figure" border="0" /><pre><code class="python">import numpy as npimport matplotlib.pyplot as pltfrom matplotlib.collections import LineCollectionx = np.linspace(0, 2*np.pi, 100)y = np.sin(x)z = np.cos(x)#上色数据points = np.array([x, y]).T.reshape(-1, 1, 2)segments = np.concatenate([points[:-1], points[1:]], axis=1)fig, ax = plt.subplots(figsize=(5,3))fig.subplots_adjust(bottom=0.1,left=0.2)##调整边界norm = plt.Normalize(min(z),max(z))lc = LineCollection(segments,cmap=&#39;jet&#39;,norm=norm)lc.set_array(z)lc.set_linewidth(2)line = ax.add_collection(lc)fig.colorbar(line)plt.xlim(0,2*np.pi)plt.ylim(-1,1)plt.savefig(&#39;fig1.png&#39;)plt.show()</code></pre><ul><li>如果想要画很多曲线的上色，其实只要一个循环就可以了，这里不赘述。</li><li>参考 [1] <a href="https://www.matplotlib.org.cn/">https://www.matplotlib.org.cn/</a></li></ul><h3 id="2-直方图"><a href="#2-直方图" class="headerlink" title="2. 直方图"></a>2. 直方图</h3><p><img src="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/plot_bar.png"></p><pre><code class="python">import numpy as np import matplotlib.pyplot as plt X = np.linspace(0,1,10)Y = np.ones(X.size)plt.rc(&#39;font&#39;, family=&#39;Times New Roman&#39;,size=26)fig, ax = plt.subplots(figsize=(10, 4))fig.subplots_adjust(bottom=0.2,left=0.2)ax.bar(X,Y,0.05,hatch=&#39;\\\\&#39;,color=&#39;white&#39;,edgecolor=&#39;c&#39;)ax.set_xlabel(&#39;Eigenvector Amplitude&#39;,fontsize=26,fontweight=&#39;bold&#39;)ax.set_ylabel(&#39;Count&#39;,fontsize=26,fontweight=&#39;bold&#39;)plt.show()</code></pre><h3 id="3-直方截断图"><a href="#3-直方截断图" class="headerlink" title="3. 直方截断图"></a>3. 直方截断图</h3><p><img src="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/plot_broken.png"></p><pre><code class="python">import numpy as np import matplotlib.pyplot as plt from brokenaxes import brokenaxesX = np.linspace(0,1,10)Y = np.ones(X.size)plt.rc(&#39;font&#39;, family=&#39;Times New Roman&#39;,size=26)# fig = plt.subplots(figsize=(10, 4))fig = plt.figure(figsize=(10,4))ax = brokenaxes(ylims=((0,0.5),(0.6,1)),hspace=0.06,despine=False)# fig.subplots_adjust(bottom=0.2,left=0.2)ax.bar(X,Y,0.05,hatch=&#39;\\\\&#39;,color=&#39;white&#39;,edgecolor=&#39;c&#39;)# ax.set_xlabel(&#39;Eigenvector Amplitude&#39;,fontsize=26,fontweight=&#39;bold&#39;)# ax.set_ylabel(&#39;Count&#39;,fontsize=26,fontweight=&#39;bold&#39;)plt.show()</code></pre><h3 id="4-直方Log图"><a href="#4-直方Log图" class="headerlink" title="4. 直方Log图"></a>4. 直方Log图</h3><p><img src="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/plot_log.png"></p><pre><code class="python">import numpy as np import matplotlib.pyplot as plt from brokenaxes import brokenaxesX = np.linspace(0,1,10)Y = np.ones(X.size)plt.rc(&#39;font&#39;, family=&#39;Times New Roman&#39;,size=26)fig, ax= plt.subplots(figsize=(10, 4))# fig = plt.figure(figsize=(10,4))# ax = brokenaxes(ylims=((0,0.5),(0.6,1)),hspace=0.06,despine=False)fig.subplots_adjust(bottom=0.2,left=0.2)ax.bar(X,Y,0.05,hatch=&#39;\\\\&#39;,color=&#39;white&#39;,edgecolor=&#39;c&#39;)ax.set_xlabel(&#39;Eigenvector Amplitude&#39;,fontsize=26,fontweight=&#39;bold&#39;)ax.set_ylabel(&#39;Count&#39;,fontsize=26,fontweight=&#39;bold&#39;)&#39;&#39;&#39;x、y坐标log&#39;&#39;&#39;# ax.set_xscale(&quot;log&quot;)ax.set_yscale(&quot;log&quot;)plt.show()</code></pre><h3 id="5-点线图（Error-Bar）"><a href="#5-点线图（Error-Bar）" class="headerlink" title="5. 点线图（Error Bar）"></a>5. 点线图（Error Bar）</h3><p><img src="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/plot_Error_bar.png"></p><pre><code class="python">import numpy as np import matplotlib.pyplot as plt def plt_tc(tcfile):    tc = np.loadtxt(tcfile)    # print(tc)    x = tc[:,0]/32.06    y = tc[:,1:4]    y_mean = np.mean(y,axis=1)    y_std = np.std(y,axis=1)    # print(y_mean,y_std)    plt.rc(&#39;font&#39;,family=&#39;Times New Roman&#39;,size=26)    fig, ax = plt.subplots(figsize=(8,6))    fig.subplots_adjust(bottom=0.2,left=0.2)    s1 = ax.errorbar(x,y_mean,yerr=y_std,capsize=10,capthick=4,        fmt=&#39;bo:&#39;,mfc=&#39;w&#39;,mec=&#39;b&#39;,markersize=16,mew=2)    ax.legend(handles=[s1],labels=[&#39;$\mathregular&#123;MoS_2&#125;$/$\mathregular&#123;MoSe^&#123;78&#125;&#125;_\mathregular&#123;2&#125;$&#39;]        ,loc=&#39;best&#39;, fontsize=26)    ax.set_xlabel(&#39;Mass ratio (R)&#39;,fontsize=26,fontweight=&#39;bold&#39;)    ax.set_ylabel(&#39;Thermal conductivity (W/m-K)&#39;,fontsize=26,fontweight=&#39;bold&#39;)    ax.set_xticks([0,1,2,3,4,5,6])    plt.show()    return    if __name__ == &#39;__main__&#39;:    tcfile = &#39;./Thermal_conductivity.txt&#39;    plt_tc(tcfile)</code></pre><ul><li>数据</li></ul><pre><code class="./Thermal_conductivity.txt">8.9    17.925 16.9828 16.447515.999    19.5132 18.2719 19.375132.06    25.3194 23.8796 25.242948.9    23.6784 21.4915 22.988878.9    15.9254 14.4494 15.1808127.6    8.5564 9.0751 8.8317209    5.2363 6.8541 5.3407</code></pre><ul><li>参考：[1] <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.errorbar.html">https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.errorbar.html</a></li></ul><h3 id="6-去掉坐标轴"><a href="#6-去掉坐标轴" class="headerlink" title="6. 去掉坐标轴"></a>6. 去掉坐标轴</h3><pre><code class="python">plt.xticks([])  #去掉x轴plt.yticks([])  #去掉y轴plt.axis(&#39;off&#39;)  #去掉坐标轴</code></pre><p>or</p><pre><code class="python">ax = plt.gca()ax.spines[&#39;top&#39;].set_visible(False)ax.spines[&#39;bottom&#39;].set_visible(False)ax.spines[&#39;left&#39;].set_visible(False)ax.spines[&#39;right&#39;].set_visible(False)</code></pre><p>or</p><pre><code class="python">ax.set_xticks([]), ax_set_yticks([]) #关闭坐标刻度ax.axis(&#39;off&#39;) #关闭坐标轴ax.set_title()#设置标题</code></pre><p>参考：<br>[1] <a href="https://blog.csdn.net/lly1122334/article/details/90647962">https://blog.csdn.net/lly1122334/article/details/90647962</a><br>[2] <a href="https://blog.csdn.net/lanchunhui/article/details/80100430">https://blog.csdn.net/lanchunhui/article/details/80100430</a></p><h3 id="7-调整图间距"><a href="#7-调整图间距" class="headerlink" title="7. 调整图间距"></a>7. 调整图间距</h3><pre><code class="python">fig.tight_layout()#调整整体处于正确位置fig.subplots_adjust(bottom=0.2,left=0.15)#调整图间距plt.subplots_adjust(wspace =0, hspace =0)#调整子图间距</code></pre><p>参考：[1] <a href="https://blog.csdn.net/GAN_player/article/details/78543643">https://blog.csdn.net/GAN_player/article/details/78543643</a></p><h3 id="8-图片上添加文字"><a href="#8-图片上添加文字" class="headerlink" title="8. 图片上添加文字"></a>8. 图片上添加文字</h3><pre><code class="python">plt.text(100, 100, &#39;text&#39;) #(x坐标,y坐标,&#39;text&#39;)</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+          <category> Matplotlib </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> Matplotlib </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Python问题与解决方法汇总</title>
       <link href="2021/01/22/python/problems/"/>
       <url>2021/01/22/python/problems/</url>
@@ -247,31 +272,6 @@
             <tag> Python </tag>
             
             <tag> Bug </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>随笔---2021</title>
-      <link href="2021/01/22/notes/DailyNotes2021/"/>
-      <url>2021/01/22/notes/DailyNotes2021/</url>
-      
-        <content type="html"><![CDATA[<p>[toc]</p><h3 id="1-只要使用键盘Materials-Studio就卡住"><a href="#1-只要使用键盘Materials-Studio就卡住" class="headerlink" title="1. 只要使用键盘Materials Studio就卡住"></a><strong>1. 只要使用键盘Materials Studio就卡住</strong></h3><ul><li>解决方法：在微软拼音输入法的“中”(或“英”)字上右击鼠标，然后点“设置”，在弹出界面中点“常规”，在新界面中向下滚动动底部，有个兼容性，打开兼容性，然后就OK了。</li><li>参考链接:<br>[1] <a href="http://muchong.com/t-14329827-1">http://muchong.com/t-14329827-1</a></li></ul><h3 id="2-最新WIN10-20H2系统找回经典系统属性界面的最彻底的方法"><a href="#2-最新WIN10-20H2系统找回经典系统属性界面的最彻底的方法" class="headerlink" title="2. 最新WIN10 20H2系统找回经典系统属性界面的最彻底的方法"></a><strong>2. 最新WIN10 20H2系统找回经典系统属性界面的最彻底的方法</strong></h3><ul><li>重装了Win10 20H2以后，右键此电脑后的属性面板变了，要彻底换回经典的属性面板方法。</li><li>（1）打开注册表，直接搜索<code>注册表</code>、或者<code>Win+R</code>，然后输入<code>regedit</code>；</li><li>（2）找到路径<code>HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\FeatureManagement\Overrides\0\2093230218</code>;</li><li>（3）将EnabledState的数值数据修改为 <code>1</code> 即可。</li><li>（4）参考链接：<a href="https://www.bilibili.com/read/cv8197364">https://www.bilibili.com/read/cv8197364</a></li></ul><h3 id="3-OPLS-optimized-potentials-for-liquid-simulations"><a href="#3-OPLS-optimized-potentials-for-liquid-simulations" class="headerlink" title="3. OPLS(optimized potentials for liquid simulations)"></a><strong>3. OPLS(optimized potentials for liquid simulations)</strong></h3><ul><li>参考链接:<br>[1] <a href="https://blog.csdn.net/qq_31346429/article/details/106358251">https://blog.csdn.net/qq_31346429/article/details/106358251</a></li></ul><h3 id="4-AMBER基础教程B0：AMBER分子动力学模拟入门"><a href="#4-AMBER基础教程B0：AMBER分子动力学模拟入门" class="headerlink" title="4. [AMBER基础教程B0：AMBER分子动力学模拟入门]"></a><strong>4. [AMBER基础教程B0：AMBER分子动力学模拟入门]</strong></h3><ul><li>参考链接:<br>[1] <a href="https://jerkwin.github.io/2018/01/17/AMBER%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8BB0-AMBER%E5%88%86%E5%AD%90%E5%8A%A8%E5%8A%9B%E5%AD%A6%E6%A8%A1%E6%8B%9F%E5%85%A5%E9%97%A8/">https://jerkwin.github.io/2018/01/17/AMBER%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8BB0-AMBER%E5%88%86%E5%AD%90%E5%8A%A8%E5%8A%9B%E5%AD%A6%E6%A8%A1%E6%8B%9F%E5%85%A5%E9%97%A8/</a></li></ul><h3 id="5-国内9大免费CDN汇总-转"><a href="#5-国内9大免费CDN汇总-转" class="headerlink" title="5. 国内9大免费CDN汇总 转"></a><strong>5. 国内9大免费CDN汇总 转</strong></h3><ul><li>转 [1] <a href="https://cloud.tencent.com/developer/article/1352398">https://cloud.tencent.com/developer/article/1352398</a></li></ul><h3 id="6-ctrl-c没反应"><a href="#6-ctrl-c没反应" class="headerlink" title="6. ctrl+c没反应"></a><strong>6. <code>ctrl+c</code>没反应</strong></h3><ul><li>可能是开着有道翻译快捷键冲突了，关了有道或者其他快捷键冲突软件即可</li></ul><h3 id="7-R7000office时不时闪黑屏"><a href="#7-R7000office时不时闪黑屏" class="headerlink" title="7. R7000office时不时闪黑屏"></a><strong>7. <code>R7000</code>office时不时闪黑屏</strong></h3><p><img src="https://filestore.community.support.microsoft.com/api/images/25b29daa-46b9-47c5-8875-3952d3cf174b?upload=true"></p><ul><li>打开office，文件&gt;选项&gt;高级&gt;显示</li><li>勾选“禁用硬件图形加速”，“应用”并“确定”</li><li>参考：[1] <a href="https://answers.microsoft.com/zh-hans/msoffice/forum/msoffice_word-mso_win10-mso_2019/office-%E9%97%AA%E5%B1%8F/33c9a15d-595b-4c62-8d30-fbce21a24fc8">https://answers.microsoft.com/zh-hans/msoffice/forum/msoffice_word-mso_win10-mso_2019/office-%E9%97%AA%E5%B1%8F/33c9a15d-595b-4c62-8d30-fbce21a24fc8</a></li></ul><h3 id="8-双系统教程参考"><a href="#8-双系统教程参考" class="headerlink" title="8. 双系统教程参考"></a><strong>8. 双系统教程参考</strong></h3><ul><li><a href="https://www.cnblogs.com/masbay/p/10745170.html">https://www.cnblogs.com/masbay/p/10745170.html</a></li></ul><h3 id="9-Origin-Copy-Page到Word或PPT后侧边空白多？"><a href="#9-Origin-Copy-Page到Word或PPT后侧边空白多？" class="headerlink" title="9. Origin, Copy Page到Word或PPT后侧边空白多？"></a><strong>9. Origin, Copy Page到Word或PPT后侧边空白多？</strong></h3><ul><li>修改Tools→Options→page选项卡，将Margin Control 设置为Tight，或者将Clip Border Width设置为0，两种都可行。</li></ul><p><img src="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/origin_bug.png"></p><ul><li>若以上步骤不行，那应该是电脑的屏幕缩放不是100%，改为100%就好；</li><li>或者换更高版本的Origin.</li></ul><h3 id="10-FFTW"><a href="#10-FFTW" class="headerlink" title="10. FFTW"></a><strong>10. FFTW</strong></h3><ul><li>Windows安装跟使用fftw  <a href="http://m.myexceptions.net/windows/1616414.html">http://m.myexceptions.net/windows/1616414.html</a></li><li>linux 和 Windows下FFTW库的安装  <a href="https://blog.csdn.net/dengm155/article/details/53819704">https://blog.csdn.net/dengm155/article/details/53819704</a></li></ul><h3 id="11-Vmware虚拟机完整创建一个linux"><a href="#11-Vmware虚拟机完整创建一个linux" class="headerlink" title="11. Vmware虚拟机完整创建一个linux"></a><strong>11. Vmware虚拟机完整创建一个linux</strong></h3><ul><li><a href="https://blog.csdn.net/weixin_42533541/article/details/81877207">https://blog.csdn.net/weixin_42533541/article/details/81877207</a></li></ul><h3 id="12-在VMD中显示原子序号的方法"><a href="#12-在VMD中显示原子序号的方法" class="headerlink" title="12. 在VMD中显示原子序号的方法"></a><strong>12. 在VMD中显示原子序号的方法</strong></h3><ul><li><a href="http://sobereva.com/197">http://sobereva.com/197</a></li></ul><h3 id="13-PhpStudy"><a href="#13-PhpStudy" class="headerlink" title="13. PhpStudy"></a><strong>13. PhpStudy</strong></h3><ul><li>PhpStudy <a href="https://www.xp.cn/">https://www.xp.cn/</a></li><li><a href="https://jingyan.baidu.com/article/148a1921b820c34d70c3b168.html">https://jingyan.baidu.com/article/148a1921b820c34d70c3b168.html</a></li><li>phpStudy V8 使用手册 <a href="https://www.xp.cn/phpstudy-v8/">https://www.xp.cn/phpstudy-v8/</a></li><li>FileZilla <a href="https://www.filezilla.cn/">https://www.filezilla.cn/</a></li></ul><h3 id="14-搭建本地服务器"><a href="#14-搭建本地服务器" class="headerlink" title="14. 搭建本地服务器"></a><strong>14. 搭建本地服务器</strong></h3><ul><li>Web服务器——保姆级教程！ <a href="https://my.oschina.net/u/4383725/blog/4510772">https://my.oschina.net/u/4383725/blog/4510772</a></li></ul><h3 id="15-MathType7"><a href="#15-MathType7" class="headerlink" title="15. MathType7"></a><strong>15. MathType7</strong></h3><ul><li><a href="https://www.mathtype.cn/">https://www.mathtype.cn/</a></li><li>30天到期后，删除注册表<code>计算机\HKEY_CURRENT_USER\SOFTWARE\Install Options</code>中的<code>Options7.4</code></li><li>便可再获得30天（还没试过）</li></ul><h3 id="16-Office自动安装至C盘修改（如果够用不建议）"><a href="#16-Office自动安装至C盘修改（如果够用不建议）" class="headerlink" title="16. Office自动安装至C盘修改（如果够用不建议）"></a><strong>16. Office自动安装至C盘修改（如果够用不建议）</strong></h3><p><img src="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/Office/1.PNG"></p><ul><li>安装前修改注册表<code>计算机\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion</code>下<code>ProgramFilesDir</code>路径为其他盘路径（千万不要乱改后又重启电脑）<blockquote><ul><li>一定要注意，改完安装后，立马注册表修改回到原来，没改前千万别重启电脑。</li><li>被迫重装系统后的反思。</li></ul></blockquote></li></ul>]]></content>
-      
-      
-      <categories>
-          
-          <category> Notes </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Daily Notes </tag>
             
         </tags>
       
@@ -535,35 +535,6 @@
     
     
     <entry>
-      <title>Lammps Notes</title>
-      <link href="2019/01/22/lammps/LammpsNotes/"/>
-      <url>2019/01/22/lammps/LammpsNotes/</url>
-      
-        <content type="html"><![CDATA[<p>[toc]</p><h3 id="1-Lammps安装"><a href="#1-Lammps安装" class="headerlink" title="1. Lammps安装"></a>1. Lammps安装</h3><ul><li>Windows下安装</li></ul><ol><li><a href="http://packages.lammps.org/windows.html">官网下载Windows版Lammps,和并行包mpich2</a>；</li><li>下载完成后，直接双击<code>LAMMPS-64bit-stable-MPI.exe</code>安装,可以自定义安装位置；</li><li>Similarly，接着安装MPICH2<code>mpich2-1.4.1p1-win-x86-64.msi</code>；</li><li>完了之后，进入到<code>Administrator</code>用户下操作，<code>win+R</code>输入<code>cmd</code>，调出cmd窗口；</li><li><code>cd</code>到MPICH2安装目录的<code>bin</code>下，也即是<code>D:\Program Files\MPICH2\bin</code>；</li><li>然后，输入命令：<code>smpd.exe -install -phrase behappy</code>；</li><li>别忘记设置环境变量，即是将对应的Lammps@MPICH2路径加入到path中：<code>D:\Program Files\LAMMPS 64-bit 7Aug2019-MPI\bin</code>，<code>D:\Program Files\MPICH2\bin</code></li><li>怎么设置环境变量：<blockquote><ul><li>鼠标右键<code>此电脑</code>；点开<code>高级系统设置</code>；找到<code>高级</code>；点开右下角<code>环境变量(N)</code>；</li><li>在系统变量下<code>path</code>中找找看，是否已经设置；若没有，点击新建，将路径复制过来，确定即可</li></ul></blockquote></li><li>至此，完成，可以进入lammps目录下<code>Examples</code>中测试一下并行；例如：<code>mpiexec -np 8 lmp_mpi -i inputfile.in</code>；具体看<a href="http://packages.lammps.org/windows.html">官网</a></li></ol><ul><li>Linux下安装</li></ul><p><strong>LAMMPS</strong><br>参考:<a href="https://cloud.tencent.com/developer/article/1484595">https://cloud.tencent.com/developer/article/1484595</a></p><p><strong>11-17</strong></p><h3 id="2-使用LAMMPS和Alamode计算热导率、PDOS、弛豫时间等"><a href="#2-使用LAMMPS和Alamode计算热导率、PDOS、弛豫时间等" class="headerlink" title="2. 使用LAMMPS和Alamode计算热导率、PDOS、弛豫时间等"></a>2. 使用LAMMPS和Alamode计算热导率、PDOS、弛豫时间等</h3><ul><li>运行alm.in,生成<code>xxx.pattern_HARMONIC</code>和<code>xxx.pattern_ANHARM3</code><blockquote><ol><li>需要注意：<code>NORDER = 2  # 1: harmonic, 2: cubic, ..</code></li><li>其他信息修改参照官网</li></ol></blockquote></li><li>用alamode自带的displace.py，生成harm1.lammps和cubic1.lammps <blockquote><ol><li>如果harm和cubic文件很多的话，几百几千个，这里可能会出现harm0001.lammps这种文件名，会报错。</li></ol></blockquote></li><li>用脚本运行lammps,in.sw,使harm1.lammps和cubic1.lammps 分别生成XFSET.harm1和XFSET.cubic1</li><li>最后使用alamode自带的extract.py，从XFSET.harm和XFSET.cubic提取到DESET_harmonic中</li><li>修改alm.in中的MODE为optimize并添加一些信息，再次运行alm.in，会得到xxx.fcs和xxx.xml,</li><li>利用anphon通过xxx.xml会得到xxx.bands文件，然后通过自带的plotband.py可以计算声子色散；</li><li>同样获得pdos</li><li>具体参见官网</li></ul><h3 id="3-Nose-Hoover"><a href="#3-Nose-Hoover" class="headerlink" title="3. Nose-Hoover"></a>3. Nose-Hoover</h3><ul><li>Lammps默认NVT为Nose-Hoover</li><li>NEMD时使用此热库，其实就是在热源和冷源加 <em>nvt</em> ，</li><li>在跑非平衡分子动力学( <em>NEMD</em> )模拟时，由于Nose-Hoover具有演化的过程，但是NEMD也有演化，</li><li>所以在跑nve的时候，不仅要排除fixed的区域，还要排除热源冷源区域。</li></ul><h3 id="4-NPT时系统的边界条件必须为周期性边界条件"><a href="#4-NPT时系统的边界条件必须为周期性边界条件" class="headerlink" title="4. NPT时系统的边界条件必须为周期性边界条件"></a>4. NPT时系统的边界条件必须为周期性边界条件</h3><pre><code class="in">boundary    p p p</code></pre><h3 id="5-REBO-MoS2-https-research-matse-psu-edu-sinnott-software"><a href="#5-REBO-MoS2-https-research-matse-psu-edu-sinnott-software" class="headerlink" title="5. REBO MoS2,https://research.matse.psu.edu/sinnott/software"></a>5. REBO MoS2,<a href="https://research.matse.psu.edu/sinnott/software">https://research.matse.psu.edu/sinnott/software</a></h3><ul><li>注意：<br>```</li></ul><p>0.020             epsilon_SS #对应300K<br>0.01386            epsilon_SS #对应0K</p><pre><code></code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> Lammps </category>
-          
-          <category> Notes </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Notes </tag>
-            
-            <tag> Lammps </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Lammps Command</title>
       <link href="2019/01/22/lammps/command/"/>
       <url>2019/01/22/lammps/command/</url>
@@ -582,9 +553,9 @@
       
         <tags>
             
-            <tag> Command </tag>
-            
             <tag> Lammps </tag>
+            
+            <tag> Command </tag>
             
         </tags>
       
@@ -614,6 +585,35 @@
             <tag> Lammps </tag>
             
             <tag> error </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Lammps Notes</title>
+      <link href="2019/01/22/lammps/LammpsNotes/"/>
+      <url>2019/01/22/lammps/LammpsNotes/</url>
+      
+        <content type="html"><![CDATA[<p>[toc]</p><h3 id="1-Lammps安装"><a href="#1-Lammps安装" class="headerlink" title="1. Lammps安装"></a>1. Lammps安装</h3><ul><li>Windows下安装</li></ul><ol><li><a href="http://packages.lammps.org/windows.html">官网下载Windows版Lammps,和并行包mpich2</a>；</li><li>下载完成后，直接双击<code>LAMMPS-64bit-stable-MPI.exe</code>安装,可以自定义安装位置；</li><li>Similarly，接着安装MPICH2<code>mpich2-1.4.1p1-win-x86-64.msi</code>；</li><li>完了之后，进入到<code>Administrator</code>用户下操作，<code>win+R</code>输入<code>cmd</code>，调出cmd窗口；</li><li><code>cd</code>到MPICH2安装目录的<code>bin</code>下，也即是<code>D:\Program Files\MPICH2\bin</code>；</li><li>然后，输入命令：<code>smpd.exe -install -phrase behappy</code>；</li><li>别忘记设置环境变量，即是将对应的Lammps@MPICH2路径加入到path中：<code>D:\Program Files\LAMMPS 64-bit 7Aug2019-MPI\bin</code>，<code>D:\Program Files\MPICH2\bin</code></li><li>怎么设置环境变量：<blockquote><ul><li>鼠标右键<code>此电脑</code>；点开<code>高级系统设置</code>；找到<code>高级</code>；点开右下角<code>环境变量(N)</code>；</li><li>在系统变量下<code>path</code>中找找看，是否已经设置；若没有，点击新建，将路径复制过来，确定即可</li></ul></blockquote></li><li>至此，完成，可以进入lammps目录下<code>Examples</code>中测试一下并行；例如：<code>mpiexec -np 8 lmp_mpi -i inputfile.in</code>；具体看<a href="http://packages.lammps.org/windows.html">官网</a></li></ol><ul><li>Linux下安装</li></ul><p><strong>LAMMPS</strong><br>参考:<a href="https://cloud.tencent.com/developer/article/1484595">https://cloud.tencent.com/developer/article/1484595</a></p><p><strong>11-17</strong></p><h3 id="2-使用LAMMPS和Alamode计算热导率、PDOS、弛豫时间等"><a href="#2-使用LAMMPS和Alamode计算热导率、PDOS、弛豫时间等" class="headerlink" title="2. 使用LAMMPS和Alamode计算热导率、PDOS、弛豫时间等"></a>2. 使用LAMMPS和Alamode计算热导率、PDOS、弛豫时间等</h3><ul><li>运行alm.in,生成<code>xxx.pattern_HARMONIC</code>和<code>xxx.pattern_ANHARM3</code><blockquote><ol><li>需要注意：<code>NORDER = 2  # 1: harmonic, 2: cubic, ..</code></li><li>其他信息修改参照官网</li></ol></blockquote></li><li>用alamode自带的displace.py，生成harm1.lammps和cubic1.lammps <blockquote><ol><li>如果harm和cubic文件很多的话，几百几千个，这里可能会出现harm0001.lammps这种文件名，会报错。</li></ol></blockquote></li><li>用脚本运行lammps,in.sw,使harm1.lammps和cubic1.lammps 分别生成XFSET.harm1和XFSET.cubic1</li><li>最后使用alamode自带的extract.py，从XFSET.harm和XFSET.cubic提取到DESET_harmonic中</li><li>修改alm.in中的MODE为optimize并添加一些信息，再次运行alm.in，会得到xxx.fcs和xxx.xml,</li><li>利用anphon通过xxx.xml会得到xxx.bands文件，然后通过自带的plotband.py可以计算声子色散；</li><li>同样获得pdos</li><li>具体参见官网</li></ul><h3 id="3-Nose-Hoover"><a href="#3-Nose-Hoover" class="headerlink" title="3. Nose-Hoover"></a>3. Nose-Hoover</h3><ul><li>Lammps默认NVT为Nose-Hoover</li><li>NEMD时使用此热库，其实就是在热源和冷源加 <em>nvt</em> ，</li><li>在跑非平衡分子动力学( <em>NEMD</em> )模拟时，由于Nose-Hoover具有演化的过程，但是NEMD也有演化，</li><li>所以在跑nve的时候，不仅要排除fixed的区域，还要排除热源冷源区域。</li></ul><h3 id="4-NPT时系统的边界条件必须为周期性边界条件"><a href="#4-NPT时系统的边界条件必须为周期性边界条件" class="headerlink" title="4. NPT时系统的边界条件必须为周期性边界条件"></a>4. NPT时系统的边界条件必须为周期性边界条件</h3><pre><code class="in">boundary    p p p</code></pre><h3 id="5-REBO-MoS2-https-research-matse-psu-edu-sinnott-software"><a href="#5-REBO-MoS2-https-research-matse-psu-edu-sinnott-software" class="headerlink" title="5. REBO MoS2,https://research.matse.psu.edu/sinnott/software"></a>5. REBO MoS2,<a href="https://research.matse.psu.edu/sinnott/software">https://research.matse.psu.edu/sinnott/software</a></h3><ul><li>注意：<br>```</li></ul><p>0.020             epsilon_SS #对应300K<br>0.01386            epsilon_SS #对应0K</p><pre><code></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Lammps </category>
+          
+          <category> Notes </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Lammps </tag>
+            
+            <tag> Notes </tag>
             
         </tags>
       
