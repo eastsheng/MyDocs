@@ -6,27 +6,41 @@
   <meta name="keywords" content=" Daily Notes ">
   <meta name="description" content="随笔---2021 | MyDocs">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="[toc] 1. electrum钱包 安装钱包 生成地址  2. 挖矿软件nicehash">
+<meta name="description" content="[toc]  黏度（viscosity）：黏度也可以称为粘度，是指流体对流动所表现的阻力。   当流体 (气体或液体) 流动时， 一部分在另一部分上面流动时， 就受到阻力， 这是流体的内摩擦力。 要使流体流动就需在流体流动方向上加一切线力以对抗阻力作用。 黏度系数(简称黏度)η的物理意义是： 在相距单位距离的两液层中， 使单位面积液层维持单位速度差所需的切线力。 其单位在厘米·克·秒(c·g·s)">
 <meta property="og:type" content="article">
-<meta property="og:title" content="挖矿流程">
-<meta property="og:url" content="https://eastsheng.github.io/2021/05/21/notes/mining/index.html">
+<meta property="og:title" content="专业名词碎片">
+<meta property="og:url" content="https://eastsheng.github.io/2021/04/28/notes/majorWords/index.html">
 <meta property="og:site_name" content="MyDocs">
-<meta property="og:description" content="[toc] 1. electrum钱包 安装钱包 生成地址  2. 挖矿软件nicehash">
+<meta property="og:description" content="[toc]  黏度（viscosity）：黏度也可以称为粘度，是指流体对流动所表现的阻力。   当流体 (气体或液体) 流动时， 一部分在另一部分上面流动时， 就受到阻力， 这是流体的内摩擦力。 要使流体流动就需在流体流动方向上加一切线力以对抗阻力作用。 黏度系数(简称黏度)η的物理意义是： 在相距单位距离的两液层中， 使单位面积液层维持单位速度差所需的切线力。 其单位在厘米·克·秒(c·g·s)">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/bit/electrum_1.PNG">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/bit/electrum_2.PNG">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/bit/electrum_3.PNG">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/bit/electrum_4.PNG">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/bit/electrum_5.PNG">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/bit/electrum_6.PNG">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/bit/electrum_7.PNG">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/bit/electrum_8.PNG">
-<meta property="article:published_time" content="2021-05-21T10:11:28.000Z">
-<meta property="article:modified_time" content="2021-05-21T04:37:33.620Z">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/Blog/latent_heat.jfif">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/gcrlx_1.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/gcrlx_2.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/gcrlx_3.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/gcrlx_5.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/gcrlx_4.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/gcrlx_6.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/gcrlx_7.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/gcrlx_8.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/gcrlx_9.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/gcrlx_10.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/gcrlx_11.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/gcrlx_12.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/gcrlx_13.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/gcrlx_14.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/gcrlx_15.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/gcrlx_16.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/gcrlx_17.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/gcrlx_18.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/gcrlx_19.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/gcrlx_20.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/gcrlx_21.png">
+<meta property="article:published_time" content="2021-04-28T04:18:28.000Z">
+<meta property="article:modified_time" content="2021-06-06T11:21:19.951Z">
 <meta property="article:author" content="Eastsheng">
-<meta property="article:tag" content="Daily Notes">
+<meta property="article:tag" content="专业知识">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/bit/electrum_1.PNG">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/Blog/latent_heat.jfif">
 
 
 <link rel="icon" href="/img/avatar.png">
@@ -193,6 +207,18 @@
                         <ul class="sub hide">
                             
                                 <li>
+                                    <div data-rel="Python<--->科学计算">
+                                        
+                                        科学计算
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
                                     <div data-rel="Python<--->Bug">
                                         
                                         Bug
@@ -232,18 +258,6 @@
                                     <div data-rel="Python<--->Matplotlib">
                                         
                                         Matplotlib
-                                        
-                                            <small>(1
-                                                )</small>
-                                        
-                                    </div>
-                                    
-                                </li>
-                            
-                                <li>
-                                    <div data-rel="Python<--->科学计算">
-                                        
-                                        科学计算
                                         
                                             <small>(1
                                                 )</small>
@@ -303,6 +317,18 @@
                         <ul class="sub hide">
                             
                                 <li>
+                                    <div data-rel="Linux<--->虚拟机">
+                                        
+                                        虚拟机
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
                                     <div data-rel="Linux<--->Command">
                                         
                                         Command
@@ -318,18 +344,6 @@
                                     <div data-rel="Linux<--->Problems">
                                         
                                         Problems
-                                        
-                                            <small>(1
-                                                )</small>
-                                        
-                                    </div>
-                                    
-                                </li>
-                            
-                                <li>
-                                    <div data-rel="Linux<--->虚拟机">
-                                        
-                                        虚拟机
                                         
                                             <small>(1
                                                 )</small>
@@ -494,7 +508,7 @@
     </div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="22">
-<input type="hidden" id="yelog_site_word_count" value="12.9k">
+<input type="hidden" id="yelog_site_word_count" value="13.1k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -538,6 +552,18 @@
     <div class="tags-list">
     <input id="tag-search" />
     <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>乱七八糟的收藏</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>虚拟机扩容</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>专业知识</a>
+            </li>
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>Bloggers</a>
@@ -637,18 +663,6 @@
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>Videos</a>
-            </li>
-        
-            <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>专业知识</a>
-            </li>
-        
-            <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>乱七八糟的收藏</a>
-            </li>
-        
-            <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>虚拟机扩容</a>
             </li>
         
     </div>
@@ -759,18 +773,18 @@
         </a>
         
         <a  class="全部文章 Collections "
-           href="/2020/06/18/collections/books_communities_fora/"
-           data-tag="Books,fora,forum,community"
-           data-author="" >
-            <span class="post-title" title="书籍/社区/论坛收藏">书籍/社区/论坛收藏</span>
-            <span class="post-date" title="2020-06-18 09:33:48">2020/06/18</span>
-        </a>
-        
-        <a  class="全部文章 Collections "
            href="/2020/06/18/collections/videos/"
            data-tag="Videos"
            data-author="" >
             <span class="post-title" title="视频收藏">视频收藏</span>
+            <span class="post-date" title="2020-06-18 09:33:48">2020/06/18</span>
+        </a>
+        
+        <a  class="全部文章 Collections "
+           href="/2020/06/18/collections/books_communities_fora/"
+           data-tag="Books,fora,forum,community"
+           data-author="" >
+            <span class="post-title" title="书籍/社区/论坛收藏">书籍/社区/论坛收藏</span>
             <span class="post-date" title="2020-06-18 09:33:48">2020/06/18</span>
         </a>
         
@@ -784,7 +798,7 @@
         
         <a  class="全部文章 Linux Command "
            href="/2020/01/22/linux/LinuxCommand/"
-           data-tag="Linux,Command"
+           data-tag="Command,Linux"
            data-author="" >
             <span class="post-title" title="Linux Command">Linux Command</span>
             <span class="post-date" title="2020-01-22 18:11:28">2020/01/22</span>
@@ -807,18 +821,18 @@
         </a>
         
         <a  class="全部文章 Lammps Notes "
-           href="/2019/01/22/lammps/LammpsNotes/"
-           data-tag="Lammps,Notes"
+           href="/2019/01/22/lammps/LammpsInstall/"
+           data-tag="Lammps安装,Notes"
            data-author="" >
-            <span class="post-title" title="Lammps Notes">Lammps Notes</span>
+            <span class="post-title" title="Lammps安装">Lammps安装</span>
             <span class="post-date" title="2019-01-22 18:11:28">2019/01/22</span>
         </a>
         
         <a  class="全部文章 Lammps Notes "
-           href="/2019/01/22/lammps/LammpsInstall/"
-           data-tag="Notes,Lammps安装"
+           href="/2019/01/22/lammps/LammpsNotes/"
+           data-tag="Lammps,Notes"
            data-author="" >
-            <span class="post-title" title="Lammps安装">Lammps安装</span>
+            <span class="post-title" title="Lammps Notes">Lammps Notes</span>
             <span class="post-date" title="2019-01-22 18:11:28">2019/01/22</span>
         </a>
         
@@ -883,12 +897,12 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2021-05-07 21:18:04'>2021-01-22 18:11</time>
+            发布时间 : <time class="date" title='最后更新: 2021-06-09 22:55:41'>2021-01-22 18:11</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:629</span>
+        <span>字数:761</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -907,7 +921,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%8F%AA%E8%A6%81%E4%BD%BF%E7%94%A8%E9%94%AE%E7%9B%98Materials-Studio%E5%B0%B1%E5%8D%A1%E4%BD%8F"><span class="toc-text">1. 只要使用键盘Materials Studio就卡住</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%9C%80%E6%96%B0WIN10-20H2%E7%B3%BB%E7%BB%9F%E6%89%BE%E5%9B%9E%E7%BB%8F%E5%85%B8%E7%B3%BB%E7%BB%9F%E5%B1%9E%E6%80%A7%E7%95%8C%E9%9D%A2%E7%9A%84%E6%9C%80%E5%BD%BB%E5%BA%95%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-text">2. 最新WIN10 20H2系统找回经典系统属性界面的最彻底的方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-OPLS-optimized-potentials-for-liquid-simulations"><span class="toc-text">3. OPLS(optimized potentials for liquid simulations)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-AMBER%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8BB0%EF%BC%9AAMBER%E5%88%86%E5%AD%90%E5%8A%A8%E5%8A%9B%E5%AD%A6%E6%A8%A1%E6%8B%9F%E5%85%A5%E9%97%A8"><span class="toc-text">4. [AMBER基础教程B0：AMBER分子动力学模拟入门]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E5%9B%BD%E5%86%859%E5%A4%A7%E5%85%8D%E8%B4%B9CDN%E6%B1%87%E6%80%BB-%E8%BD%AC"><span class="toc-text">5. 国内9大免费CDN汇总 转</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-ctrl-c%E6%B2%A1%E5%8F%8D%E5%BA%94"><span class="toc-text">6. ctrl+c没反应</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-R7000office%E6%97%B6%E4%B8%8D%E6%97%B6%E9%97%AA%E9%BB%91%E5%B1%8F"><span class="toc-text">7. R7000office时不时闪黑屏</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-%E5%8F%8C%E7%B3%BB%E7%BB%9F%E6%95%99%E7%A8%8B%E5%8F%82%E8%80%83"><span class="toc-text">8. 双系统教程参考</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-Origin-Copy-Page%E5%88%B0Word%E6%88%96PPT%E5%90%8E%E4%BE%A7%E8%BE%B9%E7%A9%BA%E7%99%BD%E5%A4%9A%EF%BC%9F"><span class="toc-text">9. Origin, Copy Page到Word或PPT后侧边空白多？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-FFTW"><span class="toc-text">10. FFTW</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-Vmware%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%8C%E6%95%B4%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AAlinux"><span class="toc-text">11. Vmware虚拟机完整创建一个linux</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-%E5%9C%A8VMD%E4%B8%AD%E6%98%BE%E7%A4%BA%E5%8E%9F%E5%AD%90%E5%BA%8F%E5%8F%B7%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-text">12. 在VMD中显示原子序号的方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13-PhpStudy"><span class="toc-text">13. PhpStudy</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14-%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-text">14. 搭建本地服务器</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%8F%AA%E8%A6%81%E4%BD%BF%E7%94%A8%E9%94%AE%E7%9B%98Materials-Studio%E5%B0%B1%E5%8D%A1%E4%BD%8F"><span class="toc-text">1. 只要使用键盘Materials Studio就卡住</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%9C%80%E6%96%B0WIN10-20H2%E7%B3%BB%E7%BB%9F%E6%89%BE%E5%9B%9E%E7%BB%8F%E5%85%B8%E7%B3%BB%E7%BB%9F%E5%B1%9E%E6%80%A7%E7%95%8C%E9%9D%A2%E7%9A%84%E6%9C%80%E5%BD%BB%E5%BA%95%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-text">2. 最新WIN10 20H2系统找回经典系统属性界面的最彻底的方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-OPLS-optimized-potentials-for-liquid-simulations"><span class="toc-text">3. OPLS(optimized potentials for liquid simulations)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-AMBER%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8BB0%EF%BC%9AAMBER%E5%88%86%E5%AD%90%E5%8A%A8%E5%8A%9B%E5%AD%A6%E6%A8%A1%E6%8B%9F%E5%85%A5%E9%97%A8"><span class="toc-text">4. [AMBER基础教程B0：AMBER分子动力学模拟入门]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E5%9B%BD%E5%86%859%E5%A4%A7%E5%85%8D%E8%B4%B9CDN%E6%B1%87%E6%80%BB-%E8%BD%AC"><span class="toc-text">5. 国内9大免费CDN汇总 转</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-ctrl-c%E6%B2%A1%E5%8F%8D%E5%BA%94"><span class="toc-text">6. ctrl+c没反应</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-R7000office%E6%97%B6%E4%B8%8D%E6%97%B6%E9%97%AA%E9%BB%91%E5%B1%8F"><span class="toc-text">7. R7000office时不时闪黑屏</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-%E5%8F%8C%E7%B3%BB%E7%BB%9F%E6%95%99%E7%A8%8B%E5%8F%82%E8%80%83"><span class="toc-text">8. 双系统教程参考</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-Origin-Copy-Page%E5%88%B0Word%E6%88%96PPT%E5%90%8E%E4%BE%A7%E8%BE%B9%E7%A9%BA%E7%99%BD%E5%A4%9A%EF%BC%9F"><span class="toc-text">9. Origin, Copy Page到Word或PPT后侧边空白多？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-FFTW"><span class="toc-text">10. FFTW</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-Vmware%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%8C%E6%95%B4%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AAlinux"><span class="toc-text">11. Vmware虚拟机完整创建一个linux</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-%E5%9C%A8VMD%E4%B8%AD%E6%98%BE%E7%A4%BA%E5%8E%9F%E5%AD%90%E5%BA%8F%E5%8F%B7%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-text">12. 在VMD中显示原子序号的方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13-PhpStudy"><span class="toc-text">13. PhpStudy</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14-%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-text">14. 搭建本地服务器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#15-MathType7"><span class="toc-text">15. MathType7</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#16-Office%E8%87%AA%E5%8A%A8%E5%AE%89%E8%A3%85%E8%87%B3C%E7%9B%98%E4%BF%AE%E6%94%B9%EF%BC%88%E5%A6%82%E6%9E%9C%E5%A4%9F%E7%94%A8%E4%B8%8D%E5%BB%BA%E8%AE%AE%EF%BC%89"><span class="toc-text">16. Office自动安装至C盘修改（如果够用不建议）</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -923,7 +937,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><div class='inner-toc'><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%8F%AA%E8%A6%81%E4%BD%BF%E7%94%A8%E9%94%AE%E7%9B%98Materials-Studio%E5%B0%B1%E5%8D%A1%E4%BD%8F"><span class="toc-text">1. 只要使用键盘Materials Studio就卡住</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%9C%80%E6%96%B0WIN10-20H2%E7%B3%BB%E7%BB%9F%E6%89%BE%E5%9B%9E%E7%BB%8F%E5%85%B8%E7%B3%BB%E7%BB%9F%E5%B1%9E%E6%80%A7%E7%95%8C%E9%9D%A2%E7%9A%84%E6%9C%80%E5%BD%BB%E5%BA%95%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-text">2. 最新WIN10 20H2系统找回经典系统属性界面的最彻底的方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-OPLS-optimized-potentials-for-liquid-simulations"><span class="toc-text">3. OPLS(optimized potentials for liquid simulations)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-AMBER%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8BB0%EF%BC%9AAMBER%E5%88%86%E5%AD%90%E5%8A%A8%E5%8A%9B%E5%AD%A6%E6%A8%A1%E6%8B%9F%E5%85%A5%E9%97%A8"><span class="toc-text">4. [AMBER基础教程B0：AMBER分子动力学模拟入门]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E5%9B%BD%E5%86%859%E5%A4%A7%E5%85%8D%E8%B4%B9CDN%E6%B1%87%E6%80%BB-%E8%BD%AC"><span class="toc-text">5. 国内9大免费CDN汇总 转</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-ctrl-c%E6%B2%A1%E5%8F%8D%E5%BA%94"><span class="toc-text">6. ctrl+c没反应</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-R7000office%E6%97%B6%E4%B8%8D%E6%97%B6%E9%97%AA%E9%BB%91%E5%B1%8F"><span class="toc-text">7. R7000office时不时闪黑屏</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-%E5%8F%8C%E7%B3%BB%E7%BB%9F%E6%95%99%E7%A8%8B%E5%8F%82%E8%80%83"><span class="toc-text">8. 双系统教程参考</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-Origin-Copy-Page%E5%88%B0Word%E6%88%96PPT%E5%90%8E%E4%BE%A7%E8%BE%B9%E7%A9%BA%E7%99%BD%E5%A4%9A%EF%BC%9F"><span class="toc-text">9. Origin, Copy Page到Word或PPT后侧边空白多？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-FFTW"><span class="toc-text">10. FFTW</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-Vmware%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%8C%E6%95%B4%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AAlinux"><span class="toc-text">11. Vmware虚拟机完整创建一个linux</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-%E5%9C%A8VMD%E4%B8%AD%E6%98%BE%E7%A4%BA%E5%8E%9F%E5%AD%90%E5%BA%8F%E5%8F%B7%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-text">12. 在VMD中显示原子序号的方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13-PhpStudy"><span class="toc-text">13. PhpStudy</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14-%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-text">14. 搭建本地服务器</span></a></li></ol></div></p>
+        <p><div class='inner-toc'><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%8F%AA%E8%A6%81%E4%BD%BF%E7%94%A8%E9%94%AE%E7%9B%98Materials-Studio%E5%B0%B1%E5%8D%A1%E4%BD%8F"><span class="toc-text">1. 只要使用键盘Materials Studio就卡住</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%9C%80%E6%96%B0WIN10-20H2%E7%B3%BB%E7%BB%9F%E6%89%BE%E5%9B%9E%E7%BB%8F%E5%85%B8%E7%B3%BB%E7%BB%9F%E5%B1%9E%E6%80%A7%E7%95%8C%E9%9D%A2%E7%9A%84%E6%9C%80%E5%BD%BB%E5%BA%95%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-text">2. 最新WIN10 20H2系统找回经典系统属性界面的最彻底的方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-OPLS-optimized-potentials-for-liquid-simulations"><span class="toc-text">3. OPLS(optimized potentials for liquid simulations)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-AMBER%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8BB0%EF%BC%9AAMBER%E5%88%86%E5%AD%90%E5%8A%A8%E5%8A%9B%E5%AD%A6%E6%A8%A1%E6%8B%9F%E5%85%A5%E9%97%A8"><span class="toc-text">4. [AMBER基础教程B0：AMBER分子动力学模拟入门]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E5%9B%BD%E5%86%859%E5%A4%A7%E5%85%8D%E8%B4%B9CDN%E6%B1%87%E6%80%BB-%E8%BD%AC"><span class="toc-text">5. 国内9大免费CDN汇总 转</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-ctrl-c%E6%B2%A1%E5%8F%8D%E5%BA%94"><span class="toc-text">6. ctrl+c没反应</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-R7000office%E6%97%B6%E4%B8%8D%E6%97%B6%E9%97%AA%E9%BB%91%E5%B1%8F"><span class="toc-text">7. R7000office时不时闪黑屏</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-%E5%8F%8C%E7%B3%BB%E7%BB%9F%E6%95%99%E7%A8%8B%E5%8F%82%E8%80%83"><span class="toc-text">8. 双系统教程参考</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-Origin-Copy-Page%E5%88%B0Word%E6%88%96PPT%E5%90%8E%E4%BE%A7%E8%BE%B9%E7%A9%BA%E7%99%BD%E5%A4%9A%EF%BC%9F"><span class="toc-text">9. Origin, Copy Page到Word或PPT后侧边空白多？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-FFTW"><span class="toc-text">10. FFTW</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-Vmware%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%8C%E6%95%B4%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AAlinux"><span class="toc-text">11. Vmware虚拟机完整创建一个linux</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-%E5%9C%A8VMD%E4%B8%AD%E6%98%BE%E7%A4%BA%E5%8E%9F%E5%AD%90%E5%BA%8F%E5%8F%B7%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-text">12. 在VMD中显示原子序号的方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13-PhpStudy"><span class="toc-text">13. PhpStudy</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14-%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-text">14. 搭建本地服务器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#15-MathType7"><span class="toc-text">15. MathType7</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#16-Office%E8%87%AA%E5%8A%A8%E5%AE%89%E8%A3%85%E8%87%B3C%E7%9B%98%E4%BF%AE%E6%94%B9%EF%BC%88%E5%A6%82%E6%9E%9C%E5%A4%9F%E7%94%A8%E4%B8%8D%E5%BB%BA%E8%AE%AE%EF%BC%89"><span class="toc-text">16. Office自动安装至C盘修改（如果够用不建议）</span></a></li></ol></div></p>
 <h3 id="1-只要使用键盘Materials-Studio就卡住"><a href="#1-只要使用键盘Materials-Studio就卡住" class="headerlink" title="1. 只要使用键盘Materials Studio就卡住"></a><strong>1. 只要使用键盘Materials Studio就卡住</strong></h3><ul>
 <li>解决方法：在微软拼音输入法的“中”(或“英”)字上右击鼠标，然后点“设置”，在弹出界面中点“常规”，在新界面中向下滚动动底部，有个兼容性，打开兼容性，然后就OK了。</li>
 <li>参考链接:<br>[1] <a target="_blank" rel="noopener" href="http://muchong.com/t-14329827-1">http://muchong.com/t-14329827-1</a></li>
@@ -983,6 +997,21 @@
 <h3 id="14-搭建本地服务器"><a href="#14-搭建本地服务器" class="headerlink" title="14. 搭建本地服务器"></a><strong>14. 搭建本地服务器</strong></h3><ul>
 <li>Web服务器——保姆级教程！ <a target="_blank" rel="noopener" href="https://my.oschina.net/u/4383725/blog/4510772">https://my.oschina.net/u/4383725/blog/4510772</a></li>
 </ul>
+<h3 id="15-MathType7"><a href="#15-MathType7" class="headerlink" title="15. MathType7"></a><strong>15. MathType7</strong></h3><ul>
+<li><a target="_blank" rel="noopener" href="https://www.mathtype.cn/">https://www.mathtype.cn/</a></li>
+<li>30天到期后，删除注册表<code>计算机\HKEY_CURRENT_USER\SOFTWARE\Install Options</code>中的<code>Options7.4</code></li>
+<li>便可再获得30天（还没试过）</li>
+</ul>
+<h3 id="16-Office自动安装至C盘修改（如果够用不建议）"><a href="#16-Office自动安装至C盘修改（如果够用不建议）" class="headerlink" title="16. Office自动安装至C盘修改（如果够用不建议）"></a><strong>16. Office自动安装至C盘修改（如果够用不建议）</strong></h3><p><img src="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/Office/1.PNG"></p>
+<ul>
+<li>安装前修改注册表<code>计算机\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion</code>下<code>ProgramFilesDir</code>路径为其他盘路径（千万不要乱改后又重启电脑）<blockquote>
+<ul>
+<li>一定要注意，改完安装后，立马注册表修改回到原来，没改前千万别重启电脑。</li>
+<li>被迫重装系统后的反思。</li>
+</ul>
+</blockquote>
+</li>
+</ul>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。 </span>
@@ -997,10 +1026,10 @@
 
 <div class="article_copyright">
     <p><span class="copy-title">文章标题:</span>随笔---2021</p>
-    <p><span class="copy-title">字数:</span><span class="post-count">759</span></p>
+    <p><span class="copy-title">字数:</span><span class="post-count">909</span></p>
     <p><span class="copy-title">本文作者:</span><a  title="Eastsheng">Eastsheng</a></p>
     <p><span class="copy-title">发布时间:</span>2021-01-22, 18:11:28</p>
-    <p><span class="copy-title">最后更新:</span>2021-05-07, 21:18:04</p>
+    <p><span class="copy-title">最后更新:</span>2021-06-09, 22:55:41</p>
     <span class="copy-title">原始链接:</span><a class="post-url" href="/2021/01/22/notes/DailyNotes2021/" title="随笔---2021">https://eastsheng.github.io/2021/01/22/notes/DailyNotes2021/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">&#34;署名-非商用-相同方式共享 4.0&#34;</a> 转载请保留原文链接及作者。
