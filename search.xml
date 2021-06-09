@@ -166,31 +166,6 @@
     
     
     <entry>
-      <title>随笔---2021</title>
-      <link href="2021/01/22/notes/DailyNotes2021/"/>
-      <url>2021/01/22/notes/DailyNotes2021/</url>
-      
-        <content type="html"><![CDATA[<p>[toc]</p><h3 id="1-只要使用键盘Materials-Studio就卡住"><a href="#1-只要使用键盘Materials-Studio就卡住" class="headerlink" title="1. 只要使用键盘Materials Studio就卡住"></a><strong>1. 只要使用键盘Materials Studio就卡住</strong></h3><ul><li>解决方法：在微软拼音输入法的“中”(或“英”)字上右击鼠标，然后点“设置”，在弹出界面中点“常规”，在新界面中向下滚动动底部，有个兼容性，打开兼容性，然后就OK了。</li><li>参考链接:<br>[1] <a href="http://muchong.com/t-14329827-1">http://muchong.com/t-14329827-1</a></li></ul><h3 id="2-最新WIN10-20H2系统找回经典系统属性界面的最彻底的方法"><a href="#2-最新WIN10-20H2系统找回经典系统属性界面的最彻底的方法" class="headerlink" title="2. 最新WIN10 20H2系统找回经典系统属性界面的最彻底的方法"></a><strong>2. 最新WIN10 20H2系统找回经典系统属性界面的最彻底的方法</strong></h3><ul><li>重装了Win10 20H2以后，右键此电脑后的属性面板变了，要彻底换回经典的属性面板方法。</li><li>（1）打开注册表，直接搜索<code>注册表</code>、或者<code>Win+R</code>，然后输入<code>regedit</code>；</li><li>（2）找到路径<code>HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\FeatureManagement\Overrides\0\2093230218</code>;</li><li>（3）将EnabledState的数值数据修改为 <code>1</code> 即可。</li><li>（4）参考链接：<a href="https://www.bilibili.com/read/cv8197364">https://www.bilibili.com/read/cv8197364</a></li></ul><h3 id="3-OPLS-optimized-potentials-for-liquid-simulations"><a href="#3-OPLS-optimized-potentials-for-liquid-simulations" class="headerlink" title="3. OPLS(optimized potentials for liquid simulations)"></a><strong>3. OPLS(optimized potentials for liquid simulations)</strong></h3><ul><li>参考链接:<br>[1] <a href="https://blog.csdn.net/qq_31346429/article/details/106358251">https://blog.csdn.net/qq_31346429/article/details/106358251</a></li></ul><h3 id="4-AMBER基础教程B0：AMBER分子动力学模拟入门"><a href="#4-AMBER基础教程B0：AMBER分子动力学模拟入门" class="headerlink" title="4. [AMBER基础教程B0：AMBER分子动力学模拟入门]"></a><strong>4. [AMBER基础教程B0：AMBER分子动力学模拟入门]</strong></h3><ul><li>参考链接:<br>[1] <a href="https://jerkwin.github.io/2018/01/17/AMBER%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8BB0-AMBER%E5%88%86%E5%AD%90%E5%8A%A8%E5%8A%9B%E5%AD%A6%E6%A8%A1%E6%8B%9F%E5%85%A5%E9%97%A8/">https://jerkwin.github.io/2018/01/17/AMBER%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8BB0-AMBER%E5%88%86%E5%AD%90%E5%8A%A8%E5%8A%9B%E5%AD%A6%E6%A8%A1%E6%8B%9F%E5%85%A5%E9%97%A8/</a></li></ul><h3 id="5-国内9大免费CDN汇总-转"><a href="#5-国内9大免费CDN汇总-转" class="headerlink" title="5. 国内9大免费CDN汇总 转"></a><strong>5. 国内9大免费CDN汇总 转</strong></h3><ul><li>转 [1] <a href="https://cloud.tencent.com/developer/article/1352398">https://cloud.tencent.com/developer/article/1352398</a></li></ul><h3 id="6-ctrl-c没反应"><a href="#6-ctrl-c没反应" class="headerlink" title="6. ctrl+c没反应"></a><strong>6. <code>ctrl+c</code>没反应</strong></h3><ul><li>可能是开着有道翻译快捷键冲突了，关了有道或者其他快捷键冲突软件即可</li></ul><h3 id="7-R7000office时不时闪黑屏"><a href="#7-R7000office时不时闪黑屏" class="headerlink" title="7. R7000office时不时闪黑屏"></a><strong>7. <code>R7000</code>office时不时闪黑屏</strong></h3><p><img src="https://filestore.community.support.microsoft.com/api/images/25b29daa-46b9-47c5-8875-3952d3cf174b?upload=true"></p><ul><li>打开office，文件&gt;选项&gt;高级&gt;显示</li><li>勾选“禁用硬件图形加速”，“应用”并“确定”</li><li>参考：[1] <a href="https://answers.microsoft.com/zh-hans/msoffice/forum/msoffice_word-mso_win10-mso_2019/office-%E9%97%AA%E5%B1%8F/33c9a15d-595b-4c62-8d30-fbce21a24fc8">https://answers.microsoft.com/zh-hans/msoffice/forum/msoffice_word-mso_win10-mso_2019/office-%E9%97%AA%E5%B1%8F/33c9a15d-595b-4c62-8d30-fbce21a24fc8</a></li></ul><h3 id="8-双系统教程参考"><a href="#8-双系统教程参考" class="headerlink" title="8. 双系统教程参考"></a><strong>8. 双系统教程参考</strong></h3><ul><li><a href="https://www.cnblogs.com/masbay/p/10745170.html">https://www.cnblogs.com/masbay/p/10745170.html</a></li></ul><h3 id="9-Origin-Copy-Page到Word或PPT后侧边空白多？"><a href="#9-Origin-Copy-Page到Word或PPT后侧边空白多？" class="headerlink" title="9. Origin, Copy Page到Word或PPT后侧边空白多？"></a><strong>9. Origin, Copy Page到Word或PPT后侧边空白多？</strong></h3><ul><li>修改Tools→Options→page选项卡，将Margin Control 设置为Tight，或者将Clip Border Width设置为0，两种都可行。</li></ul><p><img src="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/origin_bug.png"></p><ul><li>若以上步骤不行，那应该是电脑的屏幕缩放不是100%，改为100%就好；</li><li>或者换更高版本的Origin.</li></ul><h3 id="10-FFTW"><a href="#10-FFTW" class="headerlink" title="10. FFTW"></a><strong>10. FFTW</strong></h3><ul><li>Windows安装跟使用fftw  <a href="http://m.myexceptions.net/windows/1616414.html">http://m.myexceptions.net/windows/1616414.html</a></li><li>linux 和 Windows下FFTW库的安装  <a href="https://blog.csdn.net/dengm155/article/details/53819704">https://blog.csdn.net/dengm155/article/details/53819704</a></li></ul><h3 id="11-Vmware虚拟机完整创建一个linux"><a href="#11-Vmware虚拟机完整创建一个linux" class="headerlink" title="11. Vmware虚拟机完整创建一个linux"></a><strong>11. Vmware虚拟机完整创建一个linux</strong></h3><ul><li><a href="https://blog.csdn.net/weixin_42533541/article/details/81877207">https://blog.csdn.net/weixin_42533541/article/details/81877207</a></li></ul><h3 id="12-在VMD中显示原子序号的方法"><a href="#12-在VMD中显示原子序号的方法" class="headerlink" title="12. 在VMD中显示原子序号的方法"></a><strong>12. 在VMD中显示原子序号的方法</strong></h3><ul><li><a href="http://sobereva.com/197">http://sobereva.com/197</a></li></ul><h3 id="13-PhpStudy"><a href="#13-PhpStudy" class="headerlink" title="13. PhpStudy"></a><strong>13. PhpStudy</strong></h3><ul><li>PhpStudy <a href="https://www.xp.cn/">https://www.xp.cn/</a></li><li><a href="https://jingyan.baidu.com/article/148a1921b820c34d70c3b168.html">https://jingyan.baidu.com/article/148a1921b820c34d70c3b168.html</a></li><li>phpStudy V8 使用手册 <a href="https://www.xp.cn/phpstudy-v8/">https://www.xp.cn/phpstudy-v8/</a></li><li>FileZilla <a href="https://www.filezilla.cn/">https://www.filezilla.cn/</a></li></ul><h3 id="14-搭建本地服务器"><a href="#14-搭建本地服务器" class="headerlink" title="14. 搭建本地服务器"></a><strong>14. 搭建本地服务器</strong></h3><ul><li>Web服务器——保姆级教程！ <a href="https://my.oschina.net/u/4383725/blog/4510772">https://my.oschina.net/u/4383725/blog/4510772</a></li></ul><h3 id="15-MathType7"><a href="#15-MathType7" class="headerlink" title="15. MathType7"></a><strong>15. MathType7</strong></h3><ul><li><a href="https://www.mathtype.cn/">https://www.mathtype.cn/</a></li><li>30天到期后，删除注册表<code>计算机\HKEY_CURRENT_USER\SOFTWARE\Install Options</code>中的<code>Options7.4</code></li><li>便可再获得30天（还没试过）</li></ul><h3 id="16-Office自动安装至C盘修改（如果够用不建议）"><a href="#16-Office自动安装至C盘修改（如果够用不建议）" class="headerlink" title="16. Office自动安装至C盘修改（如果够用不建议）"></a><strong>16. Office自动安装至C盘修改（如果够用不建议）</strong></h3><p><img src="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/Office/1.PNG"></p><ul><li>安装前修改注册表<code>计算机\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion</code>下<code>ProgramFilesDir</code>路径为其他盘路径（千万不要乱改后又重启电脑）<blockquote><ul><li>一定要注意，改完安装后，立马注册表修改回到原来，没改前千万别重启电脑。</li><li>被迫重装系统后的反思。</li></ul></blockquote></li></ul>]]></content>
-      
-      
-      <categories>
-          
-          <category> Notes </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Daily Notes </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Matplotlib学习</title>
       <link href="2021/01/22/python/matplotlib/"/>
       <url>2021/01/22/python/matplotlib/</url>
@@ -280,6 +255,31 @@
     
     
     <entry>
+      <title>随笔---2021</title>
+      <link href="2021/01/22/notes/DailyNotes2021/"/>
+      <url>2021/01/22/notes/DailyNotes2021/</url>
+      
+        <content type="html"><![CDATA[<p>[toc]</p><h3 id="1-只要使用键盘Materials-Studio就卡住"><a href="#1-只要使用键盘Materials-Studio就卡住" class="headerlink" title="1. 只要使用键盘Materials Studio就卡住"></a><strong>1. 只要使用键盘Materials Studio就卡住</strong></h3><ul><li>解决方法：在微软拼音输入法的“中”(或“英”)字上右击鼠标，然后点“设置”，在弹出界面中点“常规”，在新界面中向下滚动动底部，有个兼容性，打开兼容性，然后就OK了。</li><li>参考链接:<br>[1] <a href="http://muchong.com/t-14329827-1">http://muchong.com/t-14329827-1</a></li></ul><h3 id="2-最新WIN10-20H2系统找回经典系统属性界面的最彻底的方法"><a href="#2-最新WIN10-20H2系统找回经典系统属性界面的最彻底的方法" class="headerlink" title="2. 最新WIN10 20H2系统找回经典系统属性界面的最彻底的方法"></a><strong>2. 最新WIN10 20H2系统找回经典系统属性界面的最彻底的方法</strong></h3><ul><li>重装了Win10 20H2以后，右键此电脑后的属性面板变了，要彻底换回经典的属性面板方法。</li><li>（1）打开注册表，直接搜索<code>注册表</code>、或者<code>Win+R</code>，然后输入<code>regedit</code>；</li><li>（2）找到路径<code>HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\FeatureManagement\Overrides\0\2093230218</code>;</li><li>（3）将EnabledState的数值数据修改为 <code>1</code> 即可。</li><li>（4）参考链接：<a href="https://www.bilibili.com/read/cv8197364">https://www.bilibili.com/read/cv8197364</a></li></ul><h3 id="3-OPLS-optimized-potentials-for-liquid-simulations"><a href="#3-OPLS-optimized-potentials-for-liquid-simulations" class="headerlink" title="3. OPLS(optimized potentials for liquid simulations)"></a><strong>3. OPLS(optimized potentials for liquid simulations)</strong></h3><ul><li>参考链接:<br>[1] <a href="https://blog.csdn.net/qq_31346429/article/details/106358251">https://blog.csdn.net/qq_31346429/article/details/106358251</a></li></ul><h3 id="4-AMBER基础教程B0：AMBER分子动力学模拟入门"><a href="#4-AMBER基础教程B0：AMBER分子动力学模拟入门" class="headerlink" title="4. [AMBER基础教程B0：AMBER分子动力学模拟入门]"></a><strong>4. [AMBER基础教程B0：AMBER分子动力学模拟入门]</strong></h3><ul><li>参考链接:<br>[1] <a href="https://jerkwin.github.io/2018/01/17/AMBER%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8BB0-AMBER%E5%88%86%E5%AD%90%E5%8A%A8%E5%8A%9B%E5%AD%A6%E6%A8%A1%E6%8B%9F%E5%85%A5%E9%97%A8/">https://jerkwin.github.io/2018/01/17/AMBER%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8BB0-AMBER%E5%88%86%E5%AD%90%E5%8A%A8%E5%8A%9B%E5%AD%A6%E6%A8%A1%E6%8B%9F%E5%85%A5%E9%97%A8/</a></li></ul><h3 id="5-国内9大免费CDN汇总-转"><a href="#5-国内9大免费CDN汇总-转" class="headerlink" title="5. 国内9大免费CDN汇总 转"></a><strong>5. 国内9大免费CDN汇总 转</strong></h3><ul><li>转 [1] <a href="https://cloud.tencent.com/developer/article/1352398">https://cloud.tencent.com/developer/article/1352398</a></li></ul><h3 id="6-ctrl-c没反应"><a href="#6-ctrl-c没反应" class="headerlink" title="6. ctrl+c没反应"></a><strong>6. <code>ctrl+c</code>没反应</strong></h3><ul><li>可能是开着有道翻译快捷键冲突了，关了有道或者其他快捷键冲突软件即可</li></ul><h3 id="7-R7000office时不时闪黑屏"><a href="#7-R7000office时不时闪黑屏" class="headerlink" title="7. R7000office时不时闪黑屏"></a><strong>7. <code>R7000</code>office时不时闪黑屏</strong></h3><p><img src="https://filestore.community.support.microsoft.com/api/images/25b29daa-46b9-47c5-8875-3952d3cf174b?upload=true"></p><ul><li>打开office，文件&gt;选项&gt;高级&gt;显示</li><li>勾选“禁用硬件图形加速”，“应用”并“确定”</li><li>参考：[1] <a href="https://answers.microsoft.com/zh-hans/msoffice/forum/msoffice_word-mso_win10-mso_2019/office-%E9%97%AA%E5%B1%8F/33c9a15d-595b-4c62-8d30-fbce21a24fc8">https://answers.microsoft.com/zh-hans/msoffice/forum/msoffice_word-mso_win10-mso_2019/office-%E9%97%AA%E5%B1%8F/33c9a15d-595b-4c62-8d30-fbce21a24fc8</a></li></ul><h3 id="8-双系统教程参考"><a href="#8-双系统教程参考" class="headerlink" title="8. 双系统教程参考"></a><strong>8. 双系统教程参考</strong></h3><ul><li><a href="https://www.cnblogs.com/masbay/p/10745170.html">https://www.cnblogs.com/masbay/p/10745170.html</a></li></ul><h3 id="9-Origin-Copy-Page到Word或PPT后侧边空白多？"><a href="#9-Origin-Copy-Page到Word或PPT后侧边空白多？" class="headerlink" title="9. Origin, Copy Page到Word或PPT后侧边空白多？"></a><strong>9. Origin, Copy Page到Word或PPT后侧边空白多？</strong></h3><ul><li>修改Tools→Options→page选项卡，将Margin Control 设置为Tight，或者将Clip Border Width设置为0，两种都可行。</li></ul><p><img src="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/origin_bug.png"></p><ul><li>若以上步骤不行，那应该是电脑的屏幕缩放不是100%，改为100%就好；</li><li>或者换更高版本的Origin.</li></ul><h3 id="10-FFTW"><a href="#10-FFTW" class="headerlink" title="10. FFTW"></a><strong>10. FFTW</strong></h3><ul><li>Windows安装跟使用fftw  <a href="http://m.myexceptions.net/windows/1616414.html">http://m.myexceptions.net/windows/1616414.html</a></li><li>linux 和 Windows下FFTW库的安装  <a href="https://blog.csdn.net/dengm155/article/details/53819704">https://blog.csdn.net/dengm155/article/details/53819704</a></li></ul><h3 id="11-Vmware虚拟机完整创建一个linux"><a href="#11-Vmware虚拟机完整创建一个linux" class="headerlink" title="11. Vmware虚拟机完整创建一个linux"></a><strong>11. Vmware虚拟机完整创建一个linux</strong></h3><ul><li><a href="https://blog.csdn.net/weixin_42533541/article/details/81877207">https://blog.csdn.net/weixin_42533541/article/details/81877207</a></li></ul><h3 id="12-在VMD中显示原子序号的方法"><a href="#12-在VMD中显示原子序号的方法" class="headerlink" title="12. 在VMD中显示原子序号的方法"></a><strong>12. 在VMD中显示原子序号的方法</strong></h3><ul><li><a href="http://sobereva.com/197">http://sobereva.com/197</a></li></ul><h3 id="13-PhpStudy"><a href="#13-PhpStudy" class="headerlink" title="13. PhpStudy"></a><strong>13. PhpStudy</strong></h3><ul><li>PhpStudy <a href="https://www.xp.cn/">https://www.xp.cn/</a></li><li><a href="https://jingyan.baidu.com/article/148a1921b820c34d70c3b168.html">https://jingyan.baidu.com/article/148a1921b820c34d70c3b168.html</a></li><li>phpStudy V8 使用手册 <a href="https://www.xp.cn/phpstudy-v8/">https://www.xp.cn/phpstudy-v8/</a></li><li>FileZilla <a href="https://www.filezilla.cn/">https://www.filezilla.cn/</a></li></ul><h3 id="14-搭建本地服务器"><a href="#14-搭建本地服务器" class="headerlink" title="14. 搭建本地服务器"></a><strong>14. 搭建本地服务器</strong></h3><ul><li>Web服务器——保姆级教程！ <a href="https://my.oschina.net/u/4383725/blog/4510772">https://my.oschina.net/u/4383725/blog/4510772</a></li></ul><h3 id="15-MathType7"><a href="#15-MathType7" class="headerlink" title="15. MathType7"></a><strong>15. MathType7</strong></h3><ul><li><a href="https://www.mathtype.cn/">https://www.mathtype.cn/</a></li><li>30天到期后，删除注册表<code>计算机\HKEY_CURRENT_USER\SOFTWARE\Install Options</code>中的<code>Options7.4</code></li><li>便可再获得30天（还没试过）</li></ul><h3 id="16-Office自动安装至C盘修改（如果够用不建议）"><a href="#16-Office自动安装至C盘修改（如果够用不建议）" class="headerlink" title="16. Office自动安装至C盘修改（如果够用不建议）"></a><strong>16. Office自动安装至C盘修改（如果够用不建议）</strong></h3><p><img src="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/Office/1.PNG"></p><ul><li>安装前修改注册表<code>计算机\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion</code>下<code>ProgramFilesDir</code>路径为其他盘路径（千万不要乱改后又重启电脑）<blockquote><ul><li>一定要注意，改完安装后，立马注册表修改回到原来，没改前千万别重启电脑。</li><li>被迫重装系统后的反思。</li></ul></blockquote></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Notes </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Daily Notes </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>单位/常数</title>
       <link href="2021/01/21/notes/units_or_constants/"/>
       <url>2021/01/21/notes/units_or_constants/</url>
@@ -334,31 +334,6 @@
     
     
     <entry>
-      <title>视频收藏</title>
-      <link href="2020/06/18/collections/videos/"/>
-      <url>2020/06/18/collections/videos/</url>
-      
-        <content type="html"><![CDATA[<p>[toc]</p><h2 id="学习视频"><a href="#学习视频" class="headerlink" title="学习视频"></a><strong>学习视频</strong></h2><h3 id="1-讲座"><a href="#1-讲座" class="headerlink" title="1. 讲座"></a>1. 讲座</h3><ul><li><a href="https://www.koushare.com/">蔻享</a></li><li><a href="https://space.bilibili.com/609834262?spm_id_from=333.788.b_765f7570696e666f.1">微纳传热</a></li></ul><h3 id="2-教程"><a href="#2-教程" class="headerlink" title="2. 教程"></a>2. 教程</h3><p><a href="https://app.cailiaoren.com/view/series/detail?id=48&vid=189">VMD软件基础使用讲解</a><br><a href="https://www.koushare.com/video/videodetail/5710">科技论文写作与投稿审稿经验分享</a><br><a href="http://cms.sjtu.edu.cn/">上交计算材料课程</a><br><a href="https://www.icourse163.org/">慕课</a><br><a href="https://www.51zxw.net/">我要自学网</a><br><a href="http://v.dxsbb.com/">大学生自学网</a><br><a href="http://www.fanshuxueyuan.com/">番薯学院</a><br><a href="http://www.kgc.cn/">课工场</a><br><a href="https://phet.colorado.edu/zh_CN/">免费的在线物理、化学、生物、地理及数学仿真程序</a><br><a href="https://www.5ifxw.com/">我爱分享网</a><br><a href="https://edu.aliyun.com/">阿里云大学</a><br><a href="https://zhishitu.com/">知识兔</a><br><a href="http://www.oioio.pro/">甲骨数字</a><br><a href="http://www.zf3d.com/">朱峰社区</a><br><a href="https://www.coursera.org/">coursera</a><br><a href="https://www.html.cn/">HTML中文网</a><br><a href="https://www.xuetangx.com/">学堂在线</a></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Collections </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Videos </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>书籍/社区/论坛收藏</title>
       <link href="2020/06/18/collections/books_communities_fora/"/>
       <url>2020/06/18/collections/books_communities_fora/</url>
@@ -382,6 +357,31 @@
             <tag> forum </tag>
             
             <tag> community </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>视频收藏</title>
+      <link href="2020/06/18/collections/videos/"/>
+      <url>2020/06/18/collections/videos/</url>
+      
+        <content type="html"><![CDATA[<p>[toc]</p><h2 id="学习视频"><a href="#学习视频" class="headerlink" title="学习视频"></a><strong>学习视频</strong></h2><h3 id="1-讲座"><a href="#1-讲座" class="headerlink" title="1. 讲座"></a>1. 讲座</h3><ul><li><a href="https://www.koushare.com/">蔻享</a></li><li><a href="https://space.bilibili.com/609834262?spm_id_from=333.788.b_765f7570696e666f.1">微纳传热</a></li></ul><h3 id="2-教程"><a href="#2-教程" class="headerlink" title="2. 教程"></a>2. 教程</h3><p><a href="https://app.cailiaoren.com/view/series/detail?id=48&vid=189">VMD软件基础使用讲解</a><br><a href="https://www.koushare.com/video/videodetail/5710">科技论文写作与投稿审稿经验分享</a><br><a href="http://cms.sjtu.edu.cn/">上交计算材料课程</a><br><a href="https://www.icourse163.org/">慕课</a><br><a href="https://www.51zxw.net/">我要自学网</a><br><a href="http://v.dxsbb.com/">大学生自学网</a><br><a href="http://www.fanshuxueyuan.com/">番薯学院</a><br><a href="http://www.kgc.cn/">课工场</a><br><a href="https://phet.colorado.edu/zh_CN/">免费的在线物理、化学、生物、地理及数学仿真程序</a><br><a href="https://www.5ifxw.com/">我爱分享网</a><br><a href="https://edu.aliyun.com/">阿里云大学</a><br><a href="https://zhishitu.com/">知识兔</a><br><a href="http://www.oioio.pro/">甲骨数字</a><br><a href="http://www.zf3d.com/">朱峰社区</a><br><a href="https://www.coursera.org/">coursera</a><br><a href="https://www.html.cn/">HTML中文网</a><br><a href="https://www.xuetangx.com/">学堂在线</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Collections </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Videos </tag>
             
         </tags>
       
@@ -437,9 +437,9 @@
       
         <tags>
             
-            <tag> Command </tag>
-            
             <tag> Linux </tag>
+            
+            <tag> Command </tag>
             
         </tags>
       
@@ -553,9 +553,9 @@
       
         <tags>
             
-            <tag> Lammps </tag>
-            
             <tag> Notes </tag>
+            
+            <tag> Lammps </tag>
             
         </tags>
       
@@ -582,9 +582,9 @@
       
         <tags>
             
-            <tag> Lammps </tag>
-            
             <tag> Command </tag>
+            
+            <tag> Lammps </tag>
             
         </tags>
       
