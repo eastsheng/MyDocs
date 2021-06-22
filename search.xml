@@ -220,6 +220,31 @@
     
     
     <entry>
+      <title>随笔---2021</title>
+      <link href="2021/01/22/notes/DailyNotes2021/"/>
+      <url>2021/01/22/notes/DailyNotes2021/</url>
+      
+        <content type="html"><![CDATA[<p>[toc]</p><h3 id="1-只要使用键盘Materials-Studio就卡住"><a href="#1-只要使用键盘Materials-Studio就卡住" class="headerlink" title="1. 只要使用键盘Materials Studio就卡住"></a><strong>1. 只要使用键盘Materials Studio就卡住</strong></h3><ul><li>解决方法：在微软拼音输入法的“中”(或“英”)字上右击鼠标，然后点“设置”，在弹出界面中点“常规”，在新界面中向下滚动动底部，有个兼容性，打开兼容性，然后就OK了。</li><li>参考链接:<br>[1] <a href="http://muchong.com/t-14329827-1">http://muchong.com/t-14329827-1</a></li></ul><h3 id="2-最新WIN10-20H2系统找回经典系统属性界面的最彻底的方法"><a href="#2-最新WIN10-20H2系统找回经典系统属性界面的最彻底的方法" class="headerlink" title="2. 最新WIN10 20H2系统找回经典系统属性界面的最彻底的方法"></a><strong>2. 最新WIN10 20H2系统找回经典系统属性界面的最彻底的方法</strong></h3><ul><li>重装了Win10 20H2以后，右键此电脑后的属性面板变了，要彻底换回经典的属性面板方法。</li><li>（1）打开注册表，直接搜索<code>注册表</code>、或者<code>Win+R</code>，然后输入<code>regedit</code>；</li><li>（2）找到路径<code>HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\FeatureManagement\Overrides\0\2093230218</code>;</li><li>（3）将EnabledState的数值数据修改为 <code>1</code> 即可。</li><li>（4）参考链接：<a href="https://www.bilibili.com/read/cv8197364">https://www.bilibili.com/read/cv8197364</a></li></ul><h3 id="3-OPLS-optimized-potentials-for-liquid-simulations"><a href="#3-OPLS-optimized-potentials-for-liquid-simulations" class="headerlink" title="3. OPLS(optimized potentials for liquid simulations)"></a><strong>3. OPLS(optimized potentials for liquid simulations)</strong></h3><ul><li>参考链接:<br>[1] <a href="https://blog.csdn.net/qq_31346429/article/details/106358251">https://blog.csdn.net/qq_31346429/article/details/106358251</a></li></ul><h3 id="4-AMBER基础教程B0：AMBER分子动力学模拟入门"><a href="#4-AMBER基础教程B0：AMBER分子动力学模拟入门" class="headerlink" title="4. [AMBER基础教程B0：AMBER分子动力学模拟入门]"></a><strong>4. [AMBER基础教程B0：AMBER分子动力学模拟入门]</strong></h3><ul><li>参考链接:<br>[1] <a href="https://jerkwin.github.io/2018/01/17/AMBER%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8BB0-AMBER%E5%88%86%E5%AD%90%E5%8A%A8%E5%8A%9B%E5%AD%A6%E6%A8%A1%E6%8B%9F%E5%85%A5%E9%97%A8/">https://jerkwin.github.io/2018/01/17/AMBER%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8BB0-AMBER%E5%88%86%E5%AD%90%E5%8A%A8%E5%8A%9B%E5%AD%A6%E6%A8%A1%E6%8B%9F%E5%85%A5%E9%97%A8/</a></li></ul><h3 id="5-国内9大免费CDN汇总-转"><a href="#5-国内9大免费CDN汇总-转" class="headerlink" title="5. 国内9大免费CDN汇总 转"></a><strong>5. 国内9大免费CDN汇总 转</strong></h3><ul><li>转 [1] <a href="https://cloud.tencent.com/developer/article/1352398">https://cloud.tencent.com/developer/article/1352398</a></li></ul><h3 id="6-ctrl-c没反应"><a href="#6-ctrl-c没反应" class="headerlink" title="6. ctrl+c没反应"></a><strong>6. <code>ctrl+c</code>没反应</strong></h3><ul><li>可能是开着有道翻译快捷键冲突了，关了有道或者其他快捷键冲突软件即可</li></ul><h3 id="7-R7000office时不时闪黑屏"><a href="#7-R7000office时不时闪黑屏" class="headerlink" title="7. R7000office时不时闪黑屏"></a><strong>7. <code>R7000</code>office时不时闪黑屏</strong></h3><p><img src="https://filestore.community.support.microsoft.com/api/images/25b29daa-46b9-47c5-8875-3952d3cf174b?upload=true"></p><ul><li>打开office，文件&gt;选项&gt;高级&gt;显示</li><li>勾选“禁用硬件图形加速”，“应用”并“确定”</li><li>参考：[1] <a href="https://answers.microsoft.com/zh-hans/msoffice/forum/msoffice_word-mso_win10-mso_2019/office-%E9%97%AA%E5%B1%8F/33c9a15d-595b-4c62-8d30-fbce21a24fc8">https://answers.microsoft.com/zh-hans/msoffice/forum/msoffice_word-mso_win10-mso_2019/office-%E9%97%AA%E5%B1%8F/33c9a15d-595b-4c62-8d30-fbce21a24fc8</a></li></ul><h3 id="8-双系统教程参考"><a href="#8-双系统教程参考" class="headerlink" title="8. 双系统教程参考"></a><strong>8. 双系统教程参考</strong></h3><ul><li><a href="https://www.cnblogs.com/masbay/p/10745170.html">https://www.cnblogs.com/masbay/p/10745170.html</a></li></ul><h3 id="9-Origin-Copy-Page到Word或PPT后侧边空白多？"><a href="#9-Origin-Copy-Page到Word或PPT后侧边空白多？" class="headerlink" title="9. Origin, Copy Page到Word或PPT后侧边空白多？"></a><strong>9. Origin, Copy Page到Word或PPT后侧边空白多？</strong></h3><ul><li>修改Tools→Options→page选项卡，将Margin Control 设置为Tight，或者将Clip Border Width设置为0，两种都可行。</li></ul><p><img src="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/origin_bug.png"></p><ul><li>若以上步骤不行，那应该是电脑的屏幕缩放不是100%，改为100%就好；</li><li>或者换更高版本的Origin.</li></ul><h3 id="10-FFTW"><a href="#10-FFTW" class="headerlink" title="10. FFTW"></a><strong>10. FFTW</strong></h3><ul><li>Windows安装跟使用fftw  <a href="http://m.myexceptions.net/windows/1616414.html">http://m.myexceptions.net/windows/1616414.html</a></li><li>linux 和 Windows下FFTW库的安装  <a href="https://blog.csdn.net/dengm155/article/details/53819704">https://blog.csdn.net/dengm155/article/details/53819704</a></li></ul><h3 id="11-Vmware虚拟机完整创建一个linux"><a href="#11-Vmware虚拟机完整创建一个linux" class="headerlink" title="11. Vmware虚拟机完整创建一个linux"></a><strong>11. Vmware虚拟机完整创建一个linux</strong></h3><ul><li><a href="https://blog.csdn.net/weixin_42533541/article/details/81877207">https://blog.csdn.net/weixin_42533541/article/details/81877207</a></li></ul><h3 id="12-在VMD中显示原子序号的方法"><a href="#12-在VMD中显示原子序号的方法" class="headerlink" title="12. 在VMD中显示原子序号的方法"></a><strong>12. 在VMD中显示原子序号的方法</strong></h3><ul><li><a href="http://sobereva.com/197">http://sobereva.com/197</a></li></ul><h3 id="13-PhpStudy"><a href="#13-PhpStudy" class="headerlink" title="13. PhpStudy"></a><strong>13. PhpStudy</strong></h3><ul><li>PhpStudy <a href="https://www.xp.cn/">https://www.xp.cn/</a></li><li><a href="https://jingyan.baidu.com/article/148a1921b820c34d70c3b168.html">https://jingyan.baidu.com/article/148a1921b820c34d70c3b168.html</a></li><li>phpStudy V8 使用手册 <a href="https://www.xp.cn/phpstudy-v8/">https://www.xp.cn/phpstudy-v8/</a></li><li>FileZilla <a href="https://www.filezilla.cn/">https://www.filezilla.cn/</a></li></ul><h3 id="14-搭建本地服务器"><a href="#14-搭建本地服务器" class="headerlink" title="14. 搭建本地服务器"></a><strong>14. 搭建本地服务器</strong></h3><ul><li>Web服务器——保姆级教程！ <a href="https://my.oschina.net/u/4383725/blog/4510772">https://my.oschina.net/u/4383725/blog/4510772</a></li></ul><h3 id="15-MathType7"><a href="#15-MathType7" class="headerlink" title="15. MathType7"></a><strong>15. MathType7</strong></h3><ul><li><a href="https://www.mathtype.cn/">https://www.mathtype.cn/</a></li><li>30天到期后，删除注册表<code>计算机\HKEY_CURRENT_USER\SOFTWARE\Install Options</code>中的<code>Options7.4</code></li><li>便可再获得30天（还没试过）</li></ul><h3 id="16-Office自动安装至C盘修改（如果够用不建议）"><a href="#16-Office自动安装至C盘修改（如果够用不建议）" class="headerlink" title="16. Office自动安装至C盘修改（如果够用不建议）"></a><strong>16. Office自动安装至C盘修改（如果够用不建议）</strong></h3><p><img src="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/Office/1.PNG"></p><ul><li>安装前修改注册表<code>计算机\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion</code>下<code>ProgramFilesDir</code>路径为其他盘路径（千万不要乱改后又重启电脑）<blockquote><ul><li>一定要注意，改完安装后，立马注册表修改回到原来，没改前千万别重启电脑。</li><li>被迫重装系统后的反思。</li></ul></blockquote></li></ul><h3 id="17-npm-install-error-code-EBADPLATFORM"><a href="#17-npm-install-error-code-EBADPLATFORM" class="headerlink" title="17. npm install error (code EBADPLATFORM)"></a><strong>17. npm install error (code EBADPLATFORM)</strong></h3><ul><li><a href="https://stackoverflow.com/questions/49475492/npm-install-error-code-ebadplatform/49475537">https://stackoverflow.com/questions/49475492/npm-install-error-code-ebadplatform/49475537</a></li><li>删除<code>package-lock.json</code>文件后，输入命令：<pre><code>npm install </code></pre><h3 id="18-PC-VMware安装安卓虚拟机"><a href="#18-PC-VMware安装安卓虚拟机" class="headerlink" title="18. PC VMware安装安卓虚拟机"></a><strong>18. PC VMware安装安卓虚拟机</strong></h3></li><li><a href="https://blog.csdn.net/muzihuaner/article/details/105284177">https://blog.csdn.net/muzihuaner/article/details/105284177</a></li></ul><h3 id="19-autoCAD-plant-3D-2022"><a href="#19-autoCAD-plant-3D-2022" class="headerlink" title="19. autoCAD plant 3D 2022"></a><strong>19. autoCAD plant 3D 2022</strong></h3><ul><li><a href="http://www.ddooo.com/softdown/193119.htm#dltab">http://www.ddooo.com/softdown/193119.htm#dltab</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Notes </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Daily Notes </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Matplotlib学习</title>
       <link href="2021/01/22/python/matplotlib/"/>
       <url>2021/01/22/python/matplotlib/</url>
@@ -309,31 +334,6 @@
     
     
     <entry>
-      <title>随笔---2021</title>
-      <link href="2021/01/22/notes/DailyNotes2021/"/>
-      <url>2021/01/22/notes/DailyNotes2021/</url>
-      
-        <content type="html"><![CDATA[<p>[toc]</p><h3 id="1-只要使用键盘Materials-Studio就卡住"><a href="#1-只要使用键盘Materials-Studio就卡住" class="headerlink" title="1. 只要使用键盘Materials Studio就卡住"></a><strong>1. 只要使用键盘Materials Studio就卡住</strong></h3><ul><li>解决方法：在微软拼音输入法的“中”(或“英”)字上右击鼠标，然后点“设置”，在弹出界面中点“常规”，在新界面中向下滚动动底部，有个兼容性，打开兼容性，然后就OK了。</li><li>参考链接:<br>[1] <a href="http://muchong.com/t-14329827-1">http://muchong.com/t-14329827-1</a></li></ul><h3 id="2-最新WIN10-20H2系统找回经典系统属性界面的最彻底的方法"><a href="#2-最新WIN10-20H2系统找回经典系统属性界面的最彻底的方法" class="headerlink" title="2. 最新WIN10 20H2系统找回经典系统属性界面的最彻底的方法"></a><strong>2. 最新WIN10 20H2系统找回经典系统属性界面的最彻底的方法</strong></h3><ul><li>重装了Win10 20H2以后，右键此电脑后的属性面板变了，要彻底换回经典的属性面板方法。</li><li>（1）打开注册表，直接搜索<code>注册表</code>、或者<code>Win+R</code>，然后输入<code>regedit</code>；</li><li>（2）找到路径<code>HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\FeatureManagement\Overrides\0\2093230218</code>;</li><li>（3）将EnabledState的数值数据修改为 <code>1</code> 即可。</li><li>（4）参考链接：<a href="https://www.bilibili.com/read/cv8197364">https://www.bilibili.com/read/cv8197364</a></li></ul><h3 id="3-OPLS-optimized-potentials-for-liquid-simulations"><a href="#3-OPLS-optimized-potentials-for-liquid-simulations" class="headerlink" title="3. OPLS(optimized potentials for liquid simulations)"></a><strong>3. OPLS(optimized potentials for liquid simulations)</strong></h3><ul><li>参考链接:<br>[1] <a href="https://blog.csdn.net/qq_31346429/article/details/106358251">https://blog.csdn.net/qq_31346429/article/details/106358251</a></li></ul><h3 id="4-AMBER基础教程B0：AMBER分子动力学模拟入门"><a href="#4-AMBER基础教程B0：AMBER分子动力学模拟入门" class="headerlink" title="4. [AMBER基础教程B0：AMBER分子动力学模拟入门]"></a><strong>4. [AMBER基础教程B0：AMBER分子动力学模拟入门]</strong></h3><ul><li>参考链接:<br>[1] <a href="https://jerkwin.github.io/2018/01/17/AMBER%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8BB0-AMBER%E5%88%86%E5%AD%90%E5%8A%A8%E5%8A%9B%E5%AD%A6%E6%A8%A1%E6%8B%9F%E5%85%A5%E9%97%A8/">https://jerkwin.github.io/2018/01/17/AMBER%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8BB0-AMBER%E5%88%86%E5%AD%90%E5%8A%A8%E5%8A%9B%E5%AD%A6%E6%A8%A1%E6%8B%9F%E5%85%A5%E9%97%A8/</a></li></ul><h3 id="5-国内9大免费CDN汇总-转"><a href="#5-国内9大免费CDN汇总-转" class="headerlink" title="5. 国内9大免费CDN汇总 转"></a><strong>5. 国内9大免费CDN汇总 转</strong></h3><ul><li>转 [1] <a href="https://cloud.tencent.com/developer/article/1352398">https://cloud.tencent.com/developer/article/1352398</a></li></ul><h3 id="6-ctrl-c没反应"><a href="#6-ctrl-c没反应" class="headerlink" title="6. ctrl+c没反应"></a><strong>6. <code>ctrl+c</code>没反应</strong></h3><ul><li>可能是开着有道翻译快捷键冲突了，关了有道或者其他快捷键冲突软件即可</li></ul><h3 id="7-R7000office时不时闪黑屏"><a href="#7-R7000office时不时闪黑屏" class="headerlink" title="7. R7000office时不时闪黑屏"></a><strong>7. <code>R7000</code>office时不时闪黑屏</strong></h3><p><img src="https://filestore.community.support.microsoft.com/api/images/25b29daa-46b9-47c5-8875-3952d3cf174b?upload=true"></p><ul><li>打开office，文件&gt;选项&gt;高级&gt;显示</li><li>勾选“禁用硬件图形加速”，“应用”并“确定”</li><li>参考：[1] <a href="https://answers.microsoft.com/zh-hans/msoffice/forum/msoffice_word-mso_win10-mso_2019/office-%E9%97%AA%E5%B1%8F/33c9a15d-595b-4c62-8d30-fbce21a24fc8">https://answers.microsoft.com/zh-hans/msoffice/forum/msoffice_word-mso_win10-mso_2019/office-%E9%97%AA%E5%B1%8F/33c9a15d-595b-4c62-8d30-fbce21a24fc8</a></li></ul><h3 id="8-双系统教程参考"><a href="#8-双系统教程参考" class="headerlink" title="8. 双系统教程参考"></a><strong>8. 双系统教程参考</strong></h3><ul><li><a href="https://www.cnblogs.com/masbay/p/10745170.html">https://www.cnblogs.com/masbay/p/10745170.html</a></li></ul><h3 id="9-Origin-Copy-Page到Word或PPT后侧边空白多？"><a href="#9-Origin-Copy-Page到Word或PPT后侧边空白多？" class="headerlink" title="9. Origin, Copy Page到Word或PPT后侧边空白多？"></a><strong>9. Origin, Copy Page到Word或PPT后侧边空白多？</strong></h3><ul><li>修改Tools→Options→page选项卡，将Margin Control 设置为Tight，或者将Clip Border Width设置为0，两种都可行。</li></ul><p><img src="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/origin_bug.png"></p><ul><li>若以上步骤不行，那应该是电脑的屏幕缩放不是100%，改为100%就好；</li><li>或者换更高版本的Origin.</li></ul><h3 id="10-FFTW"><a href="#10-FFTW" class="headerlink" title="10. FFTW"></a><strong>10. FFTW</strong></h3><ul><li>Windows安装跟使用fftw  <a href="http://m.myexceptions.net/windows/1616414.html">http://m.myexceptions.net/windows/1616414.html</a></li><li>linux 和 Windows下FFTW库的安装  <a href="https://blog.csdn.net/dengm155/article/details/53819704">https://blog.csdn.net/dengm155/article/details/53819704</a></li></ul><h3 id="11-Vmware虚拟机完整创建一个linux"><a href="#11-Vmware虚拟机完整创建一个linux" class="headerlink" title="11. Vmware虚拟机完整创建一个linux"></a><strong>11. Vmware虚拟机完整创建一个linux</strong></h3><ul><li><a href="https://blog.csdn.net/weixin_42533541/article/details/81877207">https://blog.csdn.net/weixin_42533541/article/details/81877207</a></li></ul><h3 id="12-在VMD中显示原子序号的方法"><a href="#12-在VMD中显示原子序号的方法" class="headerlink" title="12. 在VMD中显示原子序号的方法"></a><strong>12. 在VMD中显示原子序号的方法</strong></h3><ul><li><a href="http://sobereva.com/197">http://sobereva.com/197</a></li></ul><h3 id="13-PhpStudy"><a href="#13-PhpStudy" class="headerlink" title="13. PhpStudy"></a><strong>13. PhpStudy</strong></h3><ul><li>PhpStudy <a href="https://www.xp.cn/">https://www.xp.cn/</a></li><li><a href="https://jingyan.baidu.com/article/148a1921b820c34d70c3b168.html">https://jingyan.baidu.com/article/148a1921b820c34d70c3b168.html</a></li><li>phpStudy V8 使用手册 <a href="https://www.xp.cn/phpstudy-v8/">https://www.xp.cn/phpstudy-v8/</a></li><li>FileZilla <a href="https://www.filezilla.cn/">https://www.filezilla.cn/</a></li></ul><h3 id="14-搭建本地服务器"><a href="#14-搭建本地服务器" class="headerlink" title="14. 搭建本地服务器"></a><strong>14. 搭建本地服务器</strong></h3><ul><li>Web服务器——保姆级教程！ <a href="https://my.oschina.net/u/4383725/blog/4510772">https://my.oschina.net/u/4383725/blog/4510772</a></li></ul><h3 id="15-MathType7"><a href="#15-MathType7" class="headerlink" title="15. MathType7"></a><strong>15. MathType7</strong></h3><ul><li><a href="https://www.mathtype.cn/">https://www.mathtype.cn/</a></li><li>30天到期后，删除注册表<code>计算机\HKEY_CURRENT_USER\SOFTWARE\Install Options</code>中的<code>Options7.4</code></li><li>便可再获得30天（还没试过）</li></ul><h3 id="16-Office自动安装至C盘修改（如果够用不建议）"><a href="#16-Office自动安装至C盘修改（如果够用不建议）" class="headerlink" title="16. Office自动安装至C盘修改（如果够用不建议）"></a><strong>16. Office自动安装至C盘修改（如果够用不建议）</strong></h3><p><img src="https://cdn.jsdelivr.net/gh/eastsheng/PicGoImg/Figures/MyDocs/Office/1.PNG"></p><ul><li>安装前修改注册表<code>计算机\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion</code>下<code>ProgramFilesDir</code>路径为其他盘路径（千万不要乱改后又重启电脑）<blockquote><ul><li>一定要注意，改完安装后，立马注册表修改回到原来，没改前千万别重启电脑。</li><li>被迫重装系统后的反思。</li></ul></blockquote></li></ul><h3 id="17-npm-install-error-code-EBADPLATFORM"><a href="#17-npm-install-error-code-EBADPLATFORM" class="headerlink" title="17. npm install error (code EBADPLATFORM)"></a><strong>17. npm install error (code EBADPLATFORM)</strong></h3><ul><li><a href="https://stackoverflow.com/questions/49475492/npm-install-error-code-ebadplatform/49475537">https://stackoverflow.com/questions/49475492/npm-install-error-code-ebadplatform/49475537</a></li><li>删除<code>package-lock.json</code>文件后，输入命令：<pre><code>npm install </code></pre><h3 id="18-PC-VMware安装安卓虚拟机"><a href="#18-PC-VMware安装安卓虚拟机" class="headerlink" title="18. PC VMware安装安卓虚拟机"></a><strong>18. PC VMware安装安卓虚拟机</strong></h3></li><li><a href="https://blog.csdn.net/muzihuaner/article/details/105284177">https://blog.csdn.net/muzihuaner/article/details/105284177</a></li></ul><h3 id="19-autoCAD-plant-3D-2022"><a href="#19-autoCAD-plant-3D-2022" class="headerlink" title="19. autoCAD plant 3D 2022"></a><strong>19. autoCAD plant 3D 2022</strong></h3><ul><li><a href="http://www.ddooo.com/softdown/193119.htm#dltab">http://www.ddooo.com/softdown/193119.htm#dltab</a></li></ul>]]></content>
-      
-      
-      <categories>
-          
-          <category> Notes </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Daily Notes </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>单位/常数</title>
       <link href="2021/01/21/notes/units_or_constants/"/>
       <url>2021/01/21/notes/units_or_constants/</url>
@@ -388,6 +388,31 @@
     
     
     <entry>
+      <title>视频收藏</title>
+      <link href="2020/06/18/collections/videos/"/>
+      <url>2020/06/18/collections/videos/</url>
+      
+        <content type="html"><![CDATA[<p>[toc]</p><h2 id="学习视频"><a href="#学习视频" class="headerlink" title="学习视频"></a><strong>学习视频</strong></h2><h3 id="1-讲座"><a href="#1-讲座" class="headerlink" title="1. 讲座"></a>1. 讲座</h3><ul><li><a href="https://www.koushare.com/">蔻享</a></li><li><a href="https://space.bilibili.com/609834262?spm_id_from=333.788.b_765f7570696e666f.1">微纳传热</a></li></ul><h3 id="2-教程"><a href="#2-教程" class="headerlink" title="2. 教程"></a>2. 教程</h3><p><a href="https://app.cailiaoren.com/view/series/detail?id=48&vid=189">VMD软件基础使用讲解</a><br><a href="https://www.koushare.com/video/videodetail/5710">科技论文写作与投稿审稿经验分享</a><br><a href="http://cms.sjtu.edu.cn/">上交计算材料课程</a><br><a href="https://www.icourse163.org/">慕课</a><br><a href="https://www.51zxw.net/">我要自学网</a><br><a href="http://v.dxsbb.com/">大学生自学网</a><br><a href="http://www.fanshuxueyuan.com/">番薯学院</a><br><a href="http://www.kgc.cn/">课工场</a><br><a href="https://phet.colorado.edu/zh_CN/">免费的在线物理、化学、生物、地理及数学仿真程序</a><br><a href="https://www.5ifxw.com/">我爱分享网</a><br><a href="https://edu.aliyun.com/">阿里云大学</a><br><a href="https://zhishitu.com/">知识兔</a><br><a href="http://www.oioio.pro/">甲骨数字</a><br><a href="http://www.zf3d.com/">朱峰社区</a><br><a href="https://www.coursera.org/">coursera</a><br><a href="https://www.html.cn/">HTML中文网</a><br><a href="https://www.xuetangx.com/">学堂在线</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Collections </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Videos </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>书籍/社区/论坛收藏</title>
       <link href="2020/06/18/collections/books_communities_fora/"/>
       <url>2020/06/18/collections/books_communities_fora/</url>
@@ -411,31 +436,6 @@
             <tag> forum </tag>
             
             <tag> community </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>视频收藏</title>
-      <link href="2020/06/18/collections/videos/"/>
-      <url>2020/06/18/collections/videos/</url>
-      
-        <content type="html"><![CDATA[<p>[toc]</p><h2 id="学习视频"><a href="#学习视频" class="headerlink" title="学习视频"></a><strong>学习视频</strong></h2><h3 id="1-讲座"><a href="#1-讲座" class="headerlink" title="1. 讲座"></a>1. 讲座</h3><ul><li><a href="https://www.koushare.com/">蔻享</a></li><li><a href="https://space.bilibili.com/609834262?spm_id_from=333.788.b_765f7570696e666f.1">微纳传热</a></li></ul><h3 id="2-教程"><a href="#2-教程" class="headerlink" title="2. 教程"></a>2. 教程</h3><p><a href="https://app.cailiaoren.com/view/series/detail?id=48&vid=189">VMD软件基础使用讲解</a><br><a href="https://www.koushare.com/video/videodetail/5710">科技论文写作与投稿审稿经验分享</a><br><a href="http://cms.sjtu.edu.cn/">上交计算材料课程</a><br><a href="https://www.icourse163.org/">慕课</a><br><a href="https://www.51zxw.net/">我要自学网</a><br><a href="http://v.dxsbb.com/">大学生自学网</a><br><a href="http://www.fanshuxueyuan.com/">番薯学院</a><br><a href="http://www.kgc.cn/">课工场</a><br><a href="https://phet.colorado.edu/zh_CN/">免费的在线物理、化学、生物、地理及数学仿真程序</a><br><a href="https://www.5ifxw.com/">我爱分享网</a><br><a href="https://edu.aliyun.com/">阿里云大学</a><br><a href="https://zhishitu.com/">知识兔</a><br><a href="http://www.oioio.pro/">甲骨数字</a><br><a href="http://www.zf3d.com/">朱峰社区</a><br><a href="https://www.coursera.org/">coursera</a><br><a href="https://www.html.cn/">HTML中文网</a><br><a href="https://www.xuetangx.com/">学堂在线</a></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Collections </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Videos </tag>
             
         </tags>
       
@@ -477,7 +477,7 @@
       <link href="2020/01/22/linux/LinuxCommand/"/>
       <url>2020/01/22/linux/LinuxCommand/</url>
       
-        <content type="html"><![CDATA[<p>[toc]</p><h3 id="1-空间"><a href="#1-空间" class="headerlink" title="1. 空间"></a>1. 空间</h3><ul><li>查看空间大小：<code>df -h</code>；</li><li>查看该目录下文件大小：<code>du -sh *</code></li><li>查看内存使用情况：<code>free -m</code></li><li>删除残余的配置文件:</li></ul><pre><code class="bash">sudo apt-get remove &lt;package-name&gt; #删除软件包sudo apt-get purge &lt;package-name&gt; #删除软件包以及配置文件</code></pre><ul><li>找出所删除软件包的残余配置文件</li></ul><pre><code class="bash">dpkg --list | grep &quot;^rc&quot; #找出所删除软件包的残余配置文件dpkg --list | grep &quot;^rc&quot; | cut -d &quot; &quot; -f 3 #提取这些软件包的名称sudo dpkg --purge &lt;package-name&gt; #只删除某个软件包的配置文件dpkg --list | grep &quot;^rc&quot; | cut -d &quot; &quot; -f 3 | xargs sudo dpkg --purge  #删除所有软件包</code></pre><ul><li>删除没有用的deb软件安装包</li></ul><pre><code class="bash">sudo du -sh /var/cache/apt/archives  #查看/var/chace/apt/archives目录下deb安装包的总大小sudo apt-get clean #删除这些deb包sudo apt-get autoclean</code></pre><ul><li>清理日志文件</li></ul><pre><code class="bash">sudo apt-get install ncdu #安装ncdu工具sudo ncdu /var/log #查看日志文件sudo dd if=/dev/null of=/var/log/shadowsocks.log  #清空这个日志文件的内容</code></pre><ul><li><p>删除’/dev/loop0…’文件:</p><pre><code class="bash">sudo apt purge snapd</code></pre></li><li><p>ubuntu清理缓存</p><pre><code class="bash">sudo apt-get autoclean     #清理旧版本软件缓存sudo apt-get clean         #清理所有软件缓存sudo apt-get autoremove    #删除系统不再使用孤立软件</code></pre></li></ul><h3 id="2-文件夹"><a href="#2-文件夹" class="headerlink" title="2. 文件夹"></a>2. 文件夹</h3><ul><li>创建文件夹：<code>mkdir filename</code>；</li><li>还可以同时创建两个文件夹：<code>mkdir file1 file2</code>；</li><li>创建一个包含路径的文件夹：<code>mkdir -p /home/file/file1</code></li><li>删除文件；<code>rm -f filename</code></li><li>删除空文件夹：<code>rmdir foldername</code>；</li><li>删除有文件的文件夹：<code>rm -rf foldername</code>；</li><li>同时删除两个有文件的文件夹：<code>rm -rf folder1 folder2</code>；</li><li>返回上一级目录：<code>cd ..</code>；</li><li>显示当前工作路径：<code>pwd</code>；</li><li>查看当前目录中的文件/文件夹<code>ls</code>；</li><li>复制一个目录到另一个目录下:<code>cp -r dir1 dir2</code></li><li>解压<code>&quot;.tar.gz&quot;</code>：<code>tar -zxvf filename.tar.gz</code>;</li><li>解压<code>&quot;.zip&quot;</code>：<code>unzip filename.zip</code>;</li><li>显示隐藏文件夹：<pre><code>ctrl h #快捷键ls -a #命令</code></pre></li></ul><ul><li>更多参考：[1] <a href="https://www.cnblogs.com/yjd_hycf_space/p/7730690.html">https://www.cnblogs.com/yjd_hycf_space/p/7730690.html</a></li></ul><h3 id="3-root"><a href="#3-root" class="headerlink" title="3. root"></a>3. root</h3><ul><li>开启root：<code>su</code></li><li>退出root：<code>exit</code></li><li>或者快捷键退出：<code>ctrl+D</code></li><li>而另一种方法:<code>logout</code>则出现错误:<code>bash: logout: not login shell: use &quot;exit&quot;</code></li><li>修改root密码：<code>sudo passwd root</code></li></ul><h3 id="4-开启ssh"><a href="#4-开启ssh" class="headerlink" title="4. 开启ssh:"></a>4. 开启ssh:</h3><pre><code class="bash">sudo apt-get install openssh-serverservice ssh start</code></pre><h3 id="5-环境变量"><a href="#5-环境变量" class="headerlink" title="5. 环境变量"></a>5. 环境变量</h3><ul><li><p>查看已设环境变量:</p><pre><code class="bash">echo $PATH</code></pre></li><li><p>设置临时环境变量:</p><pre><code class="bash">PATH=/usr/local/.../bin:$PATH;export PATH</code></pre></li><li><p>设置永久环境变量: </p></li><li><p>root后在<code>/etc/profile</code>文件或者<code>~/.brashrc</code>文件添加环境变量；</p></li><li><p>例如：</p></li></ul><pre><code class="bash">export PATH=&quot;/usr/local/mpich-3.3.2/bin:$PATH&quot;</code></pre><ul><li>设置永久环境变量具体操作：</li></ul><pre><code class="bash">vim /etc/profileexport PATH=&quot;/usr/local/mpich-3.3.2/bin:$PATH&quot;Esc #（键盘）:wq #或（快捷键）shift+ZZ 保存并退出；:q #不保存退出:q! #强制退出source /etc/profile#(使生效)</code></pre><h3 id="6-conda启动与关闭"><a href="#6-conda启动与关闭" class="headerlink" title="6. conda启动与关闭"></a>6. conda启动与关闭</h3><ul><li>启动：<code>conda activate</code></li><li>关闭：<code>conda deactivate</code></li><li>关闭自动开启base:<code>conda config --set auto_activate_base false</code></li></ul><h3 id="7-Linux查看cpu信息"><a href="#7-Linux查看cpu信息" class="headerlink" title="7. Linux查看cpu信息"></a>7. Linux查看cpu信息</h3><ul><li>Linux查看cpu总数，在top后的界面按1，</li><li>或者：</li></ul><pre><code class="bash">cat /proc/cpuinfo | grep processor</code></pre><ul><li>查看进程绝对路径</li></ul><pre><code>top c</code></pre><h3 id="8-在linux启动和终止matlab"><a href="#8-在linux启动和终止matlab" class="headerlink" title="8. 在linux启动和终止matlab"></a>8. 在linux启动和终止matlab</h3><pre><code class="bash">matlab -nodesktop -nosplash -r matlabfile(parameters)exit</code></pre><h3 id="8-Centos7-关闭开启防火墙"><a href="#8-Centos7-关闭开启防火墙" class="headerlink" title="8. Centos7 关闭开启防火墙"></a>8. Centos7 关闭开启防火墙</h3><pre><code class="bash">systemctl status firewalld.service #查看状态systemctl stop firewalld.service   #停止防火墙，但重启后会自动开启systemctl disable firewalld.service #关闭防火墙systemctl start firewalld.service  #打开防火墙</code></pre><h3 id="9-终端连接另一台主机"><a href="#9-终端连接另一台主机" class="headerlink" title="9. 终端连接另一台主机"></a>9. 终端连接另一台主机</h3><pre><code class="bash">ssh root@另一台主机ip#例如：ssh root@111.111.11.11#然后按提示输入该主机root密码即可exit #退出</code></pre><h3 id="10-卸载cuda"><a href="#10-卸载cuda" class="headerlink" title="10. 卸载cuda"></a>10. 卸载cuda</h3><pre><code class="bash">cd  /usr/local/cuda/binsudo ./uninstall_cuda_x.x.pl #或sudo ./cuda-uninstaller</code></pre><h3 id="11-VIM命令"><a href="#11-VIM命令" class="headerlink" title="11. VIM命令"></a>11. VIM命令</h3><ul><li><a href="https://yelog.org/2017/03/06/Vim-command/">https://yelog.org/2017/03/06/Vim-command/</a></li></ul>]]></content>
+        <content type="html"><![CDATA[<p>[toc]</p><h3 id="1-空间"><a href="#1-空间" class="headerlink" title="1. 空间"></a>1. 空间</h3><ul><li>查看空间大小：<code>df -h</code>；</li><li>查看该目录下文件大小：<code>du -sh *</code></li><li>查看内存使用情况：<code>free -m</code></li><li>删除残余的配置文件:</li></ul><pre><code class="bash">sudo apt-get remove &lt;package-name&gt; #删除软件包sudo apt-get purge &lt;package-name&gt; #删除软件包以及配置文件</code></pre><ul><li>找出所删除软件包的残余配置文件</li></ul><pre><code class="bash">dpkg --list | grep &quot;^rc&quot; #找出所删除软件包的残余配置文件dpkg --list | grep &quot;^rc&quot; | cut -d &quot; &quot; -f 3 #提取这些软件包的名称sudo dpkg --purge &lt;package-name&gt; #只删除某个软件包的配置文件dpkg --list | grep &quot;^rc&quot; | cut -d &quot; &quot; -f 3 | xargs sudo dpkg --purge  #删除所有软件包</code></pre><ul><li>删除没有用的deb软件安装包</li></ul><pre><code class="bash">sudo du -sh /var/cache/apt/archives  #查看/var/chace/apt/archives目录下deb安装包的总大小sudo apt-get clean #删除这些deb包sudo apt-get autoclean</code></pre><ul><li>清理日志文件</li></ul><pre><code class="bash">sudo apt-get install ncdu #安装ncdu工具sudo ncdu /var/log #查看日志文件sudo dd if=/dev/null of=/var/log/shadowsocks.log  #清空这个日志文件的内容</code></pre><ul><li><p>删除’/dev/loop0…’文件:</p><pre><code class="bash">sudo apt purge snapd</code></pre></li><li><p>ubuntu清理缓存</p><pre><code class="bash">sudo apt-get autoclean     #清理旧版本软件缓存sudo apt-get clean         #清理所有软件缓存sudo apt-get autoremove    #删除系统不再使用孤立软件</code></pre></li></ul><h3 id="2-文件夹"><a href="#2-文件夹" class="headerlink" title="2. 文件夹"></a>2. 文件夹</h3><ul><li>创建文件夹：<code>mkdir filename</code>；</li><li>还可以同时创建两个文件夹：<code>mkdir file1 file2</code>；</li><li>创建一个包含路径的文件夹：<code>mkdir -p /home/file/file1</code></li><li>删除文件；<code>rm -f filename</code></li><li>删除空文件夹：<code>rmdir foldername</code>；</li><li>删除有文件的文件夹：<code>rm -rf foldername</code>；</li><li>同时删除两个有文件的文件夹：<code>rm -rf folder1 folder2</code>；</li><li>返回上一级目录：<code>cd ..</code>；</li><li>显示当前工作路径：<code>pwd</code>；</li><li>查看当前目录中的文件/文件夹<code>ls</code>；</li><li>复制一个目录到另一个目录下:<code>cp -r dir1 dir2</code></li><li>解压<code>&quot;.tar.gz&quot;</code>：<code>tar -zxvf filename.tar.gz</code>;</li><li>解压<code>&quot;.zip&quot;</code>：<code>unzip filename.zip</code>;</li><li>显示隐藏文件夹：<pre><code>ctrl h #快捷键ls -a #命令</code></pre></li></ul><ul><li>更多参考：[1] <a href="https://www.cnblogs.com/yjd_hycf_space/p/7730690.html">https://www.cnblogs.com/yjd_hycf_space/p/7730690.html</a></li></ul><h3 id="3-root"><a href="#3-root" class="headerlink" title="3. root"></a>3. root</h3><ul><li>开启root：<code>su</code></li><li>退出root：<code>exit</code></li><li>或者快捷键退出：<code>ctrl+D</code></li><li>而另一种方法:<code>logout</code>则出现错误:<code>bash: logout: not login shell: use &quot;exit&quot;</code></li><li>修改root密码：<code>sudo passwd root</code></li></ul><h3 id="4-开启ssh"><a href="#4-开启ssh" class="headerlink" title="4. 开启ssh:"></a>4. 开启ssh:</h3><pre><code class="bash">sudo apt-get install openssh-serverservice ssh start</code></pre><h3 id="5-环境变量"><a href="#5-环境变量" class="headerlink" title="5. 环境变量"></a>5. 环境变量</h3><ul><li><p>查看已设环境变量:</p><pre><code class="bash">echo $PATH</code></pre></li><li><p>设置临时环境变量:</p><pre><code class="bash">PATH=/usr/local/.../bin:$PATH;export PATH</code></pre></li><li><p>设置永久环境变量: </p></li><li><p>root后在<code>/etc/profile</code>文件或者<code>~/.brashrc</code>文件添加环境变量；</p></li><li><p>例如：</p></li></ul><pre><code class="bash">export PATH=&quot;/usr/local/mpich-3.3.2/bin:$PATH&quot;</code></pre><ul><li>设置永久环境变量具体操作：</li></ul><pre><code class="bash">vim /etc/profileexport PATH=&quot;/usr/local/mpich-3.3.2/bin:$PATH&quot;Esc #（键盘）:wq #或（快捷键）shift+ZZ 保存并退出；:q #不保存退出:q! #强制退出source /etc/profile#(使生效)</code></pre><h3 id="6-conda启动与关闭"><a href="#6-conda启动与关闭" class="headerlink" title="6. conda启动与关闭"></a>6. conda启动与关闭</h3><ul><li>启动：<code>conda activate</code></li><li>关闭：<code>conda deactivate</code></li><li>关闭自动开启base:<code>conda config --set auto_activate_base false</code></li></ul><h3 id="7-Linux查看cpu信息"><a href="#7-Linux查看cpu信息" class="headerlink" title="7. Linux查看cpu信息"></a>7. Linux查看cpu信息</h3><ul><li>Linux查看cpu总数，在top后的界面按1，</li><li>或者：</li></ul><pre><code class="bash">cat /proc/cpuinfo | grep processor</code></pre><ul><li>查看进程绝对路径</li></ul><pre><code>top c</code></pre><h3 id="8-在linux启动和终止matlab"><a href="#8-在linux启动和终止matlab" class="headerlink" title="8. 在linux启动和终止matlab"></a>8. 在linux启动和终止matlab</h3><pre><code class="bash">matlab -nodesktop -nosplash -r matlabfile(parameters)exit</code></pre><h3 id="8-Centos7-关闭开启防火墙"><a href="#8-Centos7-关闭开启防火墙" class="headerlink" title="8. Centos7 关闭开启防火墙"></a>8. Centos7 关闭开启防火墙</h3><pre><code class="bash">systemctl status firewalld.service #查看状态systemctl stop firewalld.service   #停止防火墙，但重启后会自动开启systemctl disable firewalld.service #关闭防火墙systemctl start firewalld.service  #打开防火墙</code></pre><h3 id="9-终端连接另一台主机"><a href="#9-终端连接另一台主机" class="headerlink" title="9. 终端连接另一台主机"></a>9. 终端连接另一台主机</h3><pre><code class="bash">ssh root@另一台主机ip#例如：ssh root@111.111.11.11#然后按提示输入该主机root密码即可exit #退出</code></pre><h3 id="10-卸载cuda"><a href="#10-卸载cuda" class="headerlink" title="10. 卸载cuda"></a>10. 卸载cuda</h3><pre><code class="bash">cd  /usr/local/cuda/binsudo ./uninstall_cuda_x.x.pl #或sudo ./cuda-uninstaller</code></pre><h3 id="11-VIM命令"><a href="#11-VIM命令" class="headerlink" title="11. VIM命令"></a>11. VIM命令</h3><ul><li><a href="https://yelog.org/2017/03/06/Vim-command/">https://yelog.org/2017/03/06/Vim-command/</a></li></ul><h3 id="12-安装与卸载命令"><a href="#12-安装与卸载命令" class="headerlink" title="12. 安装与卸载命令"></a>12. 安装与卸载命令</h3><ul><li><p>deb类型</p><pre><code class="bash">sudo dpkg -i xxx-1.2.deb #安装sudo dpkg -e xxx         #卸载sudo dpkg –l &#39;*xxx*&#39;     #查询</code></pre></li><li><p>rpm类型</p><pre><code class="bash">sudo rpm -ivh xxx-1.2.rpm #安装sudo rpm -e xxx           #卸载</code></pre></li><li><p>tar.gz类型一般安装方式</p><pre><code class="bash">tar -zxvf xxx.tar.gz #解压cd xxx./configuremakemake install</code></pre></li></ul>]]></content>
       
       
       <categories>
@@ -491,9 +491,9 @@
       
         <tags>
             
-            <tag> Linux </tag>
-            
             <tag> Command </tag>
+            
+            <tag> Linux </tag>
             
         </tags>
       
@@ -589,35 +589,6 @@
     
     
     <entry>
-      <title>Lammps Command</title>
-      <link href="2019/01/22/lammps/command/"/>
-      <url>2019/01/22/lammps/command/</url>
-      
-        <content type="html"><![CDATA[<p>[toc]</p><h3 id="1-neighbor-2-0-multi"><a href="#1-neighbor-2-0-multi" class="headerlink" title="1. neighbor 2.0 multi "></a>1. <code>neighbor 2.0 multi </code></h3><ul><li>neighbor skin style</li><li>此命令用于设置cutoff distance;</li><li>3种style代表不同的算法去构建list,<code>bin nsq multi</code></li><li>一般使用<code>bin</code>较多；</li><li><code>nsq</code>没有用过，手册上讲，在计算非周期性的盒子里的未溶解的小分子可能会更快；</li><li><code>multi</code>多用于一些cutoff distance 差别大的体系，例如，聚合物与离子共存的体系。</li></ul><h3 id="2-group"><a href="#2-group" class="headerlink" title="2. group"></a>2. <code>group</code></h3><pre><code class="in">group    g_ID    region    reg_ID# orgroup   g_ID    type 1 2  # atom type</code></pre><ul><li>所分的组的个数不能大于32个。</li></ul>]]></content>
-      
-      
-      <categories>
-          
-          <category> Lammps </category>
-          
-          <category> Command </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Lammps </tag>
-            
-            <tag> Command </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Lammps Notes</title>
       <link href="2019/01/22/lammps/LammpsNotes/"/>
       <url>2019/01/22/lammps/LammpsNotes/</url>
@@ -639,6 +610,35 @@
             <tag> Lammps </tag>
             
             <tag> Notes </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Lammps Command</title>
+      <link href="2019/01/22/lammps/command/"/>
+      <url>2019/01/22/lammps/command/</url>
+      
+        <content type="html"><![CDATA[<p>[toc]</p><h3 id="1-neighbor-2-0-multi"><a href="#1-neighbor-2-0-multi" class="headerlink" title="1. neighbor 2.0 multi "></a>1. <code>neighbor 2.0 multi </code></h3><ul><li>neighbor skin style</li><li>此命令用于设置cutoff distance;</li><li>3种style代表不同的算法去构建list,<code>bin nsq multi</code></li><li>一般使用<code>bin</code>较多；</li><li><code>nsq</code>没有用过，手册上讲，在计算非周期性的盒子里的未溶解的小分子可能会更快；</li><li><code>multi</code>多用于一些cutoff distance 差别大的体系，例如，聚合物与离子共存的体系。</li></ul><h3 id="2-group"><a href="#2-group" class="headerlink" title="2. group"></a>2. <code>group</code></h3><pre><code class="in">group    g_ID    region    reg_ID# orgroup   g_ID    type 1 2  # atom type</code></pre><ul><li>所分的组的个数不能大于32个。</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Lammps </category>
+          
+          <category> Command </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Lammps </tag>
+            
+            <tag> Command </tag>
             
         </tags>
       
