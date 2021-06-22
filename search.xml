@@ -388,31 +388,6 @@
     
     
     <entry>
-      <title>视频收藏</title>
-      <link href="2020/06/18/collections/videos/"/>
-      <url>2020/06/18/collections/videos/</url>
-      
-        <content type="html"><![CDATA[<p>[toc]</p><h2 id="学习视频"><a href="#学习视频" class="headerlink" title="学习视频"></a><strong>学习视频</strong></h2><h3 id="1-讲座"><a href="#1-讲座" class="headerlink" title="1. 讲座"></a>1. 讲座</h3><ul><li><a href="https://www.koushare.com/">蔻享</a></li><li><a href="https://space.bilibili.com/609834262?spm_id_from=333.788.b_765f7570696e666f.1">微纳传热</a></li></ul><h3 id="2-教程"><a href="#2-教程" class="headerlink" title="2. 教程"></a>2. 教程</h3><p><a href="https://app.cailiaoren.com/view/series/detail?id=48&vid=189">VMD软件基础使用讲解</a><br><a href="https://www.koushare.com/video/videodetail/5710">科技论文写作与投稿审稿经验分享</a><br><a href="http://cms.sjtu.edu.cn/">上交计算材料课程</a><br><a href="https://www.icourse163.org/">慕课</a><br><a href="https://www.51zxw.net/">我要自学网</a><br><a href="http://v.dxsbb.com/">大学生自学网</a><br><a href="http://www.fanshuxueyuan.com/">番薯学院</a><br><a href="http://www.kgc.cn/">课工场</a><br><a href="https://phet.colorado.edu/zh_CN/">免费的在线物理、化学、生物、地理及数学仿真程序</a><br><a href="https://www.5ifxw.com/">我爱分享网</a><br><a href="https://edu.aliyun.com/">阿里云大学</a><br><a href="https://zhishitu.com/">知识兔</a><br><a href="http://www.oioio.pro/">甲骨数字</a><br><a href="http://www.zf3d.com/">朱峰社区</a><br><a href="https://www.coursera.org/">coursera</a><br><a href="https://www.html.cn/">HTML中文网</a><br><a href="https://www.xuetangx.com/">学堂在线</a></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Collections </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Videos </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>书籍/社区/论坛收藏</title>
       <link href="2020/06/18/collections/books_communities_fora/"/>
       <url>2020/06/18/collections/books_communities_fora/</url>
@@ -436,6 +411,31 @@
             <tag> forum </tag>
             
             <tag> community </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>视频收藏</title>
+      <link href="2020/06/18/collections/videos/"/>
+      <url>2020/06/18/collections/videos/</url>
+      
+        <content type="html"><![CDATA[<p>[toc]</p><h2 id="学习视频"><a href="#学习视频" class="headerlink" title="学习视频"></a><strong>学习视频</strong></h2><h3 id="1-讲座"><a href="#1-讲座" class="headerlink" title="1. 讲座"></a>1. 讲座</h3><ul><li><a href="https://www.koushare.com/">蔻享</a></li><li><a href="https://space.bilibili.com/609834262?spm_id_from=333.788.b_765f7570696e666f.1">微纳传热</a></li></ul><h3 id="2-教程"><a href="#2-教程" class="headerlink" title="2. 教程"></a>2. 教程</h3><p><a href="https://app.cailiaoren.com/view/series/detail?id=48&vid=189">VMD软件基础使用讲解</a><br><a href="https://www.koushare.com/video/videodetail/5710">科技论文写作与投稿审稿经验分享</a><br><a href="http://cms.sjtu.edu.cn/">上交计算材料课程</a><br><a href="https://www.icourse163.org/">慕课</a><br><a href="https://www.51zxw.net/">我要自学网</a><br><a href="http://v.dxsbb.com/">大学生自学网</a><br><a href="http://www.fanshuxueyuan.com/">番薯学院</a><br><a href="http://www.kgc.cn/">课工场</a><br><a href="https://phet.colorado.edu/zh_CN/">免费的在线物理、化学、生物、地理及数学仿真程序</a><br><a href="https://www.5ifxw.com/">我爱分享网</a><br><a href="https://edu.aliyun.com/">阿里云大学</a><br><a href="https://zhishitu.com/">知识兔</a><br><a href="http://www.oioio.pro/">甲骨数字</a><br><a href="http://www.zf3d.com/">朱峰社区</a><br><a href="https://www.coursera.org/">coursera</a><br><a href="https://www.html.cn/">HTML中文网</a><br><a href="https://www.xuetangx.com/">学堂在线</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Collections </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Videos </tag>
             
         </tags>
       
@@ -560,6 +560,35 @@
     
     
     <entry>
+      <title>Lammps Notes</title>
+      <link href="2019/01/22/lammps/LammpsNotes/"/>
+      <url>2019/01/22/lammps/LammpsNotes/</url>
+      
+        <content type="html"><![CDATA[<p>[toc]</p><h3 id="1-Lammps安装"><a href="#1-Lammps安装" class="headerlink" title="1. Lammps安装"></a>1. Lammps安装</h3><ul><li>Windows下安装</li></ul><ol><li><a href="http://packages.lammps.org/windows.html">官网下载Windows版Lammps,和并行包mpich2</a>；</li><li>下载完成后，直接双击<code>LAMMPS-64bit-stable-MPI.exe</code>安装,可以自定义安装位置；</li><li>Similarly，接着安装MPICH2<code>mpich2-1.4.1p1-win-x86-64.msi</code>；</li><li>完了之后，进入到<code>Administrator</code>用户下操作，<code>win+R</code>输入<code>cmd</code>，调出cmd窗口；</li><li><code>cd</code>到MPICH2安装目录的<code>bin</code>下，也即是<code>D:\Program Files\MPICH2\bin</code>；</li><li>然后，输入命令：<code>smpd.exe -install -phrase behappy</code>；</li><li>别忘记设置环境变量，即是将对应的Lammps@MPICH2路径加入到path中：<code>D:\Program Files\LAMMPS 64-bit 7Aug2019-MPI\bin</code>，<code>D:\Program Files\MPICH2\bin</code></li><li>怎么设置环境变量：<blockquote><ul><li>鼠标右键<code>此电脑</code>；点开<code>高级系统设置</code>；找到<code>高级</code>；点开右下角<code>环境变量(N)</code>；</li><li>在系统变量下<code>path</code>中找找看，是否已经设置；若没有，点击新建，将路径复制过来，确定即可</li></ul></blockquote></li><li>至此，完成，可以进入lammps目录下<code>Examples</code>中测试一下并行；例如：<code>mpiexec -np 8 lmp_mpi -i inputfile.in</code>；具体看<a href="http://packages.lammps.org/windows.html">官网</a></li></ol><ul><li>Linux下安装</li></ul><p><strong>LAMMPS</strong><br>参考:<a href="https://cloud.tencent.com/developer/article/1484595">https://cloud.tencent.com/developer/article/1484595</a></p><p><strong>11-17</strong></p><h3 id="2-使用LAMMPS和Alamode计算热导率、PDOS、弛豫时间等"><a href="#2-使用LAMMPS和Alamode计算热导率、PDOS、弛豫时间等" class="headerlink" title="2. 使用LAMMPS和Alamode计算热导率、PDOS、弛豫时间等"></a>2. 使用LAMMPS和Alamode计算热导率、PDOS、弛豫时间等</h3><ul><li>运行alm.in,生成<code>xxx.pattern_HARMONIC</code>和<code>xxx.pattern_ANHARM3</code><blockquote><ol><li>需要注意：<code>NORDER = 2  # 1: harmonic, 2: cubic, ..</code></li><li>其他信息修改参照官网</li></ol></blockquote></li><li>用alamode自带的displace.py，生成harm1.lammps和cubic1.lammps <blockquote><ol><li>如果harm和cubic文件很多的话，几百几千个，这里可能会出现harm0001.lammps这种文件名，会报错。</li></ol></blockquote></li><li>用脚本运行lammps,in.sw,使harm1.lammps和cubic1.lammps 分别生成XFSET.harm1和XFSET.cubic1</li><li>最后使用alamode自带的extract.py，从XFSET.harm和XFSET.cubic提取到DESET_harmonic中</li><li>修改alm.in中的MODE为optimize并添加一些信息，再次运行alm.in，会得到xxx.fcs和xxx.xml,</li><li>利用anphon通过xxx.xml会得到xxx.bands文件，然后通过自带的plotband.py可以计算声子色散；</li><li>同样获得pdos</li><li>具体参见官网</li></ul><h3 id="3-Nose-Hoover"><a href="#3-Nose-Hoover" class="headerlink" title="3. Nose-Hoover"></a>3. Nose-Hoover</h3><ul><li>Lammps默认NVT为Nose-Hoover</li><li>NEMD时使用此热库，其实就是在热源和冷源加 <em>nvt</em> ，</li><li>在跑非平衡分子动力学( <em>NEMD</em> )模拟时，由于Nose-Hoover具有演化的过程，但是NEMD也有演化，</li><li>所以在跑nve的时候，不仅要排除fixed的区域，还要排除热源冷源区域。</li></ul><h3 id="4-NPT时系统的边界条件必须为周期性边界条件"><a href="#4-NPT时系统的边界条件必须为周期性边界条件" class="headerlink" title="4. NPT时系统的边界条件必须为周期性边界条件"></a>4. NPT时系统的边界条件必须为周期性边界条件</h3><pre><code class="in">boundary    p p p</code></pre><h3 id="5-REBO-MoS2"><a href="#5-REBO-MoS2" class="headerlink" title="5. REBO MoS2"></a>5. REBO MoS2</h3><ul><li><a href="https://research.matse.psu.edu/sinnott/software">https://research.matse.psu.edu/sinnott/software</a></li><li>注意：</li></ul><pre><code>0.020             epsilon_SS #对应300K0.01386            epsilon_SS #对应0K</code></pre><h3 id="6-原子间势函数库"><a href="#6-原子间势函数库" class="headerlink" title="6. 原子间势函数库"></a>6. 原子间势函数库</h3><ul><li>Interatomic Potentials (Force Fields)Repository</li><li><a href="https://www.ctcms.nist.gov/potentials/">https://www.ctcms.nist.gov/potentials/</a> </li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Lammps </category>
+          
+          <category> Notes </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Lammps </tag>
+            
+            <tag> Notes </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Lammps安装</title>
       <link href="2019/01/22/lammps/LammpsInstall/"/>
       <url>2019/01/22/lammps/LammpsInstall/</url>
@@ -578,38 +607,9 @@
       
         <tags>
             
+            <tag> Notes </tag>
+            
             <tag> Lammps安装 </tag>
-            
-            <tag> Notes </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Lammps Notes</title>
-      <link href="2019/01/22/lammps/LammpsNotes/"/>
-      <url>2019/01/22/lammps/LammpsNotes/</url>
-      
-        <content type="html"><![CDATA[<p>[toc]</p><h3 id="1-Lammps安装"><a href="#1-Lammps安装" class="headerlink" title="1. Lammps安装"></a>1. Lammps安装</h3><ul><li>Windows下安装</li></ul><ol><li><a href="http://packages.lammps.org/windows.html">官网下载Windows版Lammps,和并行包mpich2</a>；</li><li>下载完成后，直接双击<code>LAMMPS-64bit-stable-MPI.exe</code>安装,可以自定义安装位置；</li><li>Similarly，接着安装MPICH2<code>mpich2-1.4.1p1-win-x86-64.msi</code>；</li><li>完了之后，进入到<code>Administrator</code>用户下操作，<code>win+R</code>输入<code>cmd</code>，调出cmd窗口；</li><li><code>cd</code>到MPICH2安装目录的<code>bin</code>下，也即是<code>D:\Program Files\MPICH2\bin</code>；</li><li>然后，输入命令：<code>smpd.exe -install -phrase behappy</code>；</li><li>别忘记设置环境变量，即是将对应的Lammps@MPICH2路径加入到path中：<code>D:\Program Files\LAMMPS 64-bit 7Aug2019-MPI\bin</code>，<code>D:\Program Files\MPICH2\bin</code></li><li>怎么设置环境变量：<blockquote><ul><li>鼠标右键<code>此电脑</code>；点开<code>高级系统设置</code>；找到<code>高级</code>；点开右下角<code>环境变量(N)</code>；</li><li>在系统变量下<code>path</code>中找找看，是否已经设置；若没有，点击新建，将路径复制过来，确定即可</li></ul></blockquote></li><li>至此，完成，可以进入lammps目录下<code>Examples</code>中测试一下并行；例如：<code>mpiexec -np 8 lmp_mpi -i inputfile.in</code>；具体看<a href="http://packages.lammps.org/windows.html">官网</a></li></ol><ul><li>Linux下安装</li></ul><p><strong>LAMMPS</strong><br>参考:<a href="https://cloud.tencent.com/developer/article/1484595">https://cloud.tencent.com/developer/article/1484595</a></p><p><strong>11-17</strong></p><h3 id="2-使用LAMMPS和Alamode计算热导率、PDOS、弛豫时间等"><a href="#2-使用LAMMPS和Alamode计算热导率、PDOS、弛豫时间等" class="headerlink" title="2. 使用LAMMPS和Alamode计算热导率、PDOS、弛豫时间等"></a>2. 使用LAMMPS和Alamode计算热导率、PDOS、弛豫时间等</h3><ul><li>运行alm.in,生成<code>xxx.pattern_HARMONIC</code>和<code>xxx.pattern_ANHARM3</code><blockquote><ol><li>需要注意：<code>NORDER = 2  # 1: harmonic, 2: cubic, ..</code></li><li>其他信息修改参照官网</li></ol></blockquote></li><li>用alamode自带的displace.py，生成harm1.lammps和cubic1.lammps <blockquote><ol><li>如果harm和cubic文件很多的话，几百几千个，这里可能会出现harm0001.lammps这种文件名，会报错。</li></ol></blockquote></li><li>用脚本运行lammps,in.sw,使harm1.lammps和cubic1.lammps 分别生成XFSET.harm1和XFSET.cubic1</li><li>最后使用alamode自带的extract.py，从XFSET.harm和XFSET.cubic提取到DESET_harmonic中</li><li>修改alm.in中的MODE为optimize并添加一些信息，再次运行alm.in，会得到xxx.fcs和xxx.xml,</li><li>利用anphon通过xxx.xml会得到xxx.bands文件，然后通过自带的plotband.py可以计算声子色散；</li><li>同样获得pdos</li><li>具体参见官网</li></ul><h3 id="3-Nose-Hoover"><a href="#3-Nose-Hoover" class="headerlink" title="3. Nose-Hoover"></a>3. Nose-Hoover</h3><ul><li>Lammps默认NVT为Nose-Hoover</li><li>NEMD时使用此热库，其实就是在热源和冷源加 <em>nvt</em> ，</li><li>在跑非平衡分子动力学( <em>NEMD</em> )模拟时，由于Nose-Hoover具有演化的过程，但是NEMD也有演化，</li><li>所以在跑nve的时候，不仅要排除fixed的区域，还要排除热源冷源区域。</li></ul><h3 id="4-NPT时系统的边界条件必须为周期性边界条件"><a href="#4-NPT时系统的边界条件必须为周期性边界条件" class="headerlink" title="4. NPT时系统的边界条件必须为周期性边界条件"></a>4. NPT时系统的边界条件必须为周期性边界条件</h3><pre><code class="in">boundary    p p p</code></pre><h3 id="5-REBO-MoS2-https-research-matse-psu-edu-sinnott-software"><a href="#5-REBO-MoS2-https-research-matse-psu-edu-sinnott-software" class="headerlink" title="5. REBO MoS2,https://research.matse.psu.edu/sinnott/software"></a>5. REBO MoS2,<a href="https://research.matse.psu.edu/sinnott/software">https://research.matse.psu.edu/sinnott/software</a></h3><ul><li>注意：<br>```</li></ul><p>0.020             epsilon_SS #对应300K<br>0.01386            epsilon_SS #对应0K</p><pre><code></code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> Lammps </category>
-          
-          <category> Notes </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Lammps </tag>
-            
-            <tag> Notes </tag>
             
         </tags>
       
